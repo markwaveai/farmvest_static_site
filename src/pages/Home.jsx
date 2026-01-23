@@ -107,7 +107,7 @@ const Home = () => {
                         transition={{ delay: 1.8, duration: 1 }}
                         className="absolute bottom-12 w-full max-w-5xl p-4 text-white/80 text-lg md:text-2xl font-medium tracking-[0.3em] uppercase mt-4 border-t border-white/20 backdrop-blur-sm rounded-xl text-center font-bold"
                     >
-                    Comprehensive Farm Operations and Livestock Management System    
+                        Comprehensive Farm Operations and Livestock Management System
                     </motion.div>
                 </div>
             </section>
@@ -273,15 +273,15 @@ const Home = () => {
 
 
 
-            
+
             {/* FarmVest Business Model & Operations */}
             <FarmVestModel />
-<section className="py-24 bg-green-900 text-white relative overflow-hidden">
+            <section className="py-24 bg-green-900 text-white relative overflow-hidden">
                 {/* Background Pattern */}
                 <div className="absolute inset-0 opacity-10 bg-cover bg-center" style={{ backgroundImage: `url(${SectionBg})` }} />
 
                 <div className="container mx-auto px-4 relative z-10">
-                    
+
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
@@ -331,7 +331,7 @@ const Home = () => {
                             <img
                                 src={ManagementApp}
                                 alt="Farm Management App"
-                                className="rounded-2xl shadow-2xl border-4 border-white/10 w-full"
+                                className="rounded-2xl shadow-2xl w-full"
                             />
                             {/* Decorative elements */}
                             <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-accent rounded-full opacity-20 blur-2xl"></div>

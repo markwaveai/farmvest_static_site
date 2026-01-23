@@ -87,30 +87,23 @@ const Blog = () => {
         <div className="min-h-screen bg-slate-50 font-sans">
             <Navbar />
 
-            <section className="pt-32 pb-24 bg-slate-900 overflow-hidden relative">
-                <div className="absolute inset-0 opacity-30">
-                    <img
-                        src="https://images.unsplash.com/photo-1596733430502-d7373f0e8f00?q=80&w=2832"
-                        alt="Buffalo Farm"
-                        className="w-full h-full object-cover"
-                    />
-                </div>
+            <section className="pt-32 pb-24 header-blog overflow-hidden relative">
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        className="inline-block px-4 py-1 bg-primary/20 backdrop-blur-md rounded-full text-primary text-xs font-bold mb-6 tracking-widest uppercase italic"
+                        className="inline-block px-4 py-1 bg-white border border-teal-200 rounded-full text-teal-700 text-xs font-bold mb-6 tracking-widest uppercase italic shadow-sm"
                     >
                         Buffalo FarmVest Updates
                     </motion.div>
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-4xl md:text-6xl font-black text-white mb-6 uppercase tracking-tighter italic"
+                        className="text-4xl md:text-6xl font-black text-slate-900 mb-6 uppercase tracking-tighter italic"
                     >
-                        Project <span className="text-primary italic">Insights</span>
+                        Project <span className="text-teal-600 italic">Insights</span>
                     </motion.h1>
-                    <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed italic">
+                    <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed italic">
                         Earn returns from buffalo farming while transparently monitoring operations, animal health, and revenue through our professional digital platform.
                     </p>
                 </div>

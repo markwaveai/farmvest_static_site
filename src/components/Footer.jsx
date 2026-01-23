@@ -56,7 +56,7 @@ const Footer = () => {
                         <h3 className="text-lg font-bold mb-6">Contact Us</h3>
                         <ul className="space-y-4">
                             <li className="flex items-start gap-3 text-gray-400">
-                                <MapPin className="w-5 h-5 text-primary mt-1" />
+                                <MapPin className="w-10 h-5 text-primary mt-1" />
                                 <span>206,2nd floor,Block-A,PSR Prime Tower,Beside DLF,Gachibowli</span>
                             </li>
                             <li className="flex items-center gap-3 text-gray-400">

@@ -8,8 +8,8 @@ const PlanCard = ({ title, price, description, features, highlighted = false }) 
     <motion.div
         whileHover={{ y: -10 }}
         className={`p-8 rounded-[40px] border-2 transition-all h-full flex flex-col ${highlighted
-                ? 'bg-slate-900 border-primary text-white shadow-2xl shadow-primary/20'
-                : 'bg-white border-slate-100 text-slate-800'
+            ? 'bg-slate-900 border-primary text-white shadow-2xl shadow-primary/20'
+            : 'bg-white border-slate-100 text-slate-800'
             }`}
     >
         <h3 className="text-2xl font-bold mb-2">{title}</h3>
@@ -27,8 +27,8 @@ const PlanCard = ({ title, price, description, features, highlighted = false }) 
             ))}
         </ul>
         <button className={`w-full py-4 rounded-2xl font-bold transition-all flex items-center justify-center gap-2 uppercase tracking-widest text-xs ${highlighted
-                ? 'bg-primary text-white hover:bg-green-700 shadow-lg shadow-primary/30'
-                : 'bg-slate-100 text-slate-800 hover:bg-slate-200'
+            ? 'bg-primary text-white hover:bg-green-700 shadow-lg shadow-primary/30'
+            : 'bg-slate-100 text-slate-800 hover:bg-slate-200'
             }`}>
             Invest Now <ArrowRight className="w-5 h-5" />
         </button>
@@ -40,16 +40,16 @@ const InvestmentPlans = () => {
         <div className="min-h-screen bg-slate-50 font-sans">
             <Navbar />
 
-            <header className="pt-32 pb-20 bg-primary text-white text-center">
+            <header className="pt-32 pb-20 header-invest text-slate-900 text-center">
                 <div className="container mx-auto px-4">
                     <motion.h1
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         className="text-4xl md:text-6xl font-black mb-6 italic"
                     >
-                        Buffalo Farm <span className="text-slate-900">Yields</span>
+                        Buffalo Farm <span className="text-amber-600">Yields</span>
                     </motion.h1>
-                    <p className="text-xl text-green-50 max-w-2xl mx-auto italic">
+                    <p className="text-xl text-slate-600 max-w-2xl mx-auto italic">
                         Earn scalable returns from professionally managed buffalo farming units with full digital transparency.
                     </p>
                 </div>

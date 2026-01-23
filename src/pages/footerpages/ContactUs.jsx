@@ -22,7 +22,7 @@ const ContactUs = () => {
             <Navbar />
 
             {/* Header Section */}
-            <section className="relative pt-20 pb-12 overflow-hidden bg-sky perspective-container">
+            <section className="relative pt-20 pb-12 overflow-hidden header-contact perspective-container">
                 {/* Immersive Animated Network Flows */}
                 <div className="absolute inset-0 z-0 pointer-events-none opacity-20">
                     <svg className="w-full h-full" viewBox="0 0 1440 200" xmlns="http://www.w3.org/2000/svg">

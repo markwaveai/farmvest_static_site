@@ -23,25 +23,16 @@ const AboutUs = () => {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="relative pt-32 pb-24 overflow-hidden bg-slate-900">
-                <div className="absolute inset-0 opacity-40">
-                    <img
-                        src="https://images.unsplash.com/photo-1596733430502-d7373f0e8f00?q=80&w=2832"
-                        alt="Buffalo Farm"
-                        className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 to-slate-900" />
-                </div>
-
+            <section className="relative pt-32 pb-24 overflow-hidden header-about">
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-4xl md:text-6xl font-black text-white mb-6"
+                        className="text-4xl md:text-6xl font-black text-slate-900 mb-6"
                     >
                         Digitizing <span className="text-primary italic">Buffalo</span> Farming
                     </motion.h1>
-                    <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed italic">
+                    <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed italic">
                         FarmVest is a technology-driven buffalo farming investment platform. We bridge the gap between investors and agriculture through real-time monitoring and expert management.
                     </p>
                 </div>
@@ -102,7 +93,7 @@ const AboutUs = () => {
                         </motion.div>
                     </div>
                 </div>
-            </section>      
+            </section>
 
             <Footer />
         </div>

@@ -44,7 +44,7 @@ const OurTeam = () => {
         <div className="min-h-screen bg-slate-50 font-sans">
             <Navbar />
 
-            <section className="pt-32 pb-24 text-center">
+            <section className="pt-32 pb-24 text-center header-team relative">
                 <div className="container mx-auto px-4">
                     <h1 className="text-4xl md:text-6xl font-black text-slate-900 mb-6 italic uppercase tracking-tighter">
                         The Professionals Behind <br />

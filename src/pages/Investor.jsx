@@ -53,103 +53,89 @@ const Investor = () => {
             <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-emerald-500/5 blur-[150px] -z-10 rounded-full" />
 
             <Navbar />
-            
 
-            {/* Header - Intelligence Terminal Aesthetic */}
-            <div className="bg-[#020617] pt-40 pb-32 text-white rounded-b-[5rem] shadow-[0_50px_100px_rgba(0,0,0,0.5)] relative overflow-hidden">
-                {/* Digital Equity Grid Background */}
-                <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,#1e293b_0%,transparent_75%)]" />
-                    <div className="absolute inset-0 opacity-[0.15]"
-                        style={{
-                            backgroundImage: `linear-gradient(#6366f1 1px, transparent 1px), linear-gradient(90deg, #6366f1 1px, transparent 1px)`,
-                            backgroundSize: '30px 30px'
-                        }}
-                    />
-                    {/* Animated Data Stream */}
-                    <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
-                        {[1, 2, 3].map(i => (
-                            <div key={i} className={`absolute h-px w-full bg-gradient-to-r from-transparent via-indigo-500 to-transparent animate-scan-y`} style={{ top: `${i * 30}%`, animationDuration: `${5 + i}s` }} />
-                        ))}
-                    </div>
-                </div>
 
+            {/* Header - Investor Data Aesthetic */}
+            {/* Header - Investor Data Aesthetic */}
+            <div className="pt-32 pb-24 bg-red-100 relative overflow-hidden">
                 <div className="container mx-auto px-4 relative z-10">
-                    <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16">
-                        <div className="flex-1 text-center lg:text-left">
-                            <motion.div
-                                initial={{ opacity: 0, x: -20 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-[10px] font-black uppercase tracking-[0.3em] mb-8"
-                            >
-                                <Lock className="w-3 h-3" />
-                                Encrypted Access : 256-Bit
-                            </motion.div>
+                    <div className="max-w-5xl mx-auto text-center">
+                        <motion.div
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-red-200 text-red-600 text-xs font-bold uppercase tracking-widest mb-8 shadow-sm"
+                        >
+                            <TrendingUp className="w-3.5 h-3.5" />
+                            Live Market Data
+                        </motion.div>
 
-                            <motion.h1
+                        <motion.h1
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tight"
+                        >
+                            Investor <span className="text-red-500 opacity-80 italic">Portal</span>
+                        </motion.h1>
+
+                        <p className="text-xl text-slate-600 max-w-2xl mx-auto font-medium leading-relaxed mb-12">
+                            A secure, transparent interface for real-time monitoring of your agricultural capital. Track equity, yields, and livestock health from a single dashboard.
+                        </p>
+
+                        {/* Data Cards */}
+                        <div className="grid md:grid-cols-3 gap-6 text-left">
+                            <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                className="text-6xl md:text-8xl font-black mb-8 leading-[0.85] tracking-tighter"
+                                transition={{ delay: 0.1 }}
+                                className="bg-white p-6 rounded-2xl border border-red-100 shadow-xl shadow-red-500/5 hover:-translate-y-1 transition-all"
                             >
-                                INVESTOR <br />
-                                <span className="text-indigo-500">TERMINAL</span>
-                            </motion.h1>
-
-                            <p className="text-xl text-slate-400 max-w-xl font-medium leading-relaxed mb-10">
-                                Global equity monitoring interface for verified institutional partners.
-                                <span className="text-indigo-400"> Real-time telemetry connection established.</span>
-                            </p>
-
-                            {/* Live Equity Ticker */}
-                            <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-                                {[
-                                    { label: 'EQUITY', val: '14.2%', up: true },
-                                    { label: 'YIELD', val: '8.4%', up: true },
-                                    { label: 'NODES', val: '12', up: false }
-                                ].map((stat, i) => (
-                                    <div key={i} className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg backdrop-blur-md">
-                                        <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">{stat.label}</p>
-                                        <p className={`text-lg font-black ${stat.up ? 'text-emerald-400' : 'text-indigo-400'}`}>
-                                            {stat.up ? '▲' : '◆'} {stat.val}
-                                        </p>
+                                <div className="flex justify-between items-start mb-4">
+                                    <div className="p-2 bg-red-50 rounded-lg text-red-600">
+                                        <TrendingUp className="w-6 h-6" />
                                     </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Unique Digital Equity Visualization */}
-                        <div className="flex-1 w-full max-w-md hidden lg:block">
-                            <div className="relative aspect-square">
-                                {/* SVG Orbiting Data */}
-                                <svg className="w-full h-full animate-spin-slow opacity-20" viewBox="0 0 100 100">
-                                    <circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" strokeWidth="0.5" strokeDasharray="4 4" />
-                                    <circle cx="50" cy="50" r="35" fill="none" stroke="currentColor" strokeWidth="0.5" strokeDasharray="1 3" />
-                                </svg>
-                                <div className="absolute inset-0 flex items-center justify-center">
-                                    <div className="grid grid-cols-4 gap-2">
-                                        {Array.from({ length: 16 }).map((_, i) => (
-                                            <motion.div
-                                                key={i}
-                                                initial={{ scale: 0 }}
-                                                animate={{ scale: [1, 1.2, 1] }}
-                                                transition={{
-                                                    duration: 2,
-                                                    repeat: Infinity,
-                                                    delay: i * 0.1
-                                                }}
-                                                className={`w-4 h-4 rounded-sm ${i % 5 === 0 ? 'bg-indigo-500' : 'bg-white/10 shadow-[0_0_15px_rgba(99,102,241,0.3)]'}`}
-                                            />
-                                        ))}
-                                    </div>
+                                    <span className="text-xs font-bold bg-green-100 text-green-700 px-2 py-1 rounded">
+                                        +14.2%
+                                    </span>
                                 </div>
-                                <div className="absolute bottom-0 right-0 p-6 bg-indigo-600 rounded-2xl shadow-2xl flex items-center gap-4">
-                                    <TrendingUp className="w-8 h-8 text-white" />
-                                    <div>
-                                        <p className="text-white/60 text-[10px] font-bold uppercase">Growth Index</p>
-                                        <p className="text-2xl font-black text-white">+24%</p>
+                                <p className="text-slate-400 text-xs font-bold uppercase tracking-widest mb-1">Equity Growth</p>
+                                <h3 className="text-3xl font-black text-slate-900">₹ 12.5L</h3>
+                            </motion.div>
+
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.2 }}
+                                className="bg-white p-6 rounded-2xl border border-red-100 shadow-xl shadow-red-500/5 hover:-translate-y-1 transition-all"
+                            >
+                                <div className="flex justify-between items-start mb-4">
+                                    <div className="p-2 bg-red-50 rounded-lg text-red-600">
+                                        <Activity className="w-6 h-6" />
                                     </div>
+                                    <span className="text-xs font-bold bg-slate-100 text-slate-600 px-2 py-1 rounded">
+                                        Stable
+                                    </span>
                                 </div>
-                            </div>
+                                <p className="text-slate-400 text-xs font-bold uppercase tracking-widest mb-1">Avg Yield</p>
+                                <h3 className="text-3xl font-black text-slate-900">8.4%</h3>
+                            </motion.div>
+
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.3 }}
+                                className="bg-white p-6 rounded-2xl border border-red-100 shadow-xl shadow-red-500/5 hover:-translate-y-1 transition-all"
+                            >
+                                <div className="flex justify-between items-start mb-4">
+                                    <div className="p-2 bg-red-50 rounded-lg text-red-600">
+                                        <CheckCircle className="w-6 h-6" />
+                                    </div>
+                                    <span className="text-xs font-bold bg-blue-100 text-blue-700 px-2 py-1 rounded">
+                                        Active
+                                    </span>
+                                </div>
+                                <p className="text-slate-400 text-xs font-bold uppercase tracking-widest mb-1">Active Units</p>
+                                <h3 className="text-3xl font-black text-slate-900">12</h3>
+                            </motion.div>
                         </div>
                     </div>
                 </div>

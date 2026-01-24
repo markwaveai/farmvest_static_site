@@ -61,11 +61,11 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center gap-3 text-gray-400">
                                 <Phone className="w-5 h-5 text-primary" />
-                                <span>+91 987 654 3210</span>
+                                <span>+91 7702710290</span>
                             </li>
                             <li className="flex items-center gap-3 text-gray-400">
                                 <Mail className="w-5 h-5 text-primary" />
-                                <span>info@farmvest.com</span>
+                                <span>contact@markwave.ai</span>
                             </li>
                         </ul>
                     </div>

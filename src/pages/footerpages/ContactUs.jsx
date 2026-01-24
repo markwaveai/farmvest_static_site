@@ -118,10 +118,10 @@ const ContactUs = () => {
                             className="space-y-8"
                         >
                             <div className="grid gap-6">
-                                <ContactInfo icon={Mail} title="Direct Email" details="info@farmvest.com" />
-                                <ContactInfo icon={Phone} title="Farm Support" details="+91 987 654 3210" />
-                                <ContactInfo icon={MapPin} title="Operational Hub" details="123 Green Pastures Lane, Farmville Dist, AP, India" />
-                                <ContactInfo icon={ShieldCheck} title="Verified Business" details="ISO 9001:2015 Certified Farm Operations" />
+                                <ContactInfo icon={Mail} title="Direct Email" details="contact@markwave.ai" />
+                                <ContactInfo icon={Phone} title="Farm Support" details="+91 7702710290" />
+                                <ContactInfo icon={MapPin} title="Operational Hub" details="206,2nd floor,Block-A,PSR Prime Tower,Beside DLF,Gachibowli" />
+                                {/* <ContactInfo icon={ShieldCheck} title="Verified Business" details="ISO 9001:2015 Certified Farm Operations" /> */}
                             </div>
 
                             <div className="p-8 bg-primary rounded-[40px] text-white shadow-xl shadow-primary/20 relative overflow-hidden group">
@@ -130,7 +130,7 @@ const ContactUs = () => {
                                     <p className="text-green-50 text-sm leading-relaxed mb-6 italic">
                                         Investors can schedule physical site visits to our buffalo sheds via the "Investor Login" portal. Experience the operations first-hand carefully managed by our supervisors.
                                     </p>
-                                    <button className="px-8 py-3 bg-white text-primary font-bold rounded-xl text-xs uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-all shadow-lg">
+                                    <button disabled className="px-8 py-3 bg-white text-primary font-bold rounded-xl text-xs uppercase tracking-widest transition-all shadow-lg opacity-50 cursor-not-allowed">
                                         Schedule Now
                                     </button>
                                 </div>

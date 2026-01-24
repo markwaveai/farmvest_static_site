@@ -30,10 +30,10 @@ const AboutUs = () => {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-4xl md:text-6xl font-black text-slate-900 mb-6"
                     >
-                        Digitizing <span className="text-primary italic">Buffalo</span> Farming
+                        <span className="text-primary italic">Buffalo</span> Farming
                     </motion.h1>
                     <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed italic">
-                        FarmVest is a technology-driven buffalo farming investment platform. We bridge the gap between investors and agriculture through real-time monitoring and expert management.
+                        FarmVest is a technology-driven buffalo farming platform. We bridge the gap between investors and agriculture through real-time monitoring and expert management.
                     </p>
                 </div>
             </section>

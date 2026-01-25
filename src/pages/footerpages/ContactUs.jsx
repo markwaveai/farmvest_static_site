@@ -118,9 +118,9 @@ const ContactUs = () => {
                             className="space-y-8"
                         >
                             <div className="grid gap-6">
-                                <ContactInfo icon={Mail} title="Direct Email" details="contact@markwave.ai" />
-                                <ContactInfo icon={Phone} title="Farm Support" details="+91 7702710290" />
-                                <ContactInfo icon={MapPin} title="Operational Hub" details="206,2nd floor,Block-A,PSR Prime Tower,Beside DLF,Gachibowli" />
+                                <ContactInfo icon={Mail} title="Email Us" details="contact@markwave.ai" />
+                                <ContactInfo icon={Phone} title="Call Us" details="+91 77027 10290" />
+                                <ContactInfo icon={MapPin} title="Head Office" details="206, 2nd Floor, Block-A, Beside PSR Prime Towers, Beside DLF, Gachibowli, Hyderabad, Telangana 500032" />
                                 {/* <ContactInfo icon={ShieldCheck} title="Verified Business" details="ISO 9001:2015 Certified Farm Operations" /> */}
                             </div>
 
@@ -130,7 +130,7 @@ const ContactUs = () => {
                                     <p className="text-green-50 text-sm leading-relaxed mb-6 italic">
                                         Investors can schedule physical site visits to our buffalo sheds via the "Investor Login" portal. Experience the operations first-hand carefully managed by our supervisors.
                                     </p>
-                                    <button disabled className="px-8 py-3 bg-white text-primary font-bold rounded-xl text-xs uppercase tracking-widest transition-all shadow-lg opacity-50 cursor-not-allowed">
+                                    <button disabled className="px-8 py-3 bg-white text-primary font-bold rounded-xl text-xs uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-all shadow-lg opacity-50 cursor-not-allowed">
                                         Schedule Now
                                     </button>
                                 </div>

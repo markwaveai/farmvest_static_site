@@ -13,6 +13,10 @@ import InvestmentPlans from './pages/footerpages/InvestmentPlans';
 import OurTeam from './pages/footerpages/OurTeam';
 import Blog from './pages/footerpages/Blog';
 import ContactUs from './pages/footerpages/ContactUs';
+import PrivacyPolicy from './pages/footerpages/PrivacyPolicy';
+import Support from './pages/footerpages/Support';
+import CookiePolicy from './pages/footerpages/CookiePolicy';
+import TermsOfService from './pages/footerpages/TermsOfService';
 
 import ScrollToTop from './components/ScrollToTop';
 import SideRoleNav from './components/SideRoleNav';
@@ -41,6 +45,10 @@ function App() {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/invest" element={<InvestmentPlans />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/support" element={<Support />} />
+        <Route path="/cookie-policy" element={<CookiePolicy />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
       </Routes>
     </Router>
   );

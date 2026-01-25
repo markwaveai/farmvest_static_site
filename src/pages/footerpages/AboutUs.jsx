@@ -33,7 +33,7 @@ const AboutUs = () => {
                         <span className="text-primary italic">Buffalo</span> Farming
                     </motion.h1>
                     <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed italic">
-                        FarmVest is a technology-driven buffalo farming platform. We bridge the gap between investors and agriculture through real-time monitoring and expert management.
+                        FarmVest is a technology-driven buffalo farming investment platform. We bridge the gap between investors and agriculture through real-time monitoring and expert management.
                     </p>
                 </div>
             </section>

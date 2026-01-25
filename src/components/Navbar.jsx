@@ -53,7 +53,7 @@ const Navbar = () => {
                             to={link.path}
                             className={cn(
                                 "flex items-center gap-2 text-sm font-medium transition-all hover:text-primary relative group font-bold",
-                                (scrolled || ['/contact-us', '/investor', '/about-us', '/investment-plans', '/blog', '/our-team'].includes(location.pathname)) ? "text-gray-600" : "text-gray-200"
+                                (scrolled || ['/contact-us', '/investor', '/about-us', '/investment-plans', '/blog', '/our-team', '/cookie-policy', '/privacy-policy', '/terms-of-service', '/support'].includes(location.pathname)) ? "text-gray-600" : "text-gray-200"
                             )}
                         >
                             <link.icon className="w-4 h-4 transition-transform group-hover:-translate-y-0.5" />
@@ -68,7 +68,7 @@ const Navbar = () => {
                     className="md:hidden text-gray-600"
                     onClick={() => setIsOpen(!isOpen)}
                 >
-                    {isOpen ? <X className="w-6 h-6" /> : <Menu className={cn("w-6 h-6", (scrolled || ['/contact-us', '/investor', '/about-us', '/investment-plans', '/blog', '/our-team'].includes(location.pathname)) ? "text-slate-900" : "text-white")} />}
+                    {isOpen ? <X className="w-6 h-6" /> : <Menu className={cn("w-6 h-6", (scrolled || ['/contact-us', '/investor', '/about-us', '/investment-plans', '/blog', '/our-team', '/cookie-policy', '/privacy-policy', '/terms-of-service', '/support'].includes(location.pathname)) ? "text-slate-900" : "text-white")} />}
                 </button>
             </div>
 

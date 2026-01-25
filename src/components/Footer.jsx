@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer className="bg-dark text-white pt-16 pb-8">
             <div className="container mx-auto px-4 md:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
                     {/* Company Info */}
                     <div>
                         <div className="flex items-center gap-2 mb-6">
@@ -56,12 +56,12 @@ const Footer = () => {
                         <h3 className="text-lg font-bold mb-6">Contact Us</h3>
                         <ul className="space-y-4">
                             <li className="flex items-start gap-3 text-gray-400">
-                                <MapPin className="w-10 h-5 text-primary mt-1" />
+                                <MapPin className="w-5 h-5 text-primary mt-1" />
                                 <span>206,2nd floor,Block-A,PSR Prime Tower,Beside DLF,Gachibowli</span>
                             </li>
                             <li className="flex items-center gap-3 text-gray-400">
                                 <Phone className="w-5 h-5 text-primary" />
-                                <span>+91 7702710290</span>
+                                <span>+91 77027 10290</span>
                             </li>
                             <li className="flex items-center gap-3 text-gray-400">
                                 <Mail className="w-5 h-5 text-primary" />
@@ -74,9 +74,10 @@ const Footer = () => {
                 <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-gray-500 text-sm">© 2026 FarmVest. All rights reserved.</p>
                     <div className="flex gap-6 text-sm text-gray-500">
-                        <Link to="#" className="hover:text-white">Privacy Policy</Link>
-                        <Link to="#" className="hover:text-white">Terms of Service</Link>
-                        <Link to="#" className="hover:text-white">Cookie Policy</Link>
+                        <Link to="/privacy-policy" className="hover:text-white">Privacy Policy</Link>
+                        <Link to="/terms-of-service" className="hover:text-white">Terms of Service</Link>
+                        <Link to="/support" className="hover:text-white">Support</Link>
+                        <Link to="/cookie-policy" className="hover:text-white">Cookie Policy</Link>
                     </div>
                 </div>
             </div>

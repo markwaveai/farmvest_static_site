@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronRight, Home, Info, TrendingUp, BookOpen, Phone } from 'lucide-react';
 import { cn } from '../lib/utils';
 // Assuming the logo is saved in assets, if not I'll use text for now
-// import Logo from '../assets/logo.png'; 
+import Logo from '../assets/logo.png';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -35,14 +35,8 @@ const Navbar = () => {
         >
             <div className="w-full px-4 md:px-8 flex justify-between items-center">
                 {/* Logo */}
-                <Link to="/" className="flex items-center gap-3 group bg-emerald-50/90 backdrop-blur-sm p-1.5 pr-6 rounded-2xl border border-emerald-100 shadow-sm transition-all hover:shadow-md hover:bg-emerald-50">
-                    {/* Logo Box */}
-                    <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-sm group-hover:scale-105 transition-transform">
-                        F
-                    </div>
-                    <span className="text-xl font-bold tracking-tight text-slate-900">
-                        <span className="text-primary">Farm</span>Vest
-                    </span>
+                <Link to="/" className="flex items-center transition-all">
+                    <img src={Logo} alt="FarmVest" className="h-24 rounded-lg hover:scale-105 transition-transform" />
                 </Link>
 
                 {/* Desktop Navigation */}

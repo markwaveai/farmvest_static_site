@@ -27,9 +27,9 @@ const Section = ({ title, icon: Icon, children, className = "" }) => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className={`bg-white rounded-2xl shadow-xl border border-green-100 overflow-hidden ${className}`}
+        className={`bg-white rounded-2xl shadow-xl overflow-hidden ${className}`}
     >
-        <div className="bg-primary/5 p-6 border-b border-green-100 flex items-center gap-4">
+        <div className="bg-primary/5 p-6 flex items-center gap-4">
             <div className="p-3 bg-white rounded-xl shadow-sm text-primary">
                 <Icon className="w-8 h-8" />
             </div>

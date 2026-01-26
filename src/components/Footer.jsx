@@ -2,6 +2,8 @@ import React from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+import Logo from '../assets/logo.png';
+
 const Footer = () => {
     return (
         <footer className="bg-dark text-white pt-16 pb-8">
@@ -9,12 +11,10 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
                     {/* Company Info */}
                     <div>
-                        <div className="flex items-center gap-2 mb-6">
-                            <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center text-white font-bold text-lg">
-                                F
-                            </div>
-                            <h2 className="text-2xl font-bold"><span className="text-primary">FarmVest</span></h2>
-                        </div>
+                        <Link to="/" className="inline-block mb-6">
+                            <img src={Logo} alt="FarmVest" className="h-20 rounded-md hover:opacity-80 transition-opacity" />
+                        </Link>
+
                         <p className="text-gray-400 mb-6 leading-relaxed">
                             Revolutionizing livestock farming through sustainable investment and modern technology. Join us in building the future of agriculture.
                         </p>

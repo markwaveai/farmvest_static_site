@@ -51,7 +51,7 @@ const TermsOfService = () => {
             <div className="container mx-auto px-4 max-w-4xl py-20">
 
                 {/* Introduction Box */}
-                <div className="bg-primary/5 rounded-2xl p-8 border border-primary/10 mb-16 flex gap-6">
+                <div className="bg-primary/5 rounded-2xl p-8 mb-16 flex gap-6">
                     <AlertTriangle className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
                     <div>
                         <h3 className="font-bold text-slate-900 text-lg mb-2">Why These Terms Matter</h3>

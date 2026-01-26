@@ -4,14 +4,14 @@ import { ShieldCheck, TrendingUp, Activity, Users, Zap, Database, Droplet, Arrow
 
 const SectionHeader = ({ title, subtitle, className = "" }) => (
     <div className={`mb-12 ${className}`}>
-        <motion.h3 
+        <motion.h3
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="text-primary font-bold tracking-widest uppercase text-sm mb-2"
         >
             {subtitle}
         </motion.h3>
-        <motion.h2 
+        <motion.h2
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
@@ -41,19 +41,19 @@ const Card = ({ icon: Icon, title, description, delay }) => (
 const FarmVestModel = () => {
     return (
         <div className="space-y-32">
-            
+
             {/* White Revolution 2.0 */}
             <section className="container mx-auto px-4">
                 <div className="bg-slate-900 rounded-[3rem] p-8 md:p-16 text-white relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-                    
+
                     <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
                         <div>
                             <h1 className='text-white text-4xl font-bold mb-6 leading-tight w-[130%] font-extrabold'>
                                 The 'White Revolution 2.0' Philosophy
                             </h1>
                             <p className="text-slate-300 text-lg leading-relaxed mb-8">
-                                We are driving a shift from the original White Revolution—which focused on volume—to a new era prioritizing 
+                                We are driving a shift from the original White Revolution—which focused on volume—to a new era prioritizing
                                 <span className="text-primary font-bold"> verification, integrity, and engineering purity</span> at the source.
                             </p>
                             <p className="text-slate-400 leading-relaxed">
@@ -79,28 +79,28 @@ const FarmVestModel = () => {
 
             {/* Precision Dairy Operations */}
             <section className="container mx-auto px-4">
-                <SectionHeader 
-                    title="Precision Dairy Operations" 
+                <SectionHeader
+                    title="Precision Dairy Operations"
                     subtitle="Technology-Controlled Ecosystem"
                     className="text-center max-w-3xl mx-auto"
                 />
-                
+
                 <div className="grid md:grid-cols-3 gap-8 mt-6">
-                    <Card 
-                        icon={Activity} 
-                        title="Scientific Cattle Management" 
+                    <Card
+                        icon={Activity}
+                        title="Scientific Cattle Management"
                         description="Buffaloes are high-value biological assets. Their health is monitored 24/7 using wearable health bands and IoT sensors to enable preventive healthcare."
                         delay={0.1}
                     />
-                    <Card 
-                        icon={Droplet} 
-                        title="Zero Human-Touch Architecture" 
+                    <Card
+                        icon={Droplet}
+                        title="Zero Human-Touch Architecture"
                         description="Milk moves in a sealed environment—from automated milking to instant chilling—eliminating risks of manual handling, dilution, or chemical preservatives."
                         delay={0.2}
                     />
-                    <Card 
-                        icon={Database} 
-                        title="Genetic Governance" 
+                    <Card
+                        icon={Database}
+                        title="Genetic Governance"
                         description="Strategic Artificial Insemination (AI) programs ensure a superior herd, focusing on proven high-yield and disease-resistant bloodlines."
                         delay={0.3}
                     />
@@ -112,8 +112,8 @@ const FarmVestModel = () => {
                 <div className="container mx-auto px-4">
                     <div className="grid lg:grid-cols-2 gap-16 items-start">
                         <div className="sticky top-24">
-                            <SectionHeader 
-                                title="The Cloud Dairy Investment Model" 
+                            <SectionHeader
+                                title="The Cloud Dairy Investment Model"
                                 subtitle="Structured Financial Asset"
                             />
                             <p className="text-gray-600 text-lg leading-relaxed mb-8">
@@ -166,10 +166,10 @@ const FarmVestModel = () => {
             <section className="container mx-auto px-4 pb-20">
                 <div className="grid lg:grid-cols-2 gap-8">
                     {/* Risk Mitigation */}
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        className="bg-green-50 rounded-3xl p-10 border border-green-100"
+                        className="bg-green-50 rounded-3xl p-10"
                     >
                         <ShieldCheck className="w-12 h-12 text-green-600 mb-6" />
                         <h3 className="text-2xl font-bold text-gray-900 mb-4">Risk Mitigation & Capital Safety</h3>
@@ -190,7 +190,7 @@ const FarmVestModel = () => {
                     </motion.div>
 
                     {/* Exit Policy */}
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         className="bg-slate-50 rounded-3xl p-10 border border-slate-100"
@@ -198,10 +198,10 @@ const FarmVestModel = () => {
                         <LogOut className="w-12 h-12 text-slate-600 mb-6" />
                         <h3 className="text-2xl font-bold text-gray-900 mb-4">Liquidity & Exit Policy</h3>
                         <p className="text-gray-600 mb-8">
-                            To ensure capital flexibility, Farmvest provides a defined 
+                            To ensure capital flexibility, Farmvest provides a defined
                             <span className="font-bold text-gray-900"> exit option after 36 months</span>.
                         </p>
-                        
+
                         <div className="space-y-4">
                             <div className="flex gap-4 p-4 bg-white rounded-xl shadow-sm">
                                 <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold">1</div>

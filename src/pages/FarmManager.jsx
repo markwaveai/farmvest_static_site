@@ -212,7 +212,7 @@ const FarmManager = () => {
                                     For issues requiring timely medical attention but not immediately life-threatening.
                                 </p>
                             </div>
-                            <div className="bg-green-50 border border-green-100 p-6 rounded-xl">
+                            <div className="bg-green-50 p-6 rounded-xl">
                                 <div className="flex items-center gap-2 mb-3">
                                     <BadgeInfo className="w-6 h-6 text-green-600" />
                                     <h3 className="font-bold text-green-800 text-lg">Low Priority</h3>

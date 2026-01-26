@@ -162,7 +162,7 @@ const PrivacyPolicy = () => {
                                         </li>
                                     ))}
                                 </ul>
-                                <div className="mt-6 p-4 bg-white rounded-xl border border-green-100 text-center text-sm font-medium text-slate-600">
+                                <div className="mt-6 p-4 bg-white rounded-xl text-center text-sm font-medium text-slate-600">
                                     Farmvest does not sell, trade, or commercially exploit personal data.
                                 </div>
                             </Card>
@@ -297,7 +297,7 @@ const PrivacyPolicy = () => {
                     viewport={{ once: true }}
                     className="max-w-3xl mx-auto"
                 >
-                    <div className="bg-primary/5 rounded-3xl p-8 border border-primary/10 text-center">
+                    <div className="bg-primary/5 rounded-3xl p-8 text-center">
                         <div className="inline-flex items-center justify-center w-12 h-12 bg-white rounded-full text-primary mb-4 shadow-sm">
                             <Info className="w-6 h-6" />
                         </div>

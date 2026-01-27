@@ -70,18 +70,18 @@ const Navbar = () => {
             {isOpen && createPortal(
                 <>
                     {/* Backdrop */}
-                    <div 
+                    <div
                         className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] md:hidden animate-in fade-in duration-200"
                         onClick={() => setIsOpen(false)}
                     />
-                    
+
                     {/* Sidebar */}
                     <div className="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-white z-[70] shadow-2xl md:hidden overflow-y-auto animate-in slide-in-from-right duration-300">
                         <div className="p-6 flex flex-col gap-6">
                             {/* Header */}
                             <div className="flex items-center justify-between">
                                 <span className="text-lg font-black text-primary tracking-tight">MENU</span>
-                                <button 
+                                <button
                                     onClick={() => setIsOpen(false)}
                                     className="p-2 hover:bg-gray-100 rounded-full transition-colors"
                                 >
@@ -97,8 +97,8 @@ const Navbar = () => {
                                         to={link.path}
                                         className={cn(
                                             "flex items-center gap-4 p-3 rounded-xl transition-all",
-                                            location.pathname === link.path 
-                                                ? "bg-primary/10 text-primary font-bold" 
+                                            location.pathname === link.path
+                                                ? "bg-primary/10 text-primary font-bold"
                                                 : "text-gray-600 hover:bg-gray-50 font-medium"
                                         )}
                                         onClick={() => setIsOpen(false)}

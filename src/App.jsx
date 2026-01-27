@@ -50,6 +50,13 @@ function App() {
         <Route path="/cookie-policy" element={<CookiePolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
       </Routes>
+
+      {/* Fixed Version Display */}
+      <div className="fixed bottom-4 right-4 z-[9999] opacity-70 hover:opacity-100 transition-opacity duration-300">
+        <span className="bg-black/80 backdrop-blur-md text-white/50 text-xs font-medium px-3 py-1 rounded-full border border-white/10 select-none">
+          {import.meta.env.VITE_APP_VERSION}
+        </span>
+      </div>
     </Router>
   );
 }

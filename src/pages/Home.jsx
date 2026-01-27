@@ -31,7 +31,7 @@ const Home = () => {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="relative h-screen flex items-center justify-center overflow-hidden">
+            <section className="relative h-[50vh] md:h-screen flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <motion.div
                         initial={{ scale: 1.1, opacity: 0 }}
@@ -47,7 +47,7 @@ const Home = () => {
                     </motion.div>
                 </div>
 
-                <div className="container relative z-10 px-4 h-full flex flex-col justify-start pt-12 md:pt-24 items-center">
+                <div className="container relative z-10 px-4 h-full flex flex-col justify-start pt-32 md:pt-24 items-center">
                     {/* Top Floating Badge */}
 
 
@@ -105,7 +105,7 @@ const Home = () => {
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 1.8, duration: 1 }}
-                        className="absolute bottom-12 w-full max-w-5xl p-4 text-white/80 text-lg md:text-2xl font-medium tracking-[0.3em] uppercase mt-4 border-t border-white/20 backdrop-blur-sm rounded-xl text-center font-bold"
+                        className="hidden md:block absolute bottom-12 w-full max-w-5xl p-4 text-white/80 text-lg md:text-2xl font-medium tracking-[0.3em] uppercase mt-4 border-t border-white/20 backdrop-blur-sm rounded-xl text-center font-bold"
                     >
                         Comprehensive Farm Operations and Livestock Management System
                     </motion.div>

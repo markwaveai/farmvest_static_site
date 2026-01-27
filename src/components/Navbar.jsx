@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronRight, Home, Info, TrendingUp, BookOpen, Phone } from 'lucide-react';
+import { Menu, X, ChevronRight, Home, Info, TrendingUp, BookOpen, Phone, User, Stethoscope, ClipboardCheck, Users, Tractor } from 'lucide-react';
 import { cn } from '../lib/utils';
 // Assuming the logo is saved in assets, if not I'll use text for now
 import Logo from '../assets/logo.png';
@@ -30,13 +31,13 @@ const Navbar = () => {
         <nav
             className={cn(
                 'fixed top-0 w-full z-50 transition-all duration-300',
-                scrolled ? 'bg-white/90 backdrop-blur-md shadow-md py-4' : 'bg-transparent py-6'
+                scrolled ? 'bg-white/90 backdrop-blur-md shadow-md py-4' : 'bg-transparent py-4'
             )}
         >
             <div className="w-full px-4 md:px-8 flex justify-between items-center">
                 {/* Logo */}
                 <Link to="/" className="flex items-center transition-all">
-                    <img src={Logo} alt="FarmVest" className="h-24 rounded-lg hover:scale-105 transition-transform" />
+                    <img src={Logo} alt="FarmVest" className="h-12 md:h-16 rounded-lg hover:scale-105 transition-transform" />
                 </Link>
 
                 {/* Desktop Navigation */}
@@ -57,36 +58,89 @@ const Navbar = () => {
                     ))}
                 </div>
 
-                {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden text-gray-600"
-                    onClick={() => setIsOpen(!isOpen)}
+                    className="md:hidden text-gray-600 bg-white/50 p-2 rounded-lg backdrop-blur-sm shadow-sm border border-gray-100"
+                    onClick={() => setIsOpen(true)}
                 >
-                    {isOpen ? <X className="w-6 h-6" /> : <Menu className={cn("w-6 h-6", (scrolled || ['/contact-us', '/investor', '/about-us', '/investment-plans', '/blog', '/our-team', '/cookie-policy', '/privacy-policy', '/terms-of-service', '/support'].includes(location.pathname)) ? "text-slate-900" : "text-white")} />}
+                    <Menu className="w-6 h-6 text-gray-800" />
                 </button>
             </div>
 
-            {/* Mobile Menu */}
-            {isOpen && (
-                <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-4 px-4 flex flex-col gap-4 animate-in slide-in-from-top-5">
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.name}
-                            to={link.path}
-                            className="text-gray-700 hover:text-primary font-medium py-2 border-b border-gray-100"
-                            onClick={() => setIsOpen(false)}
-                        >
-                            {link.name}
-                        </Link>
-                    ))}
-                    <Link
-                        to="/login"
-                        className="w-full text-center py-3 rounded-lg bg-primary text-white font-bold"
+            {/* Mobile Menu Drawer */}
+            {isOpen && createPortal(
+                <>
+                    {/* Backdrop */}
+                    <div 
+                        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] md:hidden animate-in fade-in duration-200"
                         onClick={() => setIsOpen(false)}
-                    >
-                        Login Portal
-                    </Link>
-                </div>
+                    />
+                    
+                    {/* Sidebar */}
+                    <div className="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-white z-[70] shadow-2xl md:hidden overflow-y-auto animate-in slide-in-from-right duration-300">
+                        <div className="p-6 flex flex-col gap-6">
+                            {/* Header */}
+                            <div className="flex items-center justify-between">
+                                <span className="text-lg font-black text-primary tracking-tight">MENU</span>
+                                <button 
+                                    onClick={() => setIsOpen(false)}
+                                    className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                                >
+                                    <X className="w-6 h-6 text-gray-500" />
+                                </button>
+                            </div>
+
+                            {/* Main Navigation */}
+                            <div className="flex flex-col gap-2">
+                                {navLinks.map((link) => (
+                                    <Link
+                                        key={link.name}
+                                        to={link.path}
+                                        className={cn(
+                                            "flex items-center gap-4 p-3 rounded-xl transition-all",
+                                            location.pathname === link.path 
+                                                ? "bg-primary/10 text-primary font-bold" 
+                                                : "text-gray-600 hover:bg-gray-50 font-medium"
+                                        )}
+                                        onClick={() => setIsOpen(false)}
+                                    >
+                                        <link.icon className="w-5 h-5" />
+                                        {link.name}
+                                    </Link>
+                                ))}
+                            </div>
+
+                            <div className="h-px bg-gray-100 w-full" />
+
+                            {/* Portals Section */}
+                            <div className="flex flex-col gap-2">
+                                <span className="text-xs font-bold text-gray-400 uppercase tracking-wider px-3 mb-2">Access Portals</span>
+                                {[
+                                    { name: 'Investor', path: '/investor', icon: User, color: 'text-blue-500', bg: 'bg-blue-50' },
+                                    { name: 'Supervisor', path: '/supervisor', icon: ClipboardCheck, color: 'text-yellow-500', bg: 'bg-yellow-50' },
+                                    { name: 'Farm Manager', path: '/farm-manager', icon: Tractor, color: 'text-green-500', bg: 'bg-green-50' },
+                                    { name: 'Doctor', path: '/doctor', icon: Stethoscope, color: 'text-red-500', bg: 'bg-red-50' },
+                                    { name: 'Asst. Doctor', path: '/assistant-doctor', icon: Users, color: 'text-purple-500', bg: 'bg-purple-50' },
+                                ].map((role) => (
+                                    <Link
+                                        key={role.name}
+                                        to={role.path}
+                                        className="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-50 transition-all group"
+                                        onClick={() => setIsOpen(false)}
+                                    >
+                                        <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${role.bg} ${role.color}`}>
+                                            <role.icon className="w-4 h-4" />
+                                        </div>
+                                        <span className="text-gray-700 font-medium group-hover:text-primary transition-colors">{role.name}</span>
+                                        <ChevronRight className="w-4 h-4 ml-auto text-gray-300" />
+                                    </Link>
+                                ))}
+                            </div>
+
+
+                        </div>
+                    </div>
+                </>,
+                document.body
             )}
         </nav>
     );

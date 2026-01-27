@@ -49,7 +49,7 @@ const FarmVestModel = () => {
 
                     <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <h1 className='text-white text-4xl font-bold mb-6 leading-tight w-[130%] font-extrabold'>
+                            <h1 className='text-white text-4xl font-bold mb-6 leading-tight w-[100%] md:w-[130%] font-extrabold'>
                                 The 'White Revolution 2.0' Philosophy
                             </h1>
                             <p className="text-slate-300 text-lg leading-relaxed mb-8">
@@ -111,7 +111,7 @@ const FarmVestModel = () => {
             <section className="bg-gray-50 py-10">
                 <div className="container mx-auto px-4">
                     <div className="grid lg:grid-cols-2 gap-16 items-start">
-                        <div className="sticky top-24">
+                        <div className="lg:sticky lg:top-24">
                             <SectionHeader
                                 title="The Cloud Dairy Investment Model"
                                 subtitle="Structured Financial Asset"

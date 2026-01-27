@@ -51,7 +51,7 @@ const PrivacyPolicy = () => {
 
             {/* Hero Section */}
             <section className="bg-slate-900 pt-32 pb-24 relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1629731422770-4357353cc24f?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-10" />
+                <div className="absolute inset-0 bg-cover bg-center opacity-10" style={{ backgroundImage: `url('${import.meta.env.VITE_PRIVACY_HERO_BG}')` }} />
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
@@ -305,11 +305,11 @@ const PrivacyPolicy = () => {
                         <p className="text-slate-500 mb-6">Contact our Privacy & Compliance Team</p>
 
                         <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-                            <a href="mailto:contact@markwave.ai" className="flex items-center gap-2 px-6 py-3 bg-white rounded-xl shadow-sm border border-slate-100 text-slate-700 hover:text-primary hover:border-primary transition-all group">
+                            <a href={`mailto:${import.meta.env.VITE_COMPANY_EMAIL}`} className="flex items-center gap-2 px-6 py-3 bg-white rounded-xl shadow-sm border border-slate-100 text-slate-700 hover:text-primary hover:border-primary transition-all group">
                                 <span className="text-xl">📧</span>
-                                <span className="font-medium">contact@markwave.ai</span>
+                                <span className="font-medium">{import.meta.env.VITE_COMPANY_EMAIL}</span>
                             </a>
-                            <a href="https://farmvest.in" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 bg-white rounded-xl shadow-sm border border-slate-100 text-slate-700 hover:text-primary hover:border-primary transition-all group">
+                            <a href={import.meta.env.VITE_WEBSITE_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 bg-white rounded-xl shadow-sm border border-slate-100 text-slate-700 hover:text-primary hover:border-primary transition-all group">
                                 <span className="text-xl">🌐</span>
                                 <span className="font-medium">farmvest.in</span>
                             </a>

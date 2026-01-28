@@ -10,7 +10,7 @@ import FarmManager from './pages/FarmManager';
 import Admin from './pages/Admin';
 
 import AboutUs from './pages/footerpages/AboutUs';
-import InvestmentPlans from './pages/footerpages/InvestmentPlans';
+
 
 import Blog from './pages/footerpages/Blog';
 import ContactUs from './pages/footerpages/ContactUs';
@@ -38,7 +38,7 @@ function App() {
         <Route path="/admin" element={<Admin />} />
 
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/investment-plans" element={<InvestmentPlans />} />
+
 
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact-us" element={<ContactUs />} />

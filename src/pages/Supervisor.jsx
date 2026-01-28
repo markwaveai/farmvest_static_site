@@ -99,11 +99,11 @@ const Supervisor = () => {
                                 animate={{ opacity: 1, scale: 1 }}
                                 className="text-6xl md:text-8xl font-black mb-6 tracking-tighter leading-[0.85]"
                             >
-                                FIELD <br />
-                                <span className="text-[#8b6b36]">REGISTRY</span>
+                                SUPER
+                                <span className="text-[#8b6b36]">VISOR</span>
                             </motion.h1>
 
-                            <p className="text-xl text-green-100/40 max-w-xl font-medium leading-relaxed mb-10">
+                            <p className="text-xl text-green-100/60 max-w-xl font-medium leading-relaxed mb-10">
                                 Management of 300 livestock units across 4 rows.
                                 <span className="text-[#8b6b36]"> Systematic tag tracking initiated.</span>
                             </p>
@@ -119,7 +119,7 @@ const Supervisor = () => {
                                             <stat.icon className="w-5 h-5" />
                                         </div>
                                         <div>
-                                            <p className="text-[10px] font-bold text-gray-500 uppercase">{stat.label}</p>
+                                            <p className="text-[10px] font-bold text-gray-400 uppercase">{stat.label}</p>
                                             <p className="text-lg font-black">{stat.val}</p>
                                         </div>
                                     </div>
@@ -127,12 +127,12 @@ const Supervisor = () => {
                             </div>
                         </div>
 
-                        {/* Shed Grid Visualization - Representing 300 Animals */}
+                        {/* Shed Grid Visualization - Representing 300 Buffaloes */}
                         <div className="flex-1 w-full max-w-md hidden lg:block">
                             <div className="p-8 bg-black/40 backdrop-blur-3xl rounded-[3rem] border border-white/5 relative group">
                                 <div className="absolute -inset-0.5 bg-gradient-to-br from-[#8b6b36]/20 to-transparent rounded-[3.1rem] -z-10" />
                                 <div className="flex items-center justify-between mb-6">
-                                    <p className="text-[10px] font-black uppercase text-gray-500 tracking-widest">Shed Occupancy Matrix</p>
+                                    <p className="text-[10px] font-black uppercase text-gray-400 tracking-widest">Shed Occupancy Matrix</p>
                                     <div className="px-2 py-1 bg-emerald-500/10 rounded text-[8px] font-bold text-emerald-500 uppercase tracking-tighter">Live Scan</div>
                                 </div>
                                 <div className="grid grid-cols-10 gap-2 mb-6">
@@ -151,7 +151,7 @@ const Supervisor = () => {
                                 </div>
                                 <div className="flex justify-between items-end border-t border-white/5 pt-6 mt-6">
                                     <div className="space-y-1">
-                                        <p className="text-[10px] text-gray-500 font-bold uppercase tracking-[0.2em]">Shift</p>
+                                        <p className="text-[10px] text-gray-400 font-bold uppercase tracking-[0.2em]">Shift</p>
                                         <p className="font-black flex items-center gap-2 tracking-tight">
                                             <Clock className="w-4 h-4 text-[#8b6b36]" /> MORNING CYCLE
                                         </p>
@@ -175,14 +175,14 @@ const Supervisor = () => {
                     <div className="grid md:grid-cols-2 gap-8 items-center">
                         <div className="space-y-6">
                             <p className="text-gray-600 text-lg">
-                                Supervisors are the backbone of shed management, ensuring clear accountability and organized monitoring of every animal.
+                                Supervisors are the backbone of shed management, ensuring clear accountability and organized monitoring of every Buffalo.
                             </p>
                             <FeatureList items={[
                                 "One Supervisor assigned to each shed.",
-                                "Each shed manages 300 animals.",
-                                "Animals arranged in 4 rows of 75 for organized monitoring.",
-                                "Each animal uniquely identified with a tag number.",
-                                "Complete management of all tagged animals.",
+                                "Each shed manages 300 Buffaloes.",
+                                "Buffaloes arranged in 4 rows of 75 for organized monitoring.",
+                                "Each Buffalo uniquely identified with a tag number.",
+                                "Complete management of all tagged Buffaloes.",
                                 "Ensures clear accountability at the shed level."
                             ]} />
                         </div>
@@ -222,10 +222,10 @@ const Supervisor = () => {
                     <div className="grid md:grid-cols-2 gap-8 items-center">
                         <div className="space-y-6">
                             <FeatureList items={[
-                                "Conducts daily health checkups for all tagged animals.",
+                                "Conducts daily health checkups for all tagged Buffaloes.",
                                 "Performs detailed health checkups on a weekly basis.",
                                 "Systematic row-wise checking process.",
-                                "Ensures health monitoring for every animal without exception.",
+                                "Ensures health monitoring for every Buffalo without exception.",
                                 "Early detection of potential health issues.",
                                 "Helps prevent serious and critical health problems."
                             ]} />

@@ -57,7 +57,7 @@ const FarmVestModel = () => {
                                 <span className="text-primary font-bold"> verification, integrity, and engineering purity</span> at the source.
                             </p>
                             <p className="text-slate-400 leading-relaxed">
-                                Rather than treating milk as a commodity, Farmvest treats it as a biological product whose quality is strictly determined by the animal's health, feed, and environment.
+                                Rather than treating milk as a commodity, Farmvest treats it as a biological product whose quality is strictly determined by the Buffalo's health, feed, and environment.
                             </p>
                         </div>
                         <div className="grid grid-cols-2 gap-4">
@@ -140,7 +140,7 @@ const FarmVestModel = () => {
                             <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                                 <Users className="w-8 h-8 text-blue-500 mb-4" />
                                 <h4 className="font-bold text-gray-900 mb-2">Unit Structure</h4>
-                                <p className="text-sm text-gray-500">Investors purchase buffaloes in standardised units via the Animalkart digital platform.</p>
+                                <p className="text-sm text-gray-500">Investors purchase buffaloes in standardised units via the Buffalokart digital platform.</p>
                             </div>
                             <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                                 <Zap className="w-8 h-8 text-yellow-500 mb-4" />

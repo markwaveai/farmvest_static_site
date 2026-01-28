@@ -86,7 +86,7 @@ const FarmManager = () => {
                                 <span className="text-blue-600">MANAGER</span>
                             </h1>
 
-                            <p className="text-xl text-slate-400 max-w-xl font-medium leading-relaxed">
+                            <p className="text-xl text-slate-300 max-w-xl font-medium leading-relaxed">
                                 Strategic oversight and operational orchestration of multi-farm ecosystems with real-time health data integration.
                             </p>
                         </motion.div>
@@ -107,7 +107,7 @@ const FarmManager = () => {
                                         { l: 'Active Staff', v: '142', c: 'text-indigo-400', progress: 85 }
                                     ].map((s, i) => (
                                         <div key={i} className="space-y-3">
-                                            <p className="text-[10px] text-slate-500 uppercase font-bold tracking-widest">{s.l}</p>
+                                            <p className="text-[10px] text-slate-300 uppercase font-bold tracking-widest">{s.l}</p>
                                             <p className={`text-3xl font-black ${s.c}`}>{s.v}</p>
                                             <div className="w-full h-1 bg-white/5 rounded-full overflow-hidden">
                                                 <motion.div
@@ -122,7 +122,7 @@ const FarmManager = () => {
                                 <div className="mt-8 pt-6 border-t border-white/5 flex items-center justify-between">
                                     <div className="flex items-center gap-2">
                                         <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                                        <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Cloud Data Sync</span>
+                                        <span className="text-[10px] text-slate-300 font-bold uppercase tracking-wider">Cloud Data Sync</span>
                                     </div>
                                     <div className="text-[10px] text-blue-400 font-black">STABLE</div>
                                 </div>
@@ -245,12 +245,7 @@ const FarmManager = () => {
                             <img src={Feeding} alt="Feeding" className="w-full h-full object-cover" />
                             <div className="absolute inset-0 bg-blue-900/10 mix-blend-multiply" />
                             {/* Overlay Badge */}
-                            <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-4 py-2 rounded-lg shadow-sm">
-                                <div className="flex items-center gap-2 text-blue-800 font-bold text-sm">
-                                    <Syringe className="w-4 h-4" />
-                                    Medical Workflow Active
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </Section>

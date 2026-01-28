@@ -51,8 +51,7 @@ const Doctor = () => {
                             </div>
 
                             <h1 className="text-6xl md:text-8xl font-black text-white mb-8 tracking-tighter leading-none">
-                                MEDICAL <br />
-                                <span className="text-teal-500 italic font-serif">DIRECTOR</span>
+                                DOCTOR
                             </h1>
 
                             <p className="text-xl text-slate-400 max-w-xl font-medium leading-relaxed mb-10">
@@ -348,7 +347,7 @@ const Doctor = () => {
                                         "Keep medical instructions available for reference",
                                         "Coordinate with Assistant Doctors for minor cases",
                                         "Ensure continuity of care across treatments",
-                                        "Improve overall animal health management"
+                                        "Improve overall Buffalo health management"
                                     ].map((text, idx) => (
                                         <motion.div
                                             key={idx}

@@ -75,10 +75,10 @@ const Investor = () => {
                             animate={{ opacity: 1, y: 0 }}
                             className="text-5xl md:text-8xl font-black text-white mb-8 tracking-tight"
                         >
-                            Investor <span className="text-primary italic">Portal</span>
+                            INVESTOR
                         </motion.h1>
 
-                        <p className="text-xl text-slate-400 max-w-2xl mx-auto font-medium leading-relaxed mb-12">
+                        <p className="text-xl text-slate-300 max-w-2xl mx-auto font-medium leading-relaxed mb-12">
                             Secure, transparent, and asset-backed. Manage your biological capital with real-time monitoring and institutional-grade governance.
                         </p>
 
@@ -104,7 +104,7 @@ const Investor = () => {
                                             {stat.trend}
                                         </span>
                                     </div>
-                                    <p className="text-slate-400 text-xs font-bold uppercase tracking-widest mb-1">{stat.label}</p>
+                                    <p className="text-slate-300 text-xs font-bold uppercase tracking-widest mb-1">{stat.label}</p>
                                     <h3 className="text-3xl font-black text-white">{stat.value}</h3>
                                 </motion.div>
                             ))}
@@ -216,7 +216,7 @@ const Investor = () => {
                             <div>
                                 <h4 className="text-primary font-bold uppercase tracking-widest text-xs mb-2">Payout Structure</h4>
                                 <p className="text-4xl font-black">Fixed Monthly Income</p>
-                                <p className="text-slate-400 mt-2">Defined clearly in your legal agreement.</p>
+                                <p className="text-slate-300 mt-2">Defined clearly in your legal agreement.</p>
                             </div>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {[
@@ -225,7 +225,7 @@ const Investor = () => {
                                     "Contractual financial return",
                                     "Backed by real asset value"
                                 ].map((item, i) => (
-                                    <div key={i} className="flex items-center gap-2 text-slate-400 text-sm">
+                                    <div key={i} className="flex items-center gap-2 text-slate-300 text-sm">
                                         <CheckCircle className="w-4 h-4 text-primary" />
                                         <span>{item}</span>
                                     </div>
@@ -410,7 +410,7 @@ const Investor = () => {
                     <div className="relative z-10 text-center max-w-4xl mx-auto">
                         <span className="text-primary font-bold tracking-widest uppercase text-sm">Exit Options</span>
                         <h2 className="text-4xl md:text-6xl font-black mt-4 mb-8">Ownership Freedom <br />After Lock-In</h2>
-                        <p className="text-slate-400 text-xl mb-12">After 36 months, you have the absolute freedom to choose your path.</p>
+                        <p className="text-slate-300 text-xl mb-12">After 36 months, you have the absolute freedom to choose your path.</p>
 
                         <div className="grid md:grid-cols-2 gap-8 mb-16">
                             <div className="bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 text-left">

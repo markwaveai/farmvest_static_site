@@ -151,7 +151,7 @@ const PrivacyPolicy = () => {
                                         "Execute agreements and contractual obligations",
                                         "Process income payouts",
                                         "Provide real-time transparency through dashboards",
-                                        "Maintain animal health and operational governance",
+                                        "Maintain Buffalo health and operational governance",
                                         "Comply with legal and financial requirements"
                                     ].map((item, i) => (
                                         <li key={i} className="flex gap-3">

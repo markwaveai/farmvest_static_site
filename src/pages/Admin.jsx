@@ -134,7 +134,7 @@ const Admin = () => {
                             <div className="absolute -top-12 -right-12 w-40 h-40 bg-teal-500/20 rounded-full blur-3xl group-hover:bg-teal-500/30 transition-all" />
                             <Database className="w-12 h-12 text-teal-500 mb-6" />
                             <h3 className="text-xl font-bold mb-3">System Configuration</h3>
-                            <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                            <p className="text-slate-300 text-sm leading-relaxed mb-6">
                                 Manage farm parameters, investment tiers, and global system settings from the secure core.
                             </p>
                             <button className="w-full py-3 bg-white/10 hover:bg-white/20 border border-white/10 rounded-xl font-bold transition-all text-sm">

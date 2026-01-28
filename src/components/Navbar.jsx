@@ -41,20 +41,29 @@ const Navbar = () => {
 
                 {/* Desktop Navigation */}
                 <div className="hidden xl:flex items-center gap-8 bg-white/10 backdrop-blur-md border border-white/20 px-8 py-2 rounded-full shadow-lg">
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.name}
-                            to={link.path}
-                            className={cn(
-                                "flex items-center gap-2 text-sm font-medium transition-all hover:text-primary relative group font-bold",
-                                (scrolled || ['/contact-us', '/investor', '/about-us', '/investment-plans', '/blog', '/cookie-policy', '/privacy-policy', '/terms-of-service', '/support', '/admin'].includes(location.pathname)) ? "text-gray-600" : "text-gray-200"
-                            )}
-                        >
-                            <link.icon className="w-4 h-4 transition-transform group-hover:-translate-y-0.5" />
-                            <span>{link.name}</span>
-                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
-                        </Link>
-                    ))}
+                    {navLinks.map((link) => {
+                        const isActive = location.pathname === link.path;
+                        return (
+                            <Link
+                                key={link.name}
+                                to={link.path}
+                                className={cn(
+                                    "flex items-center gap-2 text-sm font-medium transition-all hover:text-primary relative group font-bold",
+                                    isActive
+                                        ? "text-primary"
+                                        : (scrolled || ['/contact-us', '/investor', '/about-us', '/investment-plans', '/blog', '/cookie-policy', '/privacy-policy', '/terms-of-service', '/support', '/admin'].includes(location.pathname))
+                                            ? "text-gray-600"
+                                            : "text-gray-200"
+                                )}
+                            >
+                                <link.icon className={cn(
+                                    "w-4 h-4 transition-transform group-hover:-translate-y-0.5",
+                                    isActive && "text-primary"
+                                )} />
+                                <span>{link.name}</span>
+                            </Link>
+                        );
+                    })}
                 </div>
 
                 <button

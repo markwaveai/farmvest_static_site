@@ -104,8 +104,7 @@ const AssistantDoctor = () => {
                             </motion.div>
 
                             <h1 className="text-6xl lg:text-8xl font-black text-white mb-8 leading-[0.85] tracking-tighter">
-                                FIELD <br />
-                                <span className="text-teal-500">INTERVENTION</span>
+                                ASST <span className="text-teal-500">DOCTOR</span>
                             </h1>
 
                             <p className="text-xl text-slate-400 max-w-xl leading-relaxed mb-12 font-medium">
@@ -266,7 +265,7 @@ const AssistantDoctor = () => {
                                     { icon: Stethoscope, title: "Expert Guidance", text: "Work under the guidance of Doctors" },
                                     { icon: ClipboardList, title: "Precision Docs", text: "Follow diagnosis & instructions" },
                                     { icon: Activity, title: "Prioritized Care", text: "Handle low-priority health issues" },
-                                    { icon: Eye, title: "Regular Visits", text: "Visit assigned animals for treatment" },
+                                    { icon: Eye, title: "Regular Visits", text: "Visit assigned Buffaloes for treatment" },
                                     { icon: Pill, title: "Medication", text: "Administer prescribed medicines" },
                                     { icon: TrendingUp, title: "Efficiency", text: "Support medical care delivery" }
                                 ].map((item, i) => (

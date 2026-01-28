@@ -13,6 +13,7 @@ import AboutUs from './pages/footerpages/AboutUs';
 
 
 import Blog from './pages/footerpages/Blog';
+import BlogPostDetail from './pages/footerpages/BlogPostDetail';
 import ContactUs from './pages/footerpages/ContactUs';
 import PrivacyPolicy from './pages/footerpages/PrivacyPolicy';
 import Support from './pages/footerpages/Support';
@@ -41,6 +42,7 @@ function App() {
 
 
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPostDetail />} />
         <Route path="/contact-us" element={<ContactUs />} />
 
         {/* Keeping old routes for compatibility if needed or redirecting */}

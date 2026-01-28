@@ -53,13 +53,13 @@ const AboutUs = () => {
                                 <span className="text-primary">Traditional Farming</span>
                             </h2>
                             <p className="text-lg text-slate-600 leading-relaxed italic">
-                                Our platform allows investors to earn stable returns from buffalo farming while maintaining complete transparency. Every aspect—from animal health to milk production—is tracked and reported digitally.
+                                Our platform allows investors to earn stable returns from buffalo farming while maintaining complete transparency. Every aspect—from Buffalo health to milk production—is tracked and reported digitally.
                             </p>
                             <div className="grid md:grid-cols-2 gap-4">
                                 <FeatureItem
                                     icon={Monitor}
                                     title="Digital Monitoring"
-                                    text="Track farm activities and animal health through our custom-built digital platform."
+                                    text="Track farm activities and Buffalo health through our custom-built digital platform."
                                 />
                                 <FeatureItem
                                     icon={Activity}

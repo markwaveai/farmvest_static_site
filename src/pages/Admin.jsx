@@ -31,7 +31,7 @@ const Admin = () => {
                 <div className="absolute inset-0 opacity-10">
                     <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px]" />
                 </div>
-                <div className="container mx-auto px-4 relative z-10">
+                <div className="container mx-auto px-4 relative z-10 xl:pl-24">
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
                         <div>
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-[10px] font-black uppercase tracking-widest mb-4">
@@ -39,7 +39,7 @@ const Admin = () => {
                                 System Administration
                             </div>
                             <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight">
-                                Admin <span className="text-teal-500 italic">Console</span>
+                                Admin
                             </h1>
                         </div>
                         <div className="flex gap-3">
@@ -55,7 +55,7 @@ const Admin = () => {
             </div>
 
             {/* Dashboard Content */}
-            <div className="container mx-auto px-4 -mt-8 pb-24 relative z-20 space-y-8">
+            <div className="container mx-auto px-4 -mt-8 pb-24 relative z-20 space-y-8 xl:pl-24">
                 {/* Stats Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <AdminCard

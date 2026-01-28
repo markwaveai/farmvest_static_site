@@ -70,7 +70,7 @@ const Supervisor = () => {
             <Navbar />
 
             {/* Header - Digital Registry Aesthetic */}
-            <div className="bg-[#121d11] pt-40 pb-32 text-white shadow-2xl relative overflow-hidden border-b-8 border-[#8b6b36]">
+            <div className="bg-[#121d11] pt-32 pb-20 text-white shadow-2xl relative overflow-hidden border-b-8 border-[#8b6b36]">
                 {/* Shed Grid Pattern */}
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,#1a2e18_0%,transparent_80%)]" />
@@ -82,13 +82,13 @@ const Supervisor = () => {
                     />
                 </div>
 
-                <div className="container mx-auto px-4 relative z-10">
+                <div className="container mx-auto px-4 relative z-10 xl:pl-24">
                     <div className="flex flex-col lg:flex-row items-center gap-16">
                         <div className="flex-1 text-center lg:text-left">
                             <motion.div
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
-                                className="inline-flex items-center gap-2 px-3 py-1 bg-[#8b6b36]/10 border border-[#8b6b36]/20 text-[#bda06d] text-[10px] font-black uppercase tracking-[0.4em] mb-8"
+                                className="inline-flex items-center gap-2 px-3 py-1 bg-[#8b6b36]/10 border border-[#8b6b36]/20 text-[#bda06d] text-[10px] font-black uppercase tracking-[0.4em] mb-6"
                             >
                                 <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
                                 Zone A-12 Active Registration
@@ -97,7 +97,7 @@ const Supervisor = () => {
                             <motion.h1
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 animate={{ opacity: 1, scale: 1 }}
-                                className="text-6xl md:text-8xl font-black mb-6 tracking-tighter leading-[0.85]"
+                                className="text-6xl md:text-8xl font-black mb-4 tracking-tighter leading-[0.85]"
                             >
                                 SUPER
                                 <span className="text-[#8b6b36]">VISOR</span>
@@ -127,6 +127,7 @@ const Supervisor = () => {
                             </div>
                         </div>
 
+                        {/* Shed Grid Visualization - Representing 300 Buffaloes */}
                         {/* Shed Grid Visualization - Representing 300 Buffaloes */}
                         <div className="flex-1 w-full max-w-md hidden lg:block">
                             <div className="p-8 bg-black/40 backdrop-blur-3xl rounded-[3rem] border border-white/5 relative group">
@@ -168,7 +169,7 @@ const Supervisor = () => {
                 </div>
             </div>
 
-            <div className="container mx-auto px-4 -mt-12 pb-24 relative z-20 space-y-12">
+            <div className="container mx-auto px-4 -mt-12 pb-24 relative z-20 space-y-12 xl:pl-24">
 
                 {/* 1. Supervisor Role & Shed Responsibility */}
                 <Section title="Role & Shed Responsibility" icon={Home}>

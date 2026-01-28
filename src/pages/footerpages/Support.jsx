@@ -65,7 +65,7 @@ const Support = () => {
             {/* Hero Section */}
             <section className="bg-slate-900 pt-32 pb-24 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-10" />
-                <div className="container mx-auto px-4 relative z-10 text-center">
+                <div className="container mx-auto px-4 relative z-10 text-center xl:pl-24">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -86,7 +86,7 @@ const Support = () => {
                 </div>
             </section>
 
-            <div className="container mx-auto px-4 -mt-12 relative z-20 pb-20">
+            <div className="container mx-auto px-4 -mt-12 relative z-20 pb-20 xl:pl-24">
                 {/* Introduction */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

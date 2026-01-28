@@ -166,7 +166,7 @@ const BlogPostDetail = () => {
 
             {/* Dynamic Content Layout */}
             <main className="pt-32 pb-24 px-4">
-                <div className="container mx-auto max-w-5xl">
+                <div className="container mx-auto max-w-5xl xl:pl-24">
                     <div className="grid lg:grid-cols-12 gap-12">
 
                         {/* Sidebar Style Meta */}

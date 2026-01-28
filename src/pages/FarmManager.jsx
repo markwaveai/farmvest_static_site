@@ -67,7 +67,7 @@ const FarmManager = () => {
                     <div className="w-full h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent absolute animate-scan-y top-1/4" />
                 </div>
 
-                <div className="container mx-auto px-4 relative z-10">
+                <div className="container mx-auto px-4 relative z-10 xl:pl-24">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <motion.div
                             initial={{ opacity: 0, x: -50 }}
@@ -132,7 +132,7 @@ const FarmManager = () => {
                 </div>
             </div>
 
-            <div className="container mx-auto px-4 -mt-12 pb-24 relative z-20 space-y-12">
+            <div className="container mx-auto px-4 -mt-12 pb-24 relative z-20 space-y-12 xl:pl-24">
 
                 {/* 1. Access & Responsibilities */}
                 <Section title="Access & Responsibilities" icon={Key}>

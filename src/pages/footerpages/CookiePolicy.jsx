@@ -29,7 +29,7 @@ const CookiePolicy = () => {
 
             {/* Header Section - distinct from others with a centered 'card' feel */}
             <div className="pt-32 pb-16 px-4">
-                <div className="container mx-auto max-w-5xl">
+                <div className="container mx-auto max-w-5xl xl:pl-24">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -55,7 +55,7 @@ const CookiePolicy = () => {
             </div>
 
             {/* Main Content Sections */}
-            <div className="container mx-auto px-4 max-w-6xl pb-24">
+            <div className="container mx-auto px-4 max-w-6xl pb-24 xl:pl-24">
 
                 {/* Introduction Text - Split Layout */}
                 <div className="grid md:grid-cols-2 gap-12 items-center mb-20 px-4">

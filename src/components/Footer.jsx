@@ -7,7 +7,7 @@ import Logo from '../assets/logo.png';
 const Footer = () => {
     return (
         <footer className="bg-dark text-white pt-16 pb-8">
-            <div className="container mx-auto px-4 md:px-8">
+            <div className="container mx-auto px-4 md:px-8 xl:pl-24">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
                     {/* Company Info */}
                     <div>
@@ -45,7 +45,7 @@ const Footer = () => {
                             {[
                                 { name: 'Home', path: '/' },
                                 { name: 'About Us', path: '/about-us' },
-                                { name: 'Investment Plans', path: '/investment-plans' },
+
                                 { name: 'Blog', path: '/blog' },
                                 { name: 'Contact Us', path: '/contact-us' }
                             ].map((item) => (
@@ -65,16 +65,34 @@ const Footer = () => {
                     <div>
                         <h3 className="text-lg font-bold mb-6">Contact Us</h3>
                         <ul className="space-y-4">
-                            <li className="flex items-start gap-3 text-gray-400">
-                                <MapPin className="w-5 h-5 text-primary mt-1" />
-                                <span>206,2nd floor,Block-A,PSR Prime Tower,Beside DLF,Gachibowli</span>
+                            <li className="flex items-start gap-3 text-gray-400 group">
+                                <a
+                                    href="https://www.google.com/maps/search/?api=1&query=PSR+Prime+Tower+Beside+DLF+Gachibowli"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-primary mt-1 hover:scale-110 transition-transform"
+                                >
+                                    <MapPin className="w-5 h-5" />
+                                </a>
+                                <a
+                                    href="https://www.google.com/maps/search/?api=1&query=PSR+Prime+Tower+Beside+DLF+Gachibowli"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:text-primary transition-colors"
+                                >
+                                    206,2nd floor,Block-A, PSR Prime Tower,Beside DLF,Gachibowli
+                                </a>
                             </li>
-                            <li className="flex items-center gap-3 text-gray-400">
-                                <Phone className="w-5 h-5 text-primary" />
+                            <li className="flex items-center gap-3 text-gray-400 group">
+                                <a href="tel:+917702710290" className="text-primary hover:scale-110 transition-transform">
+                                    <Phone className="w-5 h-5" />
+                                </a>
                                 <a href="tel:+917702710290" className="hover:text-primary transition-colors">+91 77027 10290</a>
                             </li>
-                            <li className="flex items-center gap-3 text-gray-400">
-                                <Mail className="w-5 h-5 text-primary" />
+                            <li className="flex items-center gap-3 text-gray-400 group">
+                                <a href={`mailto:${import.meta.env.VITE_COMPANY_EMAIL}`} className="text-primary hover:scale-110 transition-transform">
+                                    <Mail className="w-5 h-5" />
+                                </a>
                                 <a href={`mailto:${import.meta.env.VITE_COMPANY_EMAIL}`} className="hover:text-primary transition-colors">{import.meta.env.VITE_COMPANY_EMAIL}</a>
                             </li>
                         </ul>

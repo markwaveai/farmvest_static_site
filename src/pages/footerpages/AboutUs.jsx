@@ -24,7 +24,7 @@ const AboutUs = () => {
 
             {/* Hero Section */}
             <section className="relative pt-24 pb-24 overflow-hidden header-about">
-                <div className="container mx-auto px-4 relative z-10 text-center">
+                <div className="container mx-auto px-4 relative z-10 text-center xl:pl-24">
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -40,7 +40,7 @@ const AboutUs = () => {
 
             {/* Core Concept */}
             <section className="py-24">
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto px-4 xl:pl-24">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}

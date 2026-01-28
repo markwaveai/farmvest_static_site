@@ -93,7 +93,7 @@ const Blog = () => {
             <Navbar />
 
             <section className="pt-32 pb-24 header-blog overflow-hidden relative">
-                <div className="container mx-auto px-4 relative z-10 text-center">
+                <div className="container mx-auto px-4 relative z-10 text-center xl:pl-24">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -115,7 +115,7 @@ const Blog = () => {
             </section>
 
             <section className="py-24">
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto px-4 xl:pl-24">
                     <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
                         {blogPosts.map((post, index) => (
                             <BlogCard key={index} {...post} />

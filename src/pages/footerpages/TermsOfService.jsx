@@ -29,7 +29,7 @@ const TermsOfService = () => {
 
             {/* Hero Section */}
             <section className="bg-slate-50 pt-32 pb-20 border-b border-slate-200">
-                <div className="container mx-auto px-4 max-w-4xl text-center">
+                <div className="container mx-auto px-4 max-w-4xl text-center xl:pl-24">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -48,7 +48,7 @@ const TermsOfService = () => {
                 </div>
             </section>
 
-            <div className="container mx-auto px-4 max-w-4xl py-20">
+            <div className="container mx-auto px-4 max-w-4xl py-20 xl:pl-24">
 
                 {/* Introduction Box */}
                 <div className="bg-primary/5 rounded-2xl p-8 mb-16 flex gap-6">

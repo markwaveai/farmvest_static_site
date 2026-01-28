@@ -88,7 +88,7 @@ const AssistantDoctor = () => {
                     </div>
                 </div>
 
-                <div className="container mx-auto px-4 relative z-10">
+                <div className="container mx-auto px-4 relative z-10 xl:pl-24">
                     <div className="flex flex-col lg:flex-row items-center gap-16">
                         <div className="flex-1 text-center lg:text-left">
                             <motion.div
@@ -193,7 +193,7 @@ const AssistantDoctor = () => {
 
             {/* Login & Access Section */}
             <section className="py-24 bg-white relative">
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto px-4 xl:pl-24">
                     <div className="max-w-4xl mx-auto">
                         <div className="text-center mb-16">
                             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Login & Access Control</h2>
@@ -246,7 +246,7 @@ const AssistantDoctor = () => {
                 <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-teal-500/10 blur-[120px] rounded-full" />
                 <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-blue-500/10 blur-[120px] rounded-full" />
 
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto px-4 xl:pl-24">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
@@ -287,7 +287,7 @@ const AssistantDoctor = () => {
 
             {/* Updates & Reports */}
             <section className="py-24 bg-white">
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto px-4 xl:pl-24">
                     <div className="grid md:grid-cols-2 gap-12">
                         {/* Treatment Updates */}
                         <motion.div

@@ -123,12 +123,12 @@ const Navbar = () => {
                             <div className="flex flex-col gap-2">
                                 <span className="text-xs font-bold text-gray-400 uppercase tracking-wider px-3 mb-2">Access Portals</span>
                                 {[
+                                    { name: 'Admin', path: '/admin', icon: ShieldAlert, color: 'text-teal-500', bg: 'bg-teal-50' },
                                     { name: 'Investor', path: '/investor', icon: User, color: 'text-blue-500', bg: 'bg-blue-50' },
                                     { name: 'Supervisor', path: '/supervisor', icon: ClipboardCheck, color: 'text-yellow-500', bg: 'bg-yellow-50' },
                                     { name: 'Farm Manager', path: '/farm-manager', icon: Tractor, color: 'text-green-500', bg: 'bg-green-50' },
                                     { name: 'Doctor', path: '/doctor', icon: Stethoscope, color: 'text-red-500', bg: 'bg-red-50' },
                                     { name: 'Asst. Doctor', path: '/assistant-doctor', icon: Users, color: 'text-purple-500', bg: 'bg-purple-50' },
-                                    { name: 'Admin', path: '/admin', icon: ShieldAlert, color: 'text-teal-500', bg: 'bg-teal-50' },
                                 ].map((role) => (
                                     <Link
                                         key={role.name}

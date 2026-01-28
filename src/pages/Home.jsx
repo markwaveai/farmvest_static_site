@@ -31,7 +31,7 @@ const Home = () => {
                     </motion.div>
                 </div>
 
-                <div className="container relative z-10 px-4 h-full flex flex-col justify-end items-center text-center pb-24 md:absolute md:inset-x-0 md:bottom-0 md:pb-12 lg:relative lg:h-full lg:pb-24">
+                <div className="container relative z-10 px-4 h-full flex flex-col justify-end items-center text-center pb-24 md:absolute md:inset-x-0 md:bottom-0 md:pb-12 lg:relative lg:h-full lg:pb-24 xl:pl-24">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -77,7 +77,7 @@ const Home = () => {
 
             {/* Why Farmvest Section */}
             <section className="py-24 bg-white relative overflow-hidden">
-                <div className="container mx-auto px-4 relative z-10">
+                <div className="container mx-auto px-4 relative z-10 xl:pl-24">
                     <div className="grid md:grid-cols-2 gap-16 items-center mb-12 md:mb-16">
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
@@ -175,7 +175,7 @@ const Home = () => {
 
             {/* What Makes Farmvest Different */}
             <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
-                <div className="container mx-auto px-4 relative z-10">
+                <div className="container mx-auto px-4 relative z-10 xl:pl-24">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
@@ -218,7 +218,7 @@ const Home = () => {
 
             {/* How the Farmvest Model Works */}
             <section className="py-24 bg-white relative overflow-hidden">
-                <div className="container mx-auto px-4 relative z-10">
+                <div className="container mx-auto px-4 relative z-10 xl:pl-24">
                     <div className="flex flex-col lg:grid lg:grid-cols-5 gap-12 items-center">
                         <div className="lg:col-span-5 text-center lg:text-left">
                             <span className="text-primary font-bold tracking-widest uppercase text-sm">How the Farmvest Model Works</span>
@@ -254,7 +254,7 @@ const Home = () => {
             {/* Built on Asset Protection */}
             <section className="py-24 bg-green-900 text-white relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10 bg-cover bg-center" style={{ backgroundImage: `url(${SectionBg})` }} />
-                <div className="container mx-auto px-4 relative z-10">
+                <div className="container mx-auto px-4 relative z-10 xl:pl-24">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
@@ -299,7 +299,7 @@ const Home = () => {
 
             {/* Transparency at Every Stage */}
             <section className="py-24 bg-white relative overflow-hidden">
-                <div className="container mx-auto px-4 relative z-10">
+                <div className="container mx-auto px-4 relative z-10 xl:pl-24">
                     <div className="flex flex-col md:flex-row items-center gap-10 lg:gap-16">
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
@@ -355,7 +355,7 @@ const Home = () => {
             <section className="py-24 bg-slate-950 text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
 
-                <div className="container mx-auto px-4 relative z-10">
+                <div className="container mx-auto px-4 relative z-10 xl:pl-24">
                     <div className="grid md:grid-cols-2 md:gap-10 lg:gap-20 items-start">
                         {/* Left Side: Growth */}
                         <motion.div
@@ -416,7 +416,7 @@ const Home = () => {
 
             {/* Who Farmvest Is Built For */}
             <section className="py-24 bg-white relative overflow-hidden">
-                <div className="container mx-auto px-4 grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
+                <div className="container mx-auto px-4 grid md:grid-cols-2 gap-10 lg:gap-16 items-center xl:pl-24">
                     <div className="text-center md:text-left">
                         <h2 className="text-3xl md:text-3xl lg:text-5xl font-black text-gray-900 leading-tight">
                             Who Farmvest Is <br className="hidden md:block" /> <span className="text-primary italic">Built For</span>
@@ -451,7 +451,7 @@ const Home = () => {
 
             {/* Our Core Belief */}
             <section className="py-24 bg-slate-50 relative overflow-hidden border-y border-gray-100">
-                <div className="container mx-auto px-4 relative z-10">
+                <div className="container mx-auto px-4 relative z-10 xl:pl-24">
                     <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
                         <div className="text-center md:text-left">
                             <h3 className="text-primary font-bold tracking-[0.3em] uppercase text-sm mb-4">Our Core Belief</h3>
@@ -475,7 +475,7 @@ const Home = () => {
 
             {/* Call to Action Section */}
             <section className="py-20 bg-primary relative overflow-hidden">
-                <div className="container mx-auto px-4 relative z-10">
+                <div className="container mx-auto px-4 relative z-10 xl:pl-24">
                     <div className="grid md:grid-cols-2 gap-10 lg:gap-12 items-center">
                         <div className="text-center md:text-left">
                             <h2 className="text-2xl md:text-2xl lg:text-5xl font-black text-white mb-4 md:mb-6">Start Owning Real Assets with Confidence</h2>

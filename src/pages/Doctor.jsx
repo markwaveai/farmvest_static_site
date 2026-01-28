@@ -38,7 +38,7 @@ const Doctor = () => {
                     <div className="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-slate-900 to-slate-900/40" />
                 </div>
 
-                <div className="container mx-auto px-4 relative z-10 text-center lg:text-left">
+                <div className="container mx-auto px-4 relative z-10 text-center lg:text-left xl:pl-24">
                     <div className="flex flex-col lg:flex-row items-center gap-12">
                         <motion.div
                             initial={{ opacity: 0, x: -50 }}
@@ -127,7 +127,7 @@ const Doctor = () => {
                 </div>
             </div>
 
-            <div className="container mx-auto px-4 -mt-20 relative z-20 pb-24 space-y-24">
+            <div className="container mx-auto px-4 -mt-20 relative z-20 pb-24 space-y-24 xl:pl-24">
 
                 {/* 1. Login & Access Control - Glassmorphism Card */}
                 <motion.div
@@ -201,18 +201,13 @@ const Doctor = () => {
                         viewport={{ once: true }}
                         className="order-2 md:order-1 relative"
                     >
-                        <div className="absolute -inset-4 bg-red-100 rounded-3xl transform -rotate-3 z-0" />
+                        <div className="absolute -inset-4 bg-teal-50 rounded-3xl transform -rotate-3 z-0" />
                         <img
                             src={supervisorImage}
                             alt="Supervisor reporting issues"
-                            className="relative z-10 w-full rounded-2xl shadow-xl grayscale hover:grayscale-0 transition-all duration-500"
+                            className="relative z-10 w-full rounded-2xl shadow-xl transition-all duration-500"
                         />
-                        <div className="absolute top-6 right-6 z-20 bg-white/90 backdrop-blur px-4 py-2 rounded-lg shadow-lg border-l-4 border-red-500">
-                            <div className="font-bold text-slate-800 flex items-center gap-2">
-                                <AlertTriangle className="w-4 h-4 text-red-500" />
-                                New Ticket
-                            </div>
-                        </div>
+
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0, x: 30 }}
@@ -220,7 +215,7 @@ const Doctor = () => {
                         viewport={{ once: true }}
                         className="order-1 md:order-2 space-y-6"
                     >
-                        <span className="text-red-500 font-bold tracking-wider text-sm uppercase">Priority Assessment</span>
+                        <span className="text-teal-600 font-bold tracking-wider text-sm uppercase">Priority Assessment</span>
                         <h2 className="text-4xl font-bold text-slate-900">Health Issue Review</h2>
                         <p className="text-slate-600 text-lg">
                             Review detailed health tickets raised by supervisors, prioritized by farm managers. Access comprehensive descriptions and severity indicators to ensure accurate assessment.
@@ -254,7 +249,6 @@ const Doctor = () => {
                     <div className="grid md:grid-cols-3 gap-8">
                         {/* Diagnosis Card */}
                         <motion.div
-                            whileHover={{ y: -10 }}
                             className="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-blue-500"
                         >
                             <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
@@ -273,7 +267,6 @@ const Doctor = () => {
 
                         {/* Treatment Card */}
                         <motion.div
-                            whileHover={{ y: -10 }}
                             className="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-teal-500"
                         >
                             <div className="w-14 h-14 bg-teal-50 rounded-xl flex items-center justify-center mb-6">
@@ -292,7 +285,6 @@ const Doctor = () => {
 
                         {/* Follow-up Card */}
                         <motion.div
-                            whileHover={{ y: -10 }}
                             className="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-indigo-500"
                         >
                             <div className="w-14 h-14 bg-indigo-50 rounded-xl flex items-center justify-center mb-6">
@@ -318,7 +310,7 @@ const Doctor = () => {
                         <img
                             src={DirectivesBg}
                             alt="Background"
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2s]"
+                            className="w-full h-full object-cover transition-transform duration-[2s]"
                         />
                         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-900/80 to-slate-900/95" />
                         <div className="absolute inset-0 bg-teal-500/5 mix-blend-overlay" />

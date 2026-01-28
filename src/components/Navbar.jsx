@@ -22,7 +22,6 @@ const Navbar = () => {
     const navLinks = [
         { name: 'Home', path: '/', icon: Home },
         { name: 'About', path: '/about-us', icon: Info },
-        { name: 'Invest', path: '/investment-plans', icon: TrendingUp },
         { name: 'Blog', path: '/blog', icon: BookOpen },
         { name: 'Contact', path: '/contact-us', icon: Phone },
     ];

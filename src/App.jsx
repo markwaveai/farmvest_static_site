@@ -9,7 +9,7 @@ import AssistantDoctor from './pages/AssistantDoctor';
 import FarmManager from './pages/FarmManager';
 
 import AboutUs from './pages/footerpages/AboutUs';
-import InvestmentPlans from './pages/footerpages/InvestmentPlans';
+
 import OurTeam from './pages/footerpages/OurTeam';
 import Blog from './pages/footerpages/Blog';
 import ContactUs from './pages/footerpages/ContactUs';
@@ -36,14 +36,14 @@ function App() {
         <Route path="/assistant-doctor" element={<AssistantDoctor />} />
 
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/investment-plans" element={<InvestmentPlans />} />
+
         <Route path="/our-team" element={<OurTeam />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact-us" element={<ContactUs />} />
 
         {/* Keeping old routes for compatibility if needed or redirecting */}
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/invest" element={<InvestmentPlans />} />
+
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/support" element={<Support />} />

@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, TrendingUp, ShieldCheck, Users, Activity, CheckCircle, FileText } from 'lucide-react';
+import { ArrowRight, TrendingUp, ShieldCheck, Users, Activity, CheckCircle, FileText, Zap, Anchor, Droplet, Dna } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import SectionBg from '../assets/section_bg.jpg';
-import ManagementApp from '../assets/management_app.png';
+import ManagementApp from '../assets/structured_asset_dashboard.png';
 import HeroBg from '../assets/hero_bg.png';
 
 const Home = () => {
@@ -168,8 +168,47 @@ const Home = () => {
                             ))}
                         </div>
                     </div>
+                </div>
+            </section>
 
+            {/* White Revolution 2.0 */}
+            <section className="py-24 bg-white">
+                <div className="container mx-auto px-4">
+                    <motion.div 
+                        initial={{ opacity: 0, scale: 0.98 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        className="bg-slate-900 rounded-[3rem] p-8 md:p-16 text-white overflow-hidden relative"
+                    >
+                        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
+                        
+                        <div className="grid lg:grid-cols-2 gap-16 relative z-10 items-center">
+                            <div>
+                                <h2 className="text-3xl md:text-5xl font-black mb-6 leading-tight">
+                                    The 'White Revolution 2.0' Philosophy
+                                </h2>
+                                <p className="text-slate-300 text-lg leading-relaxed mb-8">
+                                    We are driving a shift from the original White Revolution—which focused on volume—to a new era prioritizing <span className="text-primary font-bold">verification, integrity, and engineering purity</span> at the source.
+                                </p>
+                                <p className="text-slate-400 leading-relaxed">
+                                    Rather than treating milk as a commodity, Farmvest treats it as a biological product whose quality is strictly determined by the animal's health, feed, and environment.
+                                </p>
+                            </div>
 
+                            <div className="grid grid-cols-2 gap-4">
+                                {[
+                                    { label: "100%", sub: "Source Verified" },
+                                    { label: "Daily", sub: "Purity Checks" },
+                                    { label: "Guaranteed", sub: "Antibiotic Free" },
+                                    { label: "End-to-End", sub: "Traceability" }
+                                ].map((stat, i) => (
+                                    <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-2xl text-center hover:bg-white/10 transition-colors">
+                                        <div className="text-2xl md:text-3xl font-black text-white mb-1">{stat.label}</div>
+                                        <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">{stat.sub}</div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </motion.div>
                 </div>
             </section>
 
@@ -200,16 +239,13 @@ const Home = () => {
                         <motion.div
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            className="bg-white/5 backdrop-blur-xl p-8 rounded-[2rem] border border-white/10"
+                            className=""
                         >
                             <img
                                 src={ManagementApp}
                                 alt="Structured Platform"
                                 className="rounded-xl shadow-2xl mb-8 opacity-80"
                             />
-                            <p className="text-white font-bold text-xl text-center">
-                                Engineered for Institutional-Grade Asset Management
-                            </p>
                         </motion.div>
                     </div>
                 </div>
@@ -312,10 +348,15 @@ const Home = () => {
                                     muted
                                     loop
                                     playsInline
-                                    className="w-full aspect-video object-cover"
+                                    className="w-full aspect-video object-cover opacity-90"
                                 >
                                     <source src="/hero_video.mp4" type="video/mp4" />
                                 </video>
+                                <div className="absolute bottom-1.5 right-0 w-full bg-black/100 text-right">
+                                    <span className="text-white/100 font-black tracking-tighter italic mr-3">
+                                        FarmVest
+                                    </span>
+                                </div>
                             </div>
                         </motion.div>
                         <motion.div

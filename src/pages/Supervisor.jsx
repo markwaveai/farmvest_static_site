@@ -198,7 +198,7 @@ const Supervisor = () => {
                 </Section>
 
                 {/* 2. Milk Production Updates */}
-                <Section title="Milk Production Updates" icon={Droplet}>
+                {/* <Section title="Milk Production Updates" icon={Droplet}>
                     <div className="grid md:grid-cols-2 gap-8 items-center">
                         <div className="order-2 md:order-1 bg-green-50 p-4 rounded-2xl shadow-inner relative overflow-hidden group">
                             <img
@@ -216,7 +216,7 @@ const Supervisor = () => {
                             ]} />
                         </div>
                     </div>
-                </Section>
+                </Section> */}
 
                 {/* 3. Livestock Health Monitoring */}
                 <Section title="Livestock Health Monitoring" icon={Activity}>

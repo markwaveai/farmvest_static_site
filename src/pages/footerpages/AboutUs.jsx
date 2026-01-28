@@ -6,7 +6,7 @@ import Footer from '../../components/Footer';
 import ModernShed from '../../assets/footerimages1/modern_buffalo_shed.png';
 
 const FeatureItem = ({ icon: Icon, title, text }) => (
-    <div className="flex gap-4 p-6 bg-white rounded-2xl shadow-sm border border-slate-100 italic transition-all hover:bg-green-50">
+    <div className="flex gap-4 p-6 bg-white rounded-2xl shadow-sm border border-slate-100 transition-all hover:bg-green-50">
         <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
             <Icon className="w-6 h-6" />
         </div>
@@ -30,9 +30,9 @@ const AboutUs = () => {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-4xl md:text-6xl font-black text-slate-900 mb-6"
                     >
-                        <span className="text-primary italic">Buffalo</span> Farming
+                        <span className="text-primary">Buffalo</span> Farming
                     </motion.h1>
-                    <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed italic">
+                    <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
                         FarmVest is a technology-driven buffalo farming investment platform. We bridge the gap between investors and agriculture through real-time monitoring and expert management.
                     </p>
                 </div>
@@ -48,12 +48,12 @@ const AboutUs = () => {
                             viewport={{ once: true }}
                             className="space-y-8"
                         >
-                            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 italic leading-tight">
+                            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 leading-tight">
                                 Innovation Meets <br />
                                 <span className="text-primary">Traditional Farming</span>
                             </h2>
-                            <p className="text-lg text-slate-600 leading-relaxed italic">
-                                Our platform allows investors to earn stable returns from buffalo farming while maintaining complete transparency. Every aspect—from Buffalo health to milk production—is tracked and reported digitally.
+                            <p className="text-lg text-slate-600 leading-relaxed">
+                                Our platform allows investors to earn stable returns from buffalo farming while maintaining complete transparency. Every aspect—from animal health to milk production—is tracked and reported digitally.
                             </p>
                             <div className="grid md:grid-cols-2 gap-4">
                                 <FeatureItem

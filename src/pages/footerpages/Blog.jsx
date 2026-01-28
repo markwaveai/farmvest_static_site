@@ -9,7 +9,7 @@ import Footer from '../../components/Footer';
 import HealthMonitoringImg from '../../assets/footerimages1/health_monitoring_new.png';
 import MilkYieldImg from '../../assets/footerimages1/milk_yield_new.jpg';
 import DigitalPlatformImg from '../../assets/footerimages1/digital_platform_new.png';
-import BuffaloCareImg from '../../assets/footerimages1/buffalo_care_new.png';
+import BuffaloCareImg from '../../assets/footerimages1/indian_murrah_buffalo_oversight.png';
 
 const BlogCard = ({ title, excerpt, image, author, date, category, icon: Icon, slug }) => (
     <motion.article
@@ -23,7 +23,7 @@ const BlogCard = ({ title, excerpt, image, author, date, category, icon: Icon, s
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
             <div className="absolute top-6 left-6">
-                <span className="px-4 py-2 bg-white/90 backdrop-blur-md rounded-full text-[10px] font-bold text-primary flex items-center gap-2 shadow-sm italic uppercase tracking-wider text-green-600">
+                <span className="px-4 py-2 bg-white/90 backdrop-blur-md rounded-full text-[10px] font-bold text-primary flex items-center gap-2 shadow-sm uppercase tracking-wider text-green-600">
                     <Icon className="w-3 h-3" /> {category}
                 </span>
             </div>
@@ -33,8 +33,8 @@ const BlogCard = ({ title, excerpt, image, author, date, category, icon: Icon, s
                 <div className="flex items-center gap-2"><Calendar className="w-3 h-3 text-primary" /> {date}</div>
                 <div className="flex items-center gap-2"><User className="w-3 h-3 text-primary" /> {author}</div>
             </div>
-            <h3 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-primary transition-colors line-clamp-2 italic leading-tight">{title}</h3>
-            <p className="text-slate-500 text-sm leading-relaxed mb-8 line-clamp-3 italic">{excerpt}</p>
+            <h3 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-primary transition-colors line-clamp-2 leading-tight">{title}</h3>
+            <p className="text-slate-500 text-sm leading-relaxed mb-8 line-clamp-3">{excerpt}</p>
             <div className="mt-auto">
                 <Link to={`/blog/${slug}`} className="flex items-center gap-2 font-black text-slate-900 group-hover:gap-4 transition-all uppercase tracking-[0.2em] text-[10px]">
                     Read Update <ArrowRight className="w-4 h-4 text-primary" />
@@ -47,7 +47,7 @@ const BlogCard = ({ title, excerpt, image, author, date, category, icon: Icon, s
 const Blog = () => {
     const blogPosts = [
         {
-            title: "Digital Platform: Transparent Investor Monitoring",
+            title: "Monitoring",
             excerpt: "Allowing investors to earn returns from buffalo farming while transparently monitoring farm operations and revenue through our integrated digital platform.",
             image: DigitalPlatformImg,
             author: "Tech Dept",
@@ -57,8 +57,8 @@ const Blog = () => {
             slug: "transparency"
         },
         {
-            title: "Proactive Medical Care & Buffalo Health",
-            excerpt: "Our system professionally manages medical care using role-based access for veterinarians, ensuring constant monitoring of Buffalo health and swift treatment.",
+            title: "Medical Care",
+            excerpt: "Our system professionally manages medical care using role-based access for veterinarians, ensuring constant monitoring of animal health and swift treatment.",
             image: HealthMonitoringImg,
             author: "Dr. Sathish",
             date: "Jan 18, 2026",
@@ -97,19 +97,19 @@ const Blog = () => {
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        className="inline-block px-4 py-1 bg-white border border-teal-200 rounded-full text-teal-700 text-xs font-bold mb-6 tracking-widest uppercase italic shadow-sm"
+                        className="inline-block px-4 py-1 bg-white border border-teal-200 rounded-full text-teal-700 text-xs font-bold mb-6 tracking-widest uppercase shadow-sm"
                     >
                         Buffalo FarmVest Updates
                     </motion.div>
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-4xl md:text-6xl font-black text-slate-900 mb-6 uppercase tracking-tighter italic"
+                        className="text-4xl md:text-6xl font-black text-slate-900 mb-6 uppercase tracking-tighter"
                     >
-                        Project <span className="text-teal-600 italic">Insights</span>
+                        Project <span className="text-teal-600">Insights</span>
                     </motion.h1>
-                    <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed italic">
-                        Earn returns from buffalo farming while transparently monitoring operations, Buffalo health, and revenue through our professional digital platform.
+                    <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                        Earn returns from buffalo farming while transparently monitoring operations, animal health, and revenue through our professional digital platform.
                     </p>
                 </div>
             </section>

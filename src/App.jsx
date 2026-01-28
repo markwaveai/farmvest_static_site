@@ -7,10 +7,11 @@ import Supervisor from './pages/Supervisor';
 import Doctor from './pages/Doctor';
 import AssistantDoctor from './pages/AssistantDoctor';
 import FarmManager from './pages/FarmManager';
+import Admin from './pages/Admin';
 
 import AboutUs from './pages/footerpages/AboutUs';
+import InvestmentPlans from './pages/footerpages/InvestmentPlans';
 
-import OurTeam from './pages/footerpages/OurTeam';
 import Blog from './pages/footerpages/Blog';
 import ContactUs from './pages/footerpages/ContactUs';
 import PrivacyPolicy from './pages/footerpages/PrivacyPolicy';
@@ -34,10 +35,11 @@ function App() {
         <Route path="/farm-manager" element={<FarmManager />} />
         <Route path="/doctor" element={<Doctor />} />
         <Route path="/assistant-doctor" element={<AssistantDoctor />} />
+        <Route path="/admin" element={<Admin />} />
 
         <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/investment-plans" element={<InvestmentPlans />} />
 
-        <Route path="/our-team" element={<OurTeam />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact-us" element={<ContactUs />} />
 

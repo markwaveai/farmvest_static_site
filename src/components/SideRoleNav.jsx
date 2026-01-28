@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { User, Stethoscope, ClipboardCheck, Users, Tractor } from 'lucide-react';
+import { User, Stethoscope, ClipboardCheck, Users, Tractor, ShieldAlert } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const SideRoleNav = () => {
@@ -10,12 +10,13 @@ const SideRoleNav = () => {
         { name: 'Farm Manager', path: '/farm-manager', icon: Tractor, color: 'text-green-400' },
         { name: 'Doctor', path: '/doctor', icon: Stethoscope, color: 'text-red-400' },
         { name: 'Asst. Doctor', path: '/assistant-doctor', icon: Users, color: 'text-purple-400' },
+        { name: 'Admin', path: '/admin', icon: ShieldAlert, color: 'text-teal-400' },
     ];
 
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
     return (
-        <div className="fixed left-4 top-1/2 -translate-y-1/2 z-50 hidden md:flex flex-col gap-3 items-start bg-black/20 backdrop-blur-sm p-3 rounded-2xl border border-white/5 w-[4.5rem]">
+        <div className="fixed left-4 top-1/2 -translate-y-1/2 z-50 hidden xl:flex flex-col gap-3 items-start bg-black/20 backdrop-blur-sm p-3 rounded-2xl border border-white/5 w-[4.5rem]">
             {roles.map((role, index) => (
                 <motion.div
                     key={role.name}

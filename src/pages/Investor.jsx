@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Lock, Camera, QrCode, TrendingUp, CheckCircle, Calendar, Shield, Smartphone, FileText, Activity, Stethoscope } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import ManagementApp from '../assets/management_app.png';
 
 const Section = ({ title, id, icon: Icon, children, className = "" }) => (
     <motion.div
@@ -175,14 +176,11 @@ const Investor = () => {
                 <Section title="Live CCTV & Visit Slot Booking" id="cctv" icon={Camera}>
                     <div className="grid md:grid-cols-2 gap-8 items-center">
                         <div className="order-2 md:order-1 bg-green-50 p-8 rounded-2xl relative overflow-hidden">
-                            <div className="grid grid-cols-2 gap-4">
-                                {[1, 2, 3, 4].map((i) => (
-                                    <div key={i} className="bg-gray-800 rounded-lg aspect-video flex items-center justify-center relative group overflow-hidden">
-                                        <div className="text-white/50 text-xs">Cam {i}</div>
-                                        <div className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-                                    </div>
-                                ))}
-                            </div>
+                            <img
+                                src={ManagementApp}
+                                alt="Live Farm Monitoring"
+                                className="w-full h-auto rounded-xl shadow-2xl relative z-10"
+                            />
                         </div>
                         <div className="order-1 md:order-2 space-y-6">
                             <FeatureList items={[

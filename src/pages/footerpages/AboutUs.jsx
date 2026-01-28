@@ -23,7 +23,7 @@ const AboutUs = () => {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="relative pt-32 pb-24 overflow-hidden header-about">
+            <section className="relative pt-24 pb-24 overflow-hidden header-about">
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}

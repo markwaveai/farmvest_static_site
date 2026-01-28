@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronRight, Home, Info, TrendingUp, BookOpen, Phone, User, Stethoscope, ClipboardCheck, Users, Tractor } from 'lucide-react';
+import { Menu, X, ChevronRight, Home, Info, TrendingUp, BookOpen, Phone, User, Stethoscope, ClipboardCheck, Users, Tractor, ShieldAlert } from 'lucide-react';
 import { cn } from '../lib/utils';
 // Assuming the logo is saved in assets, if not I'll use text for now
 import Logo from '../assets/logo.png';
@@ -30,24 +30,24 @@ const Navbar = () => {
         <nav
             className={cn(
                 'fixed top-0 w-full z-50 transition-all duration-300',
-                scrolled ? 'bg-white/90 backdrop-blur-md shadow-md py-4' : 'bg-transparent py-4'
+                scrolled ? 'bg-white/90 backdrop-blur-md shadow-md py-2' : 'bg-transparent py-2'
             )}
         >
             <div className="w-full px-4 md:px-8 flex justify-between items-center">
                 {/* Logo */}
                 <Link to="/" className="flex items-center transition-all">
-                    <img src={Logo} alt="FarmVest" className="h-12 md:h-16 rounded-lg hover:scale-105 transition-transform" />
+                    <img src={Logo} alt="FarmVest" className="h-10 md:h-12 rounded-lg hover:scale-105 transition-transform" />
                 </Link>
 
                 {/* Desktop Navigation */}
-                <div className="hidden md:flex items-center gap-8 bg-white/10 backdrop-blur-md border border-white/20 px-8 py-3 rounded-full shadow-lg">
+                <div className="hidden xl:flex items-center gap-8 bg-white/10 backdrop-blur-md border border-white/20 px-8 py-2 rounded-full shadow-lg">
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
                             to={link.path}
                             className={cn(
                                 "flex items-center gap-2 text-sm font-medium transition-all hover:text-primary relative group font-bold",
-                                (scrolled || ['/contact-us', '/investor', '/about-us', '/investment-plans', '/blog', '/our-team', '/cookie-policy', '/privacy-policy', '/terms-of-service', '/support'].includes(location.pathname)) ? "text-gray-600" : "text-gray-200"
+                                (scrolled || ['/contact-us', '/investor', '/about-us', '/investment-plans', '/blog', '/cookie-policy', '/privacy-policy', '/terms-of-service', '/support', '/admin'].includes(location.pathname)) ? "text-gray-600" : "text-gray-200"
                             )}
                         >
                             <link.icon className="w-4 h-4 transition-transform group-hover:-translate-y-0.5" />
@@ -58,7 +58,7 @@ const Navbar = () => {
                 </div>
 
                 <button
-                    className="md:hidden text-gray-600 bg-white/50 p-2 rounded-lg backdrop-blur-sm shadow-sm border border-gray-100"
+                    className="xl:hidden text-gray-600 bg-white/50 p-2 rounded-lg backdrop-blur-sm shadow-sm border border-gray-100"
                     onClick={() => setIsOpen(true)}
                 >
                     <Menu className="w-6 h-6 text-gray-800" />
@@ -70,12 +70,12 @@ const Navbar = () => {
                 <>
                     {/* Backdrop */}
                     <div
-                        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] md:hidden animate-in fade-in duration-200"
+                        className="fixed inset-0 bg-black/60 z-[100] xl:hidden animate-in fade-in duration-200"
                         onClick={() => setIsOpen(false)}
                     />
 
                     {/* Sidebar */}
-                    <div className="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-white z-[70] shadow-2xl md:hidden overflow-y-auto animate-in slide-in-from-right duration-300">
+                    <div className="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-white z-[110] shadow-2xl xl:hidden overflow-y-auto animate-in slide-in-from-right duration-300">
                         <div className="p-6 flex flex-col gap-6">
                             {/* Header */}
                             <div className="flex items-center justify-between">
@@ -119,6 +119,7 @@ const Navbar = () => {
                                     { name: 'Farm Manager', path: '/farm-manager', icon: Tractor, color: 'text-green-500', bg: 'bg-green-50' },
                                     { name: 'Doctor', path: '/doctor', icon: Stethoscope, color: 'text-red-500', bg: 'bg-red-50' },
                                     { name: 'Asst. Doctor', path: '/assistant-doctor', icon: Users, color: 'text-purple-500', bg: 'bg-purple-50' },
+                                    { name: 'Admin', path: '/admin', icon: ShieldAlert, color: 'text-teal-500', bg: 'bg-teal-50' },
                                 ].map((role) => (
                                     <Link
                                         key={role.name}

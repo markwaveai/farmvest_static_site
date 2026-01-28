@@ -67,7 +67,7 @@ const FarmVestModel = () => {
                                 { label: "Antibiotic Free", val: "Guaranteed" },
                                 { label: "Traceability", val: "End-to-End" }
                             ].map((stat, i) => (
-                                <div key={i} className="bg-white/5 backdrop-blur-sm p-4 rounded-2xl border border-white/10 text-center">
+                                <div key={i} className="bg-white/10 p-4 rounded-2xl border border-white/10 text-center">
                                     <h4 className="text-xl sm:text-2xl font-black text-white mb-1 break-words">{stat.val}</h4>
                                     <p className="text-white/50 text-[10px] sm:text-xs uppercase tracking-wider">{stat.label}</p>
                                 </div>

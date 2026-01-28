@@ -19,8 +19,19 @@ const Footer = () => {
                             Revolutionizing livestock farming through sustainable investment and modern technology. Join us in building the future of agriculture.
                         </p>
                         <div className="flex gap-4">
-                            {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
-                                <a key={i} href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors text-white">
+                            {[
+                                { Icon: Facebook, link: '#' },
+                                { Icon: Twitter, link: '#' },
+                                { Icon: Instagram, link: 'https://www.instagram.com' },
+                                { Icon: Linkedin, link: '#' }
+                            ].map(({ Icon, link }, i) => (
+                                <a
+                                    key={i}
+                                    href={link}
+                                    target={link !== '#' ? "_blank" : undefined}
+                                    rel={link !== '#' ? "noopener noreferrer" : undefined}
+                                    className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors text-white"
+                                >
                                     <Icon className="w-5 h-5" />
                                 </a>
                             ))}
@@ -35,7 +46,6 @@ const Footer = () => {
                                 { name: 'Home', path: '/' },
                                 { name: 'About Us', path: '/about-us' },
                                 { name: 'Investment Plans', path: '/investment-plans' },
-                                { name: 'Our Team', path: '/our-team' },
                                 { name: 'Blog', path: '/blog' },
                                 { name: 'Contact Us', path: '/contact-us' }
                             ].map((item) => (
@@ -61,11 +71,11 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center gap-3 text-gray-400">
                                 <Phone className="w-5 h-5 text-primary" />
-                                <span>+91 77027 10290</span>
+                                <a href="tel:+917702710290" className="hover:text-primary transition-colors">+91 77027 10290</a>
                             </li>
                             <li className="flex items-center gap-3 text-gray-400">
                                 <Mail className="w-5 h-5 text-primary" />
-                                <span>{import.meta.env.VITE_COMPANY_EMAIL}</span>
+                                <a href={`mailto:${import.meta.env.VITE_COMPANY_EMAIL}`} className="hover:text-primary transition-colors">{import.meta.env.VITE_COMPANY_EMAIL}</a>
                             </li>
                         </ul>
                     </div>

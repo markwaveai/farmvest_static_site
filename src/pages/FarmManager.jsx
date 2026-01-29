@@ -177,7 +177,7 @@ const FarmManager = () => {
                                     </div>
 
                                     <div className="pt-4">
-                                        <div className="h-14 bg-blue-600 hover:bg-blue-700 rounded-2xl text-white text-center font-black flex items-center justify-center shadow-lg shadow-blue-600/20 cursor-default uppercase tracking-widest text-xs">
+                                        <div className="h-14 bg-blue-600 rounded-2xl text-white text-center font-black flex items-center justify-center shadow-lg shadow-blue-600/20 cursor-default uppercase tracking-widest text-xs">
                                             Access Control Console
                                         </div>
                                     </div>

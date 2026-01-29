@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, Info, BookOpen, Phone, Menu, X } from 'lucide-react';
+import { createPortal } from 'react-dom';
+import {
+    Home, Info, BookOpen, Phone, Menu, X,
+    User, Stethoscope, ClipboardCheck, Users,
+    Tractor, ShieldAlert, ChevronRight
+} from 'lucide-react';
 import { cn } from '../lib/utils';
 // Assuming the logo is saved in assets, if not I'll use text for now
 import Logo from '../assets/logo.png';
@@ -28,8 +33,8 @@ const Navbar = () => {
     return (
         <nav
             className={cn(
-                'fixed top-0 w-full z-50 transition-all duration-300',
-                scrolled ? 'bg-white/100 shadow-md py-2' : 'bg-transparent py-2'
+                'fixed top-0 w-full z-[100] transition-all duration-300',
+                scrolled ? 'bg-white/10 backdrop-blur-md shadow-md py-2' : 'bg-transparent py-2'
             )}
         >
             <div className="w-full px-4 md:px-8 flex justify-between items-center relative">
@@ -39,7 +44,7 @@ const Navbar = () => {
                 </Link>
 
                 {/* Desktop Navigation */}
-                <div className="hidden xl:flex items-center gap-8 bg-white/10 backdrop-blur-md border border-white/20 px-8 py-2 rounded-full shadow-lg">
+                <div className="hidden lg:flex items-center gap-8 bg-white/10 backdrop-blur-md border border-white/20 px-8 py-2 rounded-full shadow-lg">
                     {navLinks.map((link) => {
                         const isActive = location.pathname === link.path;
                         return (
@@ -67,47 +72,25 @@ const Navbar = () => {
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden text-gray-600 bg-white/50 p-2 rounded-lg backdrop-blur-sm shadow-sm border border-gray-100"
+                    className="lg:hidden text-gray-600 bg-white/50 p-2 rounded-lg backdrop-blur-sm shadow-sm border border-gray-100"
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     {isOpen ? <X className="w-6 h-6 text-gray-800" /> : <Menu className="w-6 h-6 text-gray-800" />}
                 </button>
-
-                {/* Mobile Dropdown Menu */}
-                {isOpen && (
-                    <div className="absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 p-4 flex flex-col gap-2 md:hidden animate-in slide-in-from-top-2 duration-200">
-                         {navLinks.map((link) => (
-                            <Link
-                                key={link.name}
-                                to={link.path}
-                                className={cn(
-                                    "flex items-center gap-4 p-3 rounded-xl transition-all",
-                                    location.pathname === link.path
-                                        ? "bg-primary/10 text-primary font-bold"
-                                        : "text-gray-600 hover:bg-gray-50 font-medium"
-                                )}
-                                onClick={() => setIsOpen(false)}
-                            >
-                                <link.icon className="w-5 h-5" />
-                                {link.name}
-                            </Link>
-                        ))}
-                    </div>
-                )}
             </div>
-            
+
 
             {/* Mobile Menu Drawer */}
             {isOpen && createPortal(
                 <>
                     {/* Backdrop */}
                     <div
-                        className="fixed inset-0 bg-black/60 z-[100] xl:hidden animate-in fade-in duration-200"
+                        className="fixed inset-0 bg-black/60 z-[110] lg:hidden animate-in fade-in duration-200"
                         onClick={() => setIsOpen(false)}
                     />
 
                     {/* Sidebar */}
-                    <div className="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-white z-[110] shadow-2xl xl:hidden overflow-y-auto animate-in slide-in-from-right duration-300">
+                    <div className="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-white z-[120] shadow-2xl lg:hidden overflow-y-auto animate-in slide-in-from-right duration-300">
                         <div className="p-6 flex flex-col gap-6">
                             {/* Header */}
                             <div className="flex items-center justify-between">

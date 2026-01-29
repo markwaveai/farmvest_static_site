@@ -16,7 +16,7 @@ const SideRoleNav = () => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
     return (
-        <div className="fixed left-4 top-1/2 -translate-y-1/2 z-50 hidden xl:flex flex-col gap-3 items-start bg-black/20 backdrop-blur-sm p-3 rounded-2xl border border-white/5 w-[4.5rem]">
+        <div className="fixed left-4 top-1/2 -translate-y-1/2 z-[60] hidden lg:flex flex-col gap-3 items-start bg-black/60 backdrop-blur-md p-3 rounded-2xl border border-white/10 w-[4.5rem]">
             {roles.map((role, index) => (
                 <motion.div
                     key={role.name}
@@ -28,7 +28,7 @@ const SideRoleNav = () => {
                 >
                     <Link
                         to={role.path}
-                        className="relative flex items-center bg-black/40 backdrop-blur-md border border-white/10 p-3 rounded-full hover:bg-black/60 transition-colors duration-300"
+                        className="relative flex items-center bg-black/80 backdrop-blur-lg border border-white/20 p-3 rounded-full hover:bg-black/90 transition-colors duration-300"
                     >
                         <div className={`w-6 h-6 flex items-center justify-center shrink-0 ${role.color}`}>
                             <role.icon className="w-5 h-5" />

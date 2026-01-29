@@ -11,7 +11,9 @@ import {
     CheckCircle,
     Clock,
     Eye,
-    TrendingUp
+    TrendingUp,
+    User,
+    LockKeyhole
 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -226,11 +228,26 @@ const AssistantDoctor = () => {
                                             Authorized Access Only
                                         </div>
                                     </div>
-                                    <div className="space-y-6">
-                                        <div className="h-4 bg-white/10 rounded-full w-2/3" />
-                                        <div className="h-12 bg-white/20 rounded-2xl border border-white/30" />
-                                        <div className="h-12 bg-white/20 rounded-2xl border border-white/30" />
-                                        <div className="h-14 bg-white rounded-2xl flex items-center justify-center font-bold text-teal-800 mt-8">
+                                    <div className="space-y-5">
+                                        <div className="space-y-2">
+                                            <div className="flex items-center gap-2 text-teal-100/60 text-[10px] font-black uppercase tracking-widest px-1">
+                                                <User className="w-3 h-3 text-teal-300" /> Assistant ID
+                                            </div>
+                                            <div className="h-12 bg-white/10 rounded-2xl border border-white/10 flex items-center px-4 text-teal-100 italic text-sm backdrop-blur-sm">
+                                                ASST-MD-9021
+                                            </div>
+                                        </div>
+
+                                        <div className="space-y-2">
+                                            <div className="flex items-center gap-2 text-teal-100/60 text-[10px] font-black uppercase tracking-widest px-1">
+                                                <LockKeyhole className="w-3 h-3 text-teal-300" /> Access Key
+                                            </div>
+                                            <div className="h-12 bg-white/10 rounded-2xl border border-white/10 flex items-center px-4 text-teal-100 italic text-sm backdrop-blur-sm">
+                                                ••••••••••••
+                                            </div>
+                                        </div>
+
+                                        <div className="h-14 bg-white rounded-2xl flex items-center justify-center font-black text-teal-800 mt-8 shadow-xl shadow-black/20 cursor-default uppercase tracking-widest text-xs">
                                             Sign In to Portal
                                         </div>
                                     </div>

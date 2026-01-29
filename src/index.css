@@ -196,6 +196,23 @@
     background-size: 40px 40px;
   }
 
+  /* 3D Transform Utilities for Calendar */
+  .rotate-x-12 {
+    transform: rotateX(12deg);
+  }
+
+  .rotate-x-45 {
+    transform: rotateX(45deg);
+  }
+
+  .translate-z-neg-20 {
+    transform: translateZ(-20px);
+  }
+
+  .rotate-y-12 {
+    transform: rotateY(12deg);
+  }
+
 
   /* Unique Page Headers - Light & Clean Theme */
   .header-about {

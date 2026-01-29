@@ -51,6 +51,7 @@ export default {
             },
             fontFamily: {
                 sans: ['Outfit', 'sans-serif'],
+                display: ['Inter', 'sans-serif'],
             },
             keyframes: {
                 float: {

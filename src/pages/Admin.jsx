@@ -1,166 +1,311 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShieldAlert, Users, TrendingUp, Activity, Settings, Bell, Search, Database } from 'lucide-react';
+import {
+    ShieldCheck,
+    Users,
+    TrendingUp,
+    Database,
+    Lock,
+    ClipboardCheck,
+    ArrowRightLeft,
+    BarChart3,
+    Eye,
+    ShieldAlert,
+    FileCheck2,
+    History,
+    Zap,
+    Scale,
+    SearchCheck,
+    LockKeyhole
+} from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
-const AdminCard = ({ icon: Icon, title, value, trend, color }) => (
-    <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-        <div className="flex justify-between items-start mb-4">
-            <div className={`p-3 rounded-xl ${color} bg-opacity-10 ${color.replace('text-', 'bg-')}`}>
-                <Icon className={`w-6 h-6 ${color}`} />
-            </div>
-            {trend && (
-                <span className="text-xs font-bold bg-green-100 text-green-700 px-2 py-1 rounded-full">
-                    {trend}
-                </span>
-            )}
+const ResponsibilityCard = ({ icon: Icon, title, subtitle, items, colorClass }) => (
+    <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        whileHover={{ y: -5 }}
+        className="glass-card border border-white/10 p-8 rounded-[2.5rem] flex flex-col h-full bg-slate-900/40 relative overflow-hidden group"
+    >
+        <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/10 transition-colors" />
+
+        <div className={`w-14 h-14 rounded-2xl ${colorClass} flex items-center justify-center mb-6 shadow-lg shadow-black/10 group-hover:scale-110 transition-transform`}>
+            <Icon className="w-8 h-8 text-white" />
         </div>
-        <p className="text-slate-500 text-xs font-bold uppercase tracking-widest mb-1">{title}</p>
-        <h3 className="text-3xl font-black text-slate-900">{value}</h3>
-    </div>
+
+        <div className="mb-6">
+            <span className="text-primary font-black text-[10px] uppercase tracking-[0.3em]">{subtitle}</span>
+            <h3 className="text-2xl font-black text-slate-900 mt-1 leading-tight group-hover:text-primary transition-colors">{title}</h3>
+        </div>
+
+        <ul className="space-y-4 mt-auto">
+            {items.map((item, i) => (
+                <li key={i} className="flex items-start gap-3 group/item">
+                    <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/20 group-hover/item:bg-primary transition-colors flex-shrink-0" />
+                    <span className="text-slate-600 text-sm leading-relaxed group-hover/item:text-slate-900 transition-colors font-bold">{item}</span>
+                </li>
+            ))}
+        </ul>
+    </motion.div>
 );
 
 const Admin = () => {
+    const categories = [
+        {
+            icon: Database,
+            title: "Asset Registry Control",
+            subtitle: "Central Asset Management",
+            colorClass: "bg-blue-600",
+            items: [
+                "View all registered assets",
+                "Validate induction & records",
+                "Lock, flag, or audit assets",
+                "Ensure ownership continuity",
+                "Verify lifecycle integrity"
+            ]
+        },
+        {
+            icon: Users,
+            title: "User & Role Management",
+            subtitle: "Role-Based Access Control",
+            colorClass: "bg-purple-600",
+            items: [
+                "Investor access control",
+                "Supervisor permissions",
+                "Manager & System roles",
+                "Access scopes & limitations",
+                "Authorization boundaries"
+            ]
+        },
+        {
+            icon: ShieldCheck,
+            title: "Risk & Replacement",
+            subtitle: "Capital Protection Oversight",
+            colorClass: "bg-emerald-600",
+            items: [
+                "Replacement policy enforcement",
+                "Asset equivalence validation",
+                "Risk event monitoring",
+                "Income continuity confirmation",
+                "Risk absorption oversight"
+            ]
+        },
+        {
+            icon: FileCheck2,
+            title: "Compliance & Audit",
+            subtitle: "System Accountability",
+            colorClass: "bg-amber-600",
+            items: [
+                "Review compliance reports",
+                "Access audit trails",
+                "Validate protocol adherence",
+                "Export regulatory records",
+                "Traceable action logging"
+            ]
+        },
+        {
+            icon: ArrowRightLeft,
+            title: "Exit & Handover Control",
+            subtitle: "Ownership Transition",
+            colorClass: "bg-rose-600",
+            items: [
+                "Exit eligibility validation",
+                "Asset handover documentation",
+                "Ownership record updates",
+                "Lifecycle closure status",
+                "Dispute-free transitions"
+            ]
+        },
+        {
+            icon: BarChart3,
+            title: "Reports & Analytics",
+            subtitle: "Platform Intelligence",
+            colorClass: "bg-indigo-600",
+            items: [
+                "Asset distribution analytics",
+                "Risk frequency patterns",
+                "Replacement statistics",
+                "System health indicators",
+                "Governance improvements"
+            ]
+        }
+    ];
+
     return (
-        <div className="min-h-screen flex flex-col font-sans bg-slate-50 relative overflow-hidden">
+        <div className="min-h-screen bg-slate-50 font-display selection:bg-primary selection:text-white relative overflow-hidden">
             <Navbar />
 
-            {/* Admin Header */}
-            <div className="pt-32 pb-16 bg-slate-900 relative overflow-hidden">
-                <div className="absolute inset-0 opacity-10">
-                    <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px]" />
-                </div>
+            {/* Admin Command Center Header */}
+            <section className="relative pt-40 pb-24 overflow-hidden">
+                {/* Background Decor */}
+                <div className="absolute inset-0 bg-mesh opacity-30" />
+                <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[120px] -rotate-12 translate-x-1/4 -translate-y-1/4" />
+                <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[100px] translate-x-[-20%] translate-y-[20%]" />
+                <div className="absolute inset-0 blueprint-grid opacity-10" />
+
                 <div className="container mx-auto px-4 relative z-10 xl:pl-24">
-                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
-                        <div>
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-[10px] font-black uppercase tracking-widest mb-4">
-                                <ShieldAlert className="w-3 h-3" />
-                                System Administration
-                            </div>
-                            <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight">
-                                Admin
-                            </h1>
-                        </div>
-                        <div className="flex gap-3">
-                            <button className="px-6 py-2.5 bg-teal-600 hover:bg-teal-500 text-white rounded-xl font-bold transition-all shadow-lg shadow-teal-900/20 text-sm">
-                                System Logs
-                            </button>
-                            <button className="px-6 py-2.5 bg-slate-800 hover:bg-slate-700 text-white border border-white/10 rounded-xl font-bold transition-all text-sm">
-                                Database
-                            </button>
-                        </div>
+                    <div className="max-w-5xl">
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 border border-white/10 text-primary text-[10px] font-black uppercase tracking-[0.4em] mb-8 shadow-2xl"
+                        >
+                            <ShieldAlert className="w-4 h-4" />
+                            System Administration Center
+                        </motion.div>
+                        <motion.h1
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.1 }}
+                            className="text-5xl md:text-6xl lg:text-8xl font-black text-slate-900 leading-[0.85] tracking-tighter mb-10"
+                        >
+                            ADMIN
+                        </motion.h1>
+                        <motion.p
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 0.3 }}
+                            className="text-slate-400 text-xl md:text-2xl leading-relaxed font-medium max-w-3xl border-l-4 border-primary/30 pl-8"
+                        >
+                            Admins are responsible for platform governance, asset integrity, and risk framework supervision.
+                            This role ensures the platform operates within <span className="text-green-500">defined rules</span>, not discretion.
+                        </motion.p>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            {/* Dashboard Content */}
-            <div className="container mx-auto px-4 -mt-8 pb-24 relative z-20 space-y-8 xl:pl-24">
-                {/* Stats Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <AdminCard
-                        icon={Users}
-                        title="Total Investors"
-                        value="1,284"
-                        trend="+12%"
-                        color="text-blue-500"
-                    />
-                    <AdminCard
-                        icon={TrendingUp}
-                        title="Total Capital"
-                        value="₹ 84.5M"
-                        trend="+5.4L"
-                        color="text-green-500"
-                    />
-                    <AdminCard
-                        icon={Activity}
-                        title="Active Units"
-                        value="452"
-                        color="text-purple-500"
-                    />
-                    <AdminCard
-                        icon={ShieldAlert}
-                        title="System Health"
-                        value="99.9%"
-                        color="text-teal-500"
-                    />
-                </div>
+            {/* Core Administrative Functions Overview */}
+            <section className="py-24 bg-white relative border-y border-slate-100">
+                <div className="container mx-auto px-4 xl:pl-24 relative z-10">
+                    <div className="grid lg:grid-cols-2 gap-24 items-center">
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                        >
+                            <span className="text-primary font-black text-xs uppercase tracking-[0.5em] block mb-6">Core Functions</span>
+                            <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-10 leading-tight">Platform Execution <br />& <span className="text-primary">Governance</span></h2>
 
-                <div className="grid lg:grid-cols-3 gap-8">
-                    {/* Main Management Section */}
-                    <div className="lg:col-span-2 space-y-6">
-                        <div className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
-                            <div className="p-6 border-b border-slate-50 flex items-center justify-between">
-                                <h3 className="font-bold text-slate-800">User Management</h3>
-                                <div className="relative">
-                                    <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
-                                    <input
-                                        type="text"
-                                        placeholder="Search users..."
-                                        className="pl-10 pr-4 py-2 bg-slate-50 border border-slate-100 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/20"
-                                    />
-                                </div>
-                            </div>
-                            <div className="p-6">
-                                <div className="space-y-4">
-                                    {[1, 2, 3, 4, 5].map((i) => (
-                                        <div key={i} className="flex items-center justify-between p-4 rounded-xl border border-dashed border-slate-200 hover:border-teal-200 hover:bg-teal-50/10 transition-all cursor-pointer group">
-                                            <div className="flex items-center gap-4">
-                                                <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 font-bold group-hover:bg-teal-100 group-hover:text-teal-600 transition-colors">
-                                                    U{i}
-                                                </div>
-                                                <div>
-                                                    <p className="font-bold text-slate-800 text-sm">Investor User_0{i}</p>
-                                                    <p className="text-xs text-slate-500">investor0{i}@farmvest.com</p>
-                                                </div>
-                                            </div>
-                                            <div className="flex items-center gap-3">
-                                                <span className="text-[10px] font-bold px-2 py-0.5 bg-green-100 text-green-700 rounded-full">ACTIVE</span>
-                                                <Settings className="w-4 h-4 text-slate-300 group-hover:text-slate-600" />
-                                            </div>
+                            <div className="grid sm:grid-cols-2 gap-8 mb-12">
+                                {[
+                                    { title: "Governance", icon: Scale, desc: "Rule enforcement" },
+                                    { title: "Registry", icon: Database, desc: "Asset mapping" },
+                                    { title: "Access", icon: LockKeyhole, desc: "RBAC protocols" },
+                                    { title: "Integrity", icon: SearchCheck, desc: "Audit readiness" }
+                                ].map((item, i) => (
+                                    <div key={i} className="flex flex-col gap-3 p-6 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-primary/5 hover:border-primary/20 transition-all duration-300">
+                                        <item.icon className="w-8 h-8 text-primary" />
+                                        <div>
+                                            <h4 className="text-slate-900 font-black text-sm">{item.title}</h4>
+                                            <p className="text-slate-400 text-[10px] font-black uppercase tracking-widest">{item.desc}</p>
                                         </div>
-                                    ))}
-                                </div>
-                                <button className="w-full mt-6 py-3 border-2 border-dashed border-slate-200 rounded-xl text-slate-400 font-bold text-sm hover:border-teal-300 hover:text-teal-600 transition-all">
-                                    View All Users
-                                </button>
+                                    </div>
+                                ))}
                             </div>
-                        </div>
-                    </div>
 
-                    {/* Sidebar Actions */}
-                    <div className="space-y-6">
-                        <div className="bg-slate-900 rounded-3xl p-8 text-white relative overflow-hidden group shadow-xl">
-                            <div className="absolute -top-12 -right-12 w-40 h-40 bg-teal-500/20 rounded-full blur-3xl group-hover:bg-teal-500/30 transition-all" />
-                            <Database className="w-12 h-12 text-teal-500 mb-6" />
-                            <h3 className="text-xl font-bold mb-3">System Configuration</h3>
-                            <p className="text-slate-300 text-sm leading-relaxed mb-6">
-                                Manage farm parameters, investment tiers, and global system settings from the secure core.
-                            </p>
-                            <button className="w-full py-3 bg-white/10 hover:bg-white/20 border border-white/10 rounded-xl font-bold transition-all text-sm">
-                                Configure Core
-                            </button>
-                        </div>
+                            <motion.div
+                                whileHover={{ scale: 1.02 }}
+                                className="p-8 rounded-[2.5rem] bg-primary/5 border border-primary/10 backdrop-blur-md"
+                            >
+                                <p className="text-slate-800 text-xl font-bold italic leading-relaxed">
+                                    "Governing biological assets with <span className="text-primary">technical precision</span> and <span className="text-primary">legal clarity</span>."
+                                </p>
+                            </motion.div>
+                        </motion.div>
 
-                        <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
-                            <h3 className="font-bold text-slate-800 mb-4 flex items-center gap-2">
-                                <Bell className="w-4 h-4 text-orange-500" />
-                                Notifications
-                            </h3>
-                            <div className="space-y-4">
-                                <div className="p-3 bg-orange-50 border border-orange-100 rounded-xl">
-                                    <p className="text-xs font-bold text-orange-800 mb-1">Backup Success</p>
-                                    <p className="text-[10px] text-orange-600">Daily database backup completed successfully 2h ago.</p>
+                        <div className="relative">
+                            <div className="absolute -inset-4 bg-primary/10 blur-3xl rounded-full" />
+                            <div className="relative grid grid-cols-2 gap-6">
+                                <div className="space-y-6">
+                                    <div className="p-10 rounded-[3rem] bg-white border border-slate-100 shadow-xl">
+                                        <div className="text-4xl font-black text-slate-900 mb-3">100%</div>
+                                        <p className="text-slate-400 text-xs font-black uppercase tracking-widest">Digital Registration</p>
+                                    </div>
+                                    <div className="p-10 rounded-[3rem] bg-white border border-slate-100 shadow-xl">
+                                        <div className="text-4xl font-black text-slate-900 mb-3">Traceable</div>
+                                        <p className="text-slate-400 text-xs font-black uppercase tracking-widest">Audit Trails</p>
+                                    </div>
                                 </div>
-                                <div className="p-3 bg-blue-50 border border-blue-100 rounded-xl">
-                                    <p className="text-xs font-bold text-blue-800 mb-1">New Enrollment</p>
-                                    <p className="text-[10px] text-blue-600">12 new investment units active in Zone B.</p>
+                                <div className="space-y-6 pt-16">
+                                    <div className="p-10 rounded-[3rem] bg-primary border border-primary shadow-2xl shadow-primary/20">
+                                        <div className="text-4xl font-black text-white mb-3">Locked</div>
+                                        <p className="text-white/70 text-xs font-black uppercase tracking-widest">Asset Integrity</p>
+                                    </div>
+                                    <div className="p-10 rounded-[3rem] bg-white border border-slate-100 shadow-xl">
+                                        <div className="text-4xl font-black text-slate-900 mb-3">Logged</div>
+                                        <p className="text-slate-400 text-xs font-black uppercase tracking-widest">System Actions</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+
+            {/* Advanced Control Systems Grid */}
+            <section className="py-32 relative bg-slate-50">
+                <div className="container mx-auto px-4 xl:pl-24 relative z-10">
+                    <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
+                        <div>
+                            <span className="text-primary font-black text-xs uppercase tracking-[0.4em] block mb-4">Control Systems</span>
+                            <h2 className="text-4xl md:text-6xl font-black text-slate-900 uppercase tracking-tight">Administrative <span className="text-primary italic">Protocols</span></h2>
+                        </div>
+                        <div className="h-px flex-1 bg-slate-200 hidden md:block mx-12 translate-y-[-10px]" />
+                        <div className="text-slate-400 font-black uppercase tracking-widest text-sm">
+                            v4.0.0 Stable Build
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                        {categories.map((card, i) => (
+                            <ResponsibilityCard key={i} {...card} />
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Verification Infrastructure */}
+            <section className="py-24 bg-white relative overflow-visible border-t border-slate-100">
+                <div className="container mx-auto px-4 xl:pl-24 relative z-10">
+                    <div className="bg-slate-50 border border-slate-200 rounded-[3rem] p-10 md:p-20 relative group overflow-visible shadow-sm">
+                        {/* Glowing Background Accent */}
+                        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+
+                        <div className="grid md:grid-cols-3 gap-12 md:gap-16 relative z-10">
+                            {[
+                                { title: "Ownership Mapping", desc: "Every biological asset is digitally linked to a primary owner verified by the registry.", icon: Users },
+                                { title: "Time-Stamped Logs", desc: "Every lifecycle event, from induction to handover, is chronologically time-stamped.", icon: History },
+                                { title: "Policy Enforcement", desc: "Platform ensures risk absorption and income continuity through automated rules.", icon: ClipboardCheck }
+                            ].map((feature, i) => (
+                                <motion.div
+                                    key={i}
+                                    whileHover={{ y: -5 }}
+                                    className="text-center md:text-left"
+                                >
+                                    <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-primary mb-8 mx-auto md:mx-0 border border-slate-100 shadow-xl shadow-slate-900/5 transition-transform duration-300 group-hover:scale-110">
+                                        <feature.icon className="w-8 h-8" />
+                                    </div>
+                                    <h4 className="text-2xl font-black text-slate-900 mb-4 tracking-tight leading-tight">{feature.title}</h4>
+                                    <p className="text-slate-500 text-base leading-relaxed font-bold">{feature.desc}</p>
+                                </motion.div>
+                            ))}
+                        </div>
+
+                        <div className="mt-16 pt-10 border-t border-slate-200 flex flex-wrap justify-center md:justify-between items-center gap-6">
+                            {["Non-Editable Logs", "Immutable Audit Trails", "System Rule Enforcement"].map((text, i) => (
+                                <div key={i} className="flex items-center gap-2">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                                    <span className="text-slate-400 text-[10px] font-black uppercase tracking-[0.3em]">{text}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
 
             <Footer />
         </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Lock, Camera, QrCode, TrendingUp, CheckCircle, Calendar, Shield, Smartphone, FileText, Activity, Stethoscope, Clock, ChevronRight, X, ChevronLeft } from 'lucide-react';
+import { Lock, Camera, QrCode, TrendingUp, CheckCircle, Calendar, Shield, Smartphone, FileText, Activity, Stethoscope, Clock, ChevronRight, X, ChevronLeft, User, LockKeyhole } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ManagementApp from '../assets/management_app.png';
@@ -148,14 +148,44 @@ const Investor = () => {
                                 "Access to reports, CCTV viewing, and visit scheduling."
                             ]} />
                         </div>
-                        <div className="bg-green-50 p-8 rounded-2xl flex justify-center items-center h-full min-h-[300px]">
-                            <Shield className="w-32 h-32 text-primary opacity-20 absolute" />
-                            <div className="relative z-10 bg-white p-6 rounded-2xl shadow-lg w-full max-w-xs">
-                                <div className="space-y-4">
-                                    <div className="h-2 bg-gray-100 rounded w-1/3" />
-                                    <div className="h-10 bg-gray-50 rounded border border-gray-200" />
-                                    <div className="h-10 bg-gray-50 rounded border border-gray-200" />
-                                    <div className="h-10 bg-primary rounded text-white text-center font-bold flex items-center justify-center">Login</div>
+                        <div className="bg-green-50/50 p-8 rounded-3xl flex justify-center items-center h-full min-h-[350px] relative overflow-hidden group">
+                            <Shield className="w-48 h-48 text-primary/5 absolute -right-10 -bottom-10 rotate-12 group-hover:scale-110 transition-transform duration-700" />
+                            <div className="relative z-10 bg-white p-8 rounded-3xl shadow-2xl w-full max-w-[300px] border border-white/50 backdrop-blur-sm">
+                                <div className="space-y-6">
+                                    <div className="flex items-center gap-2 mb-2">
+                                        <div className="w-8 h-1 bg-primary/20 rounded-full" />
+                                        <div className="w-4 h-1 bg-primary/10 rounded-full" />
+                                    </div>
+
+                                    <div className="space-y-4">
+                                        <div className="space-y-2">
+                                            <div className="flex items-center gap-2 text-slate-400 text-[10px] font-black uppercase tracking-widest px-1">
+                                                <User className="w-3 h-3 text-primary" /> Investor ID
+                                            </div>
+                                            <div className="h-12 bg-slate-50 rounded-2xl border border-slate-100 flex items-center px-4 text-slate-300 italic text-sm">
+                                                ID-XXXX-PRJ
+                                            </div>
+                                        </div>
+
+                                        <div className="space-y-2">
+                                            <div className="flex items-center gap-2 text-slate-400 text-[10px] font-black uppercase tracking-widest px-1">
+                                                <LockKeyhole className="w-3 h-3 text-primary" /> Password
+                                            </div>
+                                            <div className="h-12 bg-slate-50 rounded-2xl border border-slate-100 flex items-center px-4 text-slate-300 italic text-sm">
+                                                ••••••••••••
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="pt-4">
+                                        <div className="h-14 bg-primary hover:bg-green-600 rounded-2xl text-white text-center font-black flex items-center justify-center shadow-lg shadow-primary/20  transition-all uppercase tracking-widest text-xs">
+                                            Secure Login
+                                        </div>
+                                    </div>
+
+                                    <p className="text-[9px] text-slate-400 text-center font-bold uppercase tracking-tighter opacity-60">
+                                        Encrypted Session • Farmvest Security
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -184,6 +214,94 @@ const Investor = () => {
                     </div>
                 </Section>
 
+                {/* 3. Slot Booking System */}
+                <Section title="Visit Scheduling & Slot Booking" id="booking" icon={Calendar}>
+                    <div className="grid lg:grid-cols-2 gap-12 items-start">
+                        <div className="space-y-8">
+                            <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                                <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                                    {/* <Shield className="w-5 h-5 text-primary" /> Booking */}
+                                </h3>
+                                <div className="space-y-3">
+                                    {[
+                                        { t: "Monthly Frequency", d: "One visit slot per month", i: Calendar },
+                                        { t: "Visit Duration", d: "Fixed 30-minute window", i: Clock },
+                                        { t: "Verification Protocol", d: "Entry after verifying booking & ID", i: Lock },
+                                        { t: "Slot Finality", d: "Locked after submission", i: CheckCircle }
+                                    ].map((item, idx) => (
+                                        <div key={idx} className="flex gap-3 p-3 bg-white rounded-xl border border-slate-100 items-start">
+                                            <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center text-primary flex-shrink-0">
+                                                <item.i className="w-4 h-4" />
+                                            </div>
+                                            <div>
+                                                <h4 className="font-bold text-slate-900 text-xs">{item.t}</h4>
+                                                <p className="text-gray-500 text-[10px]">{item.d}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                            <FeatureList items={[
+                                "Real-time availability of visit slots.",
+                                "Direct calendar integration for date selection.",
+                                "Automated booking confirmation and digital pass.",
+                                "Visitor detail verification at the main gate."
+                            ]} />
+                        </div>
+
+                        <div className="bg-white p-6 md:p-8 rounded-[2.5rem] shadow-xl relative overflow-hidden group border border-slate-100">
+                            {/* Decorative background elements matching the light theme */}
+                            <div className="absolute top-0 right-0 w-48 h-48 bg-primary/5 rounded-full blur-[60px] -z-0" />
+
+                            <div className="relative z-10">
+                                <div className="flex justify-between items-center mb-8">
+
+                                </div>
+
+                                {/* 3D Tent Calendar Simulation */}
+                                <div className="perspective-container relative mb-12 h-48 flex justify-center items-center">
+                                    <div className="relative w-full max-w-[320px] h-full transition-transform duration-700 hover:rotate-y-12">
+                                        {/* Tent Structure - Back Side */}
+                                        <div className="absolute inset-0 bg-slate-200 rounded-2xl origin-bottom transform -rotate-x-45 translate-z-neg-20 shadow-inner" />
+
+                                        {/* Tent Structure - Front Face (The Calendar) */}
+                                        <div className="absolute inset-0 bg-white rounded-2xl shadow-2xl origin-bottom transform rotate-x-12 border border-slate-100 flex flex-col overflow-hidden">
+                                            {/* Light Blue Calendar Face */}
+                                            <div className="bg-sky-50/80 p-6 flex-1">
+                                                <div className="grid grid-cols-7 gap-1 mb-4">
+                                                    {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map(d => (
+                                                        <div key={d} className="text-[9px] text-sky-500 font-black text-center opacity-70">{d}</div>
+                                                    ))}
+                                                </div>
+                                                <div className="grid grid-cols-7 gap-1">
+                                                    {Array.from({ length: 31 }).map((_, i) => (
+                                                        <div
+                                                            key={i}
+                                                            className={`h-7 rounded-lg flex items-center justify-center text-[10px] font-bold transition-all
+                                                                ${i + 1 === 18 ? 'bg-sky-500 text-white shadow-lg shadow-sky-200 cursor-pointer scale-110' :
+                                                                    (i + 1) % 4 === 0 ? 'text-slate-200' : 'text-sky-900/40 hover:bg-sky-100 cursor-pointer'}`}
+                                                        >
+                                                            {i + 1}
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                            {/* Bottom Edge Reflection/Shadow */}
+                                            <div className="h-2 bg-gradient-to-b from-slate-50 to-white" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Time Slots - Matching Light Theme */}
+                                <div className="space-y-3">
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </Section>
+
                 {/* 3. Notifications & Reports */}
                 <Section title="Notifications & Reports" id="qrcode" icon={QrCode}>
                     <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -196,20 +314,35 @@ const Investor = () => {
                                 "Secure document vault for investment certificates."
                             ]} />
                         </div>
-                        <div className="bg-green-50 p-8 rounded-2xl flex justify-center">
-                            <div className="bg-white p-6 rounded-3xl shadow-xl w-64 border-4 border-gray-800">
-                                <div className="w-10 h-1 bg-gray-300 rounded-full mx-auto mb-4" />
+                        <div className="bg-green-50 p-8 rounded-[3rem] flex justify-center relative overflow-hidden group">
+                            <div className="absolute inset-0 bg-mesh opacity-20" />
+                            <div className="bg-white p-7 rounded-[3rem] shadow-2xl w-64 border-[8px] border-slate-900 relative z-10">
+                                <div className="w-12 h-1.5 bg-slate-100 rounded-full mx-auto mb-6" />
+
                                 <div className="text-center mb-6">
-                                    <div className="text-sm text-gray-500 mb-1">Status Update</div>
-                                    <div className="font-bold text-lg">April 2026</div>
+                                    <div className="text-[10px] text-slate-400 font-black uppercase tracking-[0.2em] mb-1">Notification</div>
+                                    <div className="font-black text-lg text-slate-900">Visit Scheduled</div>
                                 </div>
-                                <div className="space-y-3">
-                                    <div className="h-2 bg-green-100 rounded-full w-full" />
-                                    <div className="h-2 bg-green-50 rounded-full w-2/3" />
-                                    <div className="h-2 bg-green-50 rounded-full w-3/4" />
+
+                                <div className="bg-emerald-50 rounded-2xl p-5 border border-emerald-100 flex flex-col items-center text-center shadow-inner">
+                                    <motion.div
+                                        initial={{ scale: 0 }}
+                                        animate={{ scale: 1 }}
+                                        className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary shadow-md mb-3"
+                                    >
+                                        <CheckCircle className="w-7 h-7" />
+                                    </motion.div>
+                                    <div className="text-xs font-black text-emerald-900 uppercase tracking-tighter mb-1">Slot Booking Successful</div>
+                                    <div className="text-[10px] text-emerald-600 font-bold italic">Shed #04 • 10:30 AM</div>
                                 </div>
-                                <div className="mt-8 text-center text-xs text-green-600 font-bold bg-green-100 py-2 rounded-lg">
-                                    Operations Active
+
+                                <div className="mt-6 space-y-2">
+                                    <div className="h-1 bg-slate-50 rounded-full w-full" />
+                                    <div className="h-1 bg-slate-50 rounded-full w-3/4" />
+                                </div>
+
+                                <div className="mt-10 py-3 bg-slate-900 rounded-xl text-white text-[9px] font-black uppercase tracking-widest text-center">
+                                    View Details
                                 </div>
                             </div>
                         </div>

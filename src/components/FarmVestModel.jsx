@@ -60,16 +60,20 @@ const FarmVestModel = () => {
                                 Rather than treating milk as a commodity, Farmvest treats it as a biological product whose quality is strictly determined by the Buffalo's health, feed, and environment.
                             </p>
                         </div>
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 gap-4">
                             {[
                                 { label: "Source Verified", val: "100%" },
                                 { label: "Purity Checks", val: "Daily" },
                                 { label: "Antibiotic Free", val: "Guaranteed" },
                                 { label: "Traceability", val: "End-to-End" }
                             ].map((stat, i) => (
-                                <div key={i} className="bg-white/10 p-4 rounded-2xl border border-white/10 text-center">
-                                    <h4 className="text-xl sm:text-2xl font-black text-white mb-1 break-words">{stat.val}</h4>
-                                    <p className="text-white/50 text-[10px] sm:text-xs uppercase tracking-wider">{stat.label}</p>
+                                <div key={i} className="bg-white/10 p-5 rounded-2xl border border-white/10 flex items-center gap-6 md:gap-12 px-8 hover:bg-white/20 transition-all group">
+                                    <h4 className="text-2xl md:text-4xl font-black text-white min-w-[140px] md:min-w-[200px] leading-none group-hover:text-primary transition-colors">
+                                        {stat.val}
+                                    </h4>
+                                    <p className="text-white/60 text-[10px] md:text-sm font-black uppercase tracking-[0.2em] leading-tight flex-1">
+                                        {stat.label}
+                                    </p>
                                 </div>
                             ))}
                         </div>

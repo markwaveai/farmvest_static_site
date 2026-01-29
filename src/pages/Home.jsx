@@ -59,95 +59,65 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Why Farmvest Section */}
-            <section className="py-24 bg-white relative overflow-hidden">
-                <div className="container mx-auto px-4 relative z-10 lg:pl-24">
-                    <div className="grid md:grid-cols-2 gap-16 items-center mb-12 md:mb-16">
-                        <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                        >
-                            <span className="text-primary font-bold tracking-widest uppercase text-sm">Our Mission</span>
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mt-2 mb-6 leading-tight">
-                                Redefining Agricultural <span className="text-primary">Asset Management</span>
-                            </h2>
-                            <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                                Farmvest is a technology-driven biological asset management platform that transforms agriculture into a structured, transparent, and secure investment ecosystem.
-                            </p>
-                            <p className="text-gray-600 text-lg leading-relaxed italic border-l-4 border-primary pl-6 font-medium">
-                                We enable individuals to own real biological assets, earn stable monthly income, and stay fully protected from operational and biological risk.
-                            </p>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            className="bg-gray-50 p-10 rounded-[2.5rem] border border-gray-100 shadow-sm"
-                        >
-                            <div className="space-y-8">
-                                <div className="flex items-center gap-6">
-                                    <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-primary">
-                                        <ShieldCheck className="w-8 h-8" />
-                                    </div>
-                                    <div>
-                                        <h4 className="font-bold text-gray-900 text-xl">Risk Absorption</h4>
-                                        <p className="text-gray-500">We take the risk so you don't have to.</p>
-                                    </div>
-                                </div>
-                                <div className="flex items-center gap-6">
-                                    <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-primary">
-                                        <TrendingUp className="w-8 h-8" />
-                                    </div>
-                                    <div>
-                                        <h4 className="font-bold text-gray-900 text-xl">Stable Returns</h4>
-                                        <p className="text-gray-500">Consistent monthly income from structured models.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
-                    </div>
+            {/* Why Farmvest Section - The Problem We Solve */}
+            <section className="py-32 bg-slate-50 relative overflow-hidden">
+                {/* Decorative background elements */}
+                <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
+                <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
 
-                    <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center pt-12 md:pt-16 border-t border-gray-100">
-                        <div className="text-center md:text-left">
-                            <motion.span
-                                initial={{ opacity: 0 }}
-                                whileInView={{ opacity: 1 }}
-                                className="text-primary font-bold tracking-widest uppercase text-sm"
-                            >
+                <div className="container mx-auto px-4 relative z-10 xl:pl-24">
+                    <div className="grid lg:grid-cols-2 gap-20 items-center">
+                        <motion.div
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8 }}
+                            viewport={{ once: true }}
+                        >
+                            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold tracking-widest uppercase text-xs mb-6">
                                 Why Farmvest
-                            </motion.span>
-                            <motion.h2
-                                initial={{ opacity: 0, y: 10 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                className="text-3xl md:text-2xl lg:text-5xl font-black text-gray-900 mt-2 mb-4 md:mb-6"
-                            >
-                                The Problem We Solve
-                            </motion.h2>
-                            <p className="text-gray-600 text-lg md:text-sm lg:text-lg leading-relaxed">
-                                Agriculture has always been real — but never structured.<br className="hidden lg:block" />
-                                Investments have always promised returns — but often lacked real backing.
+                            </span>
+                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-8 leading-[1.1]">
+                                The Problem <br /><span className="text-primary italic">We Solve</span>
+                            </h2>
+                            <p className="text-gray-600 text-xl leading-relaxed mb-6 max-w-xl">
+                                Agriculture has always been real — but never structured.
+                                <br />Investments have always promised returns — but often lacked real backing.
                             </p>
-                        </div>
+                            <div className="h-1 w-24 bg-primary rounded-full mb-12" />
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.3 }}
+                                className="p-8 rounded-[2rem] bg-white border border-gray-100 shadow-xl shadow-gray-200/50 relative overflow-hidden group"
+                            >
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700" />
+                                <p className="text-gray-700 text-lg leading-relaxed italic relative z-10">
+                                    "We enable individuals to own real biological assets, earn stable income, and stay fully protected from operational and biological risk."
+                                </p>
+                            </motion.div>
+                        </motion.div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             {[
-                                { title: "Assets are real and owned", icon: CheckCircle },
-                                { title: "Income is contractual and predictable", icon: TrendingUp },
-                                { title: "Risk is absorbed by the platform", icon: ShieldCheck },
-                                { title: "Trust is built through visibility", icon: Users }
+                                { title: "Assets are real and owned", icon: CheckCircle, color: "bg-green-500" },
+                                { title: "Income is contractual and predictable", icon: TrendingUp, color: "bg-blue-500" },
+                                { title: "Risk is absorbed by the platform", icon: ShieldCheck, color: "bg-indigo-500" },
+                                { title: "Trust is built through visibility", icon: Users, color: "bg-emerald-500" }
                             ].map((item, i) => (
                                 <motion.div
                                     key={i}
-                                    initial={{ opacity: 0, y: 20 }}
+                                    initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: i * 0.1 }}
-                                    className="bg-gray-50 p-6 lg:p-8 rounded-2xl border border-gray-100 flex items-center gap-6 hover:shadow-md transition-all group"
+                                    transition={{ delay: i * 0.1, duration: 0.6 }}
+                                    viewport={{ once: true }}
+                                    whileHover={{ y: -8, scale: 1.02 }}
+                                    className="p-8 rounded-3xl bg-white border border-gray-100 shadow-lg shadow-gray-200/20 flex flex-col items-start gap-6 hover:shadow-2xl hover:border-primary/20 transition-all duration-300"
                                 >
-                                    <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-primary flex-shrink-0 group-hover:bg-white transition-colors">
-                                        <item.icon className="w-6 h-6" />
+                                    <div className={`w-14 h-14 ${item.color}/10 rounded-2xl flex items-center justify-center text-primary`}>
+                                        <item.icon className="w-8 h-8" />
                                     </div>
-                                    <h3 className="text-base lg:text-lg font-bold text-gray-800 leading-tight text-left">{item.title}</h3>
+                                    <h3 className="text-xl font-bold text-gray-800 leading-tight">{item.title}</h3>
                                 </motion.div>
                             ))}
                         </div>
@@ -157,7 +127,7 @@ const Home = () => {
 
             {/* White Revolution 2.0 */}
             <section className="py-24 bg-white">
-                <div className="container mx-auto px-4 lg:pl-24">
+                <div className="container mx-auto px-4">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.98 }}
                         whileInView={{ opacity: 1, scale: 1 }}
@@ -167,7 +137,7 @@ const Home = () => {
 
                         <div className="grid lg:grid-cols-2 gap-16 relative z-10 items-center">
                             <div>
-                                <h2 className="text-3xl md:text-5xl font-black mb-6 leading-tight">
+                                <h2 className="text-2xl md:text-4xl font-black mb-6 leading-tight">
                                     The 'White Revolution 2.0' Philosophy
                                 </h2>
                                 <p className="text-slate-300 text-lg leading-relaxed mb-8">
@@ -178,16 +148,20 @@ const Home = () => {
                                 </p>
                             </div>
 
-                            <div className="grid grid-cols-2 gap-4">
+                            <div className="grid grid-cols-1 gap-4">
                                 {[
                                     { label: "100%", sub: "Source Verified" },
                                     { label: "Daily", sub: "Purity Checks" },
                                     { label: "Guaranteed", sub: "Antibiotic Free" },
                                     { label: "End-to-End", sub: "Traceability" }
                                 ].map((stat, i) => (
-                                    <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-2xl text-center hover:bg-white/10 transition-colors">
-                                        <div className="text-2xl md:text-3xl font-black text-white mb-1">{stat.label}</div>
-                                        <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">{stat.sub}</div>
+                                    <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-2xl flex items-center gap-6 md:gap-12 hover:bg-white/10 transition-colors group">
+                                        <div className="text-2xl md:text-2xl font-black text-white min-w-[140px] md:min-w-[220px] leading-none group-hover:text-primary transition-colors">
+                                            {stat.label}
+                                        </div>
+                                        <div className="text-[10px] md:text-xs font-black text-slate-400 uppercase tracking-[0.3em] leading-tight flex-1">
+                                            {stat.sub}
+                                        </div>
                                     </div>
                                 ))}
                             </div>
@@ -237,36 +211,67 @@ const Home = () => {
 
 
             {/* How the Farmvest Model Works */}
-            <section className="py-24 bg-white relative overflow-hidden">
-                <div className="container mx-auto px-4 relative z-10 lg:pl-24">
-                    <div className="flex flex-col lg:grid lg:grid-cols-5 gap-12 items-center">
-                        <div className="lg:col-span-5 text-center lg:text-left">
-                            <span className="text-primary font-bold tracking-widest uppercase text-sm">How the Farmvest Model Works</span>
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mt-4 mb-12">Engineered for <span className="text-primary italic">Simplicity</span></h2>
+            <section className="py-32 bg-slate-900 relative overflow-hidden">
+                {/* Background Special Features */}
+                <div className="absolute inset-0 bg-mesh opacity-20" />
+                <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-[150px] animate-pulse" />
+                <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white/5 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '1s' }} />
+                <div className="absolute inset-0 blueprint-grid opacity-10" />
+
+                <div className="container mx-auto px-4 relative z-10 xl:pl-24">
+                    <div className="text-center mb-20">
+                        <motion.span
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            className="text-white/50 font-bold tracking-[0.3em] uppercase text-sm mb-4 block"
+                        >
+                            The Blueprint
+                        </motion.span>
+                        <motion.h2
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.1 }}
+                            className="text-4xl md:text-6xl font-black text-white tracking-tight uppercase"
+                        >
+                            How the Farmvest Model Works
+                        </motion.h2>
+                        <div className="mt-6 flex justify-center">
+                            <div className="h-1.5 w-40 bg-gradient-to-r from-transparent via-primary/20 to-transparent rounded-full" />
                         </div>
-                        <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6">
-                            {[
-                                { title: "You Own Real Assets", desc: "You purchase ownership of biological assets through a defined unit structure." },
-                                { title: "We Manage Everything", desc: "Farmvest handles operations, monitoring, risk management, and asset protection." },
-                                { title: "You Earn Fixed Income", desc: "Monthly income is paid as per agreement terms — independent of market volatility." },
-                                { title: "Your Capital Stays Protected", desc: "Any asset loss is replaced by Farmvest, ensuring income and ownership continuity." },
-                                { title: "You Always Have an Exit", desc: "After a defined period, you can continue or exit with full ownership rights." }
-                            ].map((item, i) => (
-                                <motion.div
-                                    key={i}
-                                    initial={{ opacity: 0, scale: 0.9 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    transition={{ delay: i * 0.1 }}
-                                    className="p-6 rounded-2xl bg-gray-50 border border-gray-100 flex flex-col items-center text-center hover:bg-white hover:shadow-md transition-all"
-                                >
-                                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold mb-4">
-                                        {i + 1}
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                        {[
+                            { title: "Asset Acquisition", desc: "You purchase ownership of biological assets through a defined unit structure.", icon: Zap },
+                            { title: "Expert Management", desc: "Farmvest handles operations, monitoring, risk management, and protection.", icon: ShieldCheck },
+                            { title: "Fixed Income", desc: "Monthly income is paid as per agreement terms — independent of market volatility.", icon: TrendingUp },
+                            { title: "Capital Safety", desc: "Any asset loss is replaced by Farmvest, ensuring continuity.", icon: CheckCircle },
+                            { title: "Flexible Exit", desc: "After 36 months, you can continue or exit with full ownership rights.", icon: Anchor }
+                        ].map((item, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ delay: i * 0.1, duration: 0.5 }}
+                                viewport={{ once: true }}
+                                whileHover={{ y: -10 }}
+                                className="group relative"
+                            >
+                                <div className="absolute -inset-0.5 bg-gradient-to-b from-white/20 to-transparent rounded-[2rem] opacity-0 group-hover:opacity-100 transition duration-500 blur-sm" />
+                                <div className="relative h-full p-8 rounded-[2rem] glass-card border border-white/10 flex flex-col items-center text-center group-hover:bg-white/5 transition-all duration-300">
+                                    <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white font-bold mb-8 group-hover:scale-110 group-hover:bg-white/10 transition-all duration-300">
+                                        <item.icon className="w-8 h-8" />
                                     </div>
-                                    <h3 className="font-bold text-gray-800 mb-2 text-sm lg:text-base">{item.title}</h3>
-                                    <p className="text-gray-600 text-xs lg:text-sm leading-relaxed">{item.desc}</p>
-                                </motion.div>
-                            ))}
-                        </div>
+                                    <div className="h-16 flex items-center justify-center mb-4">
+                                        <h3 className="font-bold text-white text-xl transition-colors leading-tight">{item.title}</h3>
+                                    </div>
+                                    <p className="text-slate-200 text-sm leading-relaxed font-medium transition-colors">{item.desc}</p>
+                                </div>
+                                {i < 4 && (
+                                    <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-px bg-white/10 z-0" />
+                                )}
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </section>

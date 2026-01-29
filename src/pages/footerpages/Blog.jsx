@@ -29,14 +29,14 @@ const BlogCard = ({ title, excerpt, image, author, date, category, icon: Icon, s
             </div>
         </div>
         <div className="p-8 flex flex-col flex-1">
-            <div className="flex items-center gap-6 mb-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+            <div className="flex items-center gap-6 mb-4 text-[10px] font-bold text-slate-600 uppercase tracking-widest">
                 <div className="flex items-center gap-2"><Calendar className="w-3 h-3 text-primary" /> {date}</div>
                 <div className="flex items-center gap-2"><User className="w-3 h-3 text-primary" /> {author}</div>
             </div>
-            <h3 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-primary transition-colors line-clamp-2 leading-tight">{title}</h3>
-            <p className="text-slate-500 text-sm leading-relaxed mb-8 line-clamp-3">{excerpt}</p>
+            <h3 className="text-xl font-bold font-sans text-slate-800 mb-4 group-hover:text-primary transition-colors line-clamp-2 leading-tight">{title}</h3>
+            <p className="text-slate-700 text-base leading-relaxed mb-8 line-clamp-3 font-medium">{excerpt}</p>
             <div className="mt-auto">
-                <Link to={`/blog/${slug}`} className="flex items-center gap-2 font-black text-slate-900 group-hover:gap-4 transition-all uppercase tracking-[0.2em] text-[10px]">
+                <Link to={`/blog/${slug}`} className="flex items-center gap-2 font-black font-display text-slate-900 group-hover:gap-4 transition-all uppercase tracking-[0.2em] text-[10px]">
                     Read Update <ArrowRight className="w-4 h-4 text-primary" />
                 </Link>
             </div>
@@ -89,7 +89,7 @@ const Blog = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-slate-50 font-sans">
+        <div className="min-h-screen bg-slate-50 font-display">
             <Navbar />
 
             <section className="pt-32 pb-24 header-blog overflow-hidden relative">
@@ -104,11 +104,11 @@ const Blog = () => {
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-4xl md:text-6xl font-black text-slate-900 mb-6 uppercase tracking-tighter"
+                        className="text-4xl md:text-6xl font-black font-sans text-slate-900 mb-6 uppercase tracking-tighter"
                     >
                         Project <span className="text-teal-600">Insights</span>
                     </motion.h1>
-                    <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-xl text-slate-800 max-w-3xl mx-auto font-medium leading-relaxed">
                         Earn returns from buffalo farming while transparently monitoring operations, animal health, and revenue through our professional digital platform.
                     </p>
                 </div>

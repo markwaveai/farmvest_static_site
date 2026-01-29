@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, MessageSquare, CheckCircle2, X } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, MessageSquare, CheckCircle2, X, ChevronDown } from 'lucide-react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
@@ -21,13 +21,13 @@ const ContactInfo = ({ icon: Icon, title, details, link }) => (
             </div>
         )}
         <div>
-            <h4 className="font-bold text-slate-800 text-[10px] mb-1 uppercase tracking-widest leading-none">{title}</h4>
+            <h4 className="font-bold text-slate-900 text-[10px] mb-1 uppercase tracking-widest leading-none">{title}</h4>
             {link ? (
-                <a href={link} target={link.startsWith('http') ? "_blank" : undefined} rel={link.startsWith('http') ? "noopener noreferrer" : undefined} className="text-slate-500 font-bold italic text-sm hover:text-primary transition-colors block">
+                <a href={link} target={link.startsWith('http') ? "_blank" : undefined} rel={link.startsWith('http') ? "noopener noreferrer" : undefined} className="text-slate-700 font-bold italic text-sm hover:text-primary transition-colors block">
                     {details}
                 </a>
             ) : (
-                <div className="text-slate-500 font-bold italic text-sm">{details}</div>
+                <div className="text-slate-700 font-bold italic text-sm">{details}</div>
             )}
         </div>
     </div>
@@ -94,7 +94,7 @@ const ContactUs = () => {
     };
 
     return (
-        <div className="min-h-screen bg-white font-sans">
+        <div className="min-h-screen bg-white font-display">
             <Navbar />
 
             {/* Success Modal */}
@@ -126,7 +126,7 @@ const ContactUs = () => {
                             </div>
 
                             <h3 className="text-2xl font-black text-slate-900 mb-2 italic">Inquiry Received</h3>
-                            <p className="text-slate-500 font-medium mb-8 leading-relaxed">
+                            <p className="text-slate-700 font-medium mb-8 leading-relaxed">
                                 Our management team has received your inquiry. We will get back to you shortly.
                             </p>
 
@@ -181,7 +181,7 @@ const ContactUs = () => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.6 }}
-                            className="text-base md:text-lg text-slate-500 max-w-2xl mx-auto leading-tight italic font-black text-center mt-2 tracking-tighter opacity-80"
+                            className="text-base md:text-lg text-slate-700 max-w-2xl mx-auto leading-tight italic font-black text-center mt-2 tracking-tighter"
                         >
                             Your Direct Link Between <span className="text-primary">Capital</span> & <span className="text-primary">Cultivation</span>
                         </motion.p>
@@ -203,52 +203,57 @@ const ContactUs = () => {
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
-                                        <label className="text-[10px] font-black text-slate-400 px-2 uppercase tracking-[0.2em]">Full Name</label>
+                                        <label className="text-[10px] font-black text-slate-600 px-2 uppercase tracking-[0.2em]">Full Name</label>
                                         <input
                                             name="name"
                                             value={formData.name}
                                             onChange={handleChange}
                                             type="text"
-                                            className={`w-full px-6 py-4 bg-slate-50 rounded-2xl border outline-none transition-all italic ${errors.name ? 'border-red-400 focus:ring-4 focus:ring-red-100' : 'border-slate-100 focus:border-primary focus:ring-4 focus:ring-primary/10'}`}
+                                            className={`w-full px-6 py-4 bg-slate-50 rounded-2xl border outline-none transition-all italic text-slate-800 font-medium ${errors.name ? 'border-red-400 focus:ring-4 focus:ring-red-100' : 'border-slate-100 focus:border-primary focus:ring-4 focus:ring-primary/10'}`}
                                             placeholder="Your Name"
                                         />
                                         {errors.name && <p className="text-xs text-red-500 font-bold px-2 italic">{errors.name}</p>}
                                     </div>
                                     <div className="space-y-2">
-                                        <label className="text-[10px] font-black text-slate-400 px-2 uppercase tracking-[0.2em]">Contact Email</label>
+                                        <label className="text-[10px] font-black text-slate-600 px-2 uppercase tracking-[0.2em]">Contact Email</label>
                                         <input
                                             name="email"
                                             value={formData.email}
                                             onChange={handleChange}
                                             type="text"
-                                            className={`w-full px-6 py-4 bg-slate-50 rounded-2xl border outline-none transition-all italic ${errors.email ? 'border-red-400 focus:ring-4 focus:ring-red-100' : 'border-slate-100 focus:border-primary focus:ring-4 focus:ring-primary/10'}`}
+                                            className={`w-full px-6 py-4 bg-slate-50 rounded-2xl border outline-none transition-all italic text-slate-800 font-medium ${errors.email ? 'border-red-400 focus:ring-4 focus:ring-red-100' : 'border-slate-100 focus:border-primary focus:ring-4 focus:ring-primary/10'}`}
                                             placeholder="email@domain.com"
                                         />
                                         {errors.email && <p className="text-xs text-red-500 font-bold px-2 italic">{errors.email}</p>}
                                     </div>
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black text-slate-400 px-2 uppercase tracking-[0.2em]">Inquiry Type</label>
-                                    <select
-                                        name="type"
-                                        value={formData.type}
-                                        onChange={handleChange}
-                                        className="w-full px-6 py-4 bg-slate-50 rounded-2xl border border-slate-100 focus:border-primary outline-none transition-all italic appearance-none"
-                                    >
-                                        <option>Investment Opportunity</option>
-                                        <option>Farm Operations Support</option>
-                                        <option>Technical Platform Inquiry</option>
-                                        <option>Media & PR</option>
-                                    </select>
+                                    <label className="text-[10px] font-black text-slate-600 px-2 uppercase tracking-[0.2em]">Inquiry Type</label>
+                                    <div className="relative">
+                                        <select
+                                            name="type"
+                                            value={formData.type}
+                                            onChange={handleChange}
+                                            className="w-full px-6 py-4 bg-slate-50 rounded-2xl border border-slate-100 focus:border-primary outline-none transition-all italic appearance-none text-slate-800 font-medium cursor-pointer"
+                                        >
+                                            <option>Investment Opportunity</option>
+                                            <option>Farm Operations Support</option>
+                                            <option>Technical Platform Inquiry</option>
+                                            <option>Media & PR</option>
+                                        </select>
+                                        <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
+                                            <ChevronDown className="w-5 h-5" />
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black text-slate-400 px-2 uppercase tracking-[0.2em]">Message Details</label>
+                                    <label className="text-[10px] font-black text-slate-600 px-2 uppercase tracking-[0.2em]">Message Details</label>
                                     <textarea
                                         name="message"
                                         value={formData.message}
                                         onChange={handleChange}
                                         rows="4"
-                                        className={`w-full px-6 py-4 bg-slate-50 rounded-2xl border outline-none transition-all resize-none italic ${errors.message ? 'border-red-400 focus:ring-4 focus:ring-red-100' : 'border-slate-100 focus:border-primary focus:ring-4 focus:ring-primary/10'}`}
+                                        className={`w-full px-6 py-4 bg-slate-50 rounded-2xl border outline-none transition-all resize-none italic text-slate-800 font-medium ${errors.message ? 'border-red-400 focus:ring-4 focus:ring-red-100' : 'border-slate-100 focus:border-primary focus:ring-4 focus:ring-primary/10'}`}
                                         placeholder="How can our management assist you?"
                                     ></textarea>
                                     {errors.message && <p className="text-xs text-red-500 font-bold px-2 italic">{errors.message}</p>}
@@ -275,7 +280,7 @@ const ContactUs = () => {
                             <div className="p-8 bg-primary rounded-[40px] text-white shadow-xl shadow-primary/20 relative overflow-hidden group">
                                 <div className="relative z-10">
                                     <h3 className="text-2xl font-black mb-4 italic uppercase tracking-tighter">Ready to Visit?</h3>
-                                    <p className="text-green-50 text-sm leading-relaxed mb-6 italic">
+                                    <p className="text-green-50 text-sm leading-relaxed mb-6 italic font-medium">
                                         Investors can schedule physical site visits to our buffalo sheds via the "Investor Login" portal. Experience the operations first-hand carefully managed by our supervisors.
                                     </p>
                                     <button disabled className="px-8 py-3 bg-white text-primary font-bold rounded-xl text-xs uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-all shadow-lg opacity-50 cursor-not-allowed">

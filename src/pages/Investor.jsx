@@ -273,13 +273,13 @@ const Investor = () => {
                                                         <div key={d} className="text-[9px] text-sky-500 font-black text-center opacity-70">{d}</div>
                                                     ))}
                                                 </div>
-                                                <div className="grid grid-cols-7 gap-1">
+                                                <div className="grid grid-cols-7 gap-1 text-slate-400">
                                                     {Array.from({ length: 31 }).map((_, i) => (
                                                         <div
                                                             key={i}
                                                             className={`h-7 rounded-lg flex items-center justify-center text-[10px] font-bold transition-all
-                                                                ${i + 1 === 18 ? 'bg-sky-500 text-white shadow-lg shadow-sky-200 cursor-pointer scale-110' :
-                                                                    (i + 1) % 4 === 0 ? 'text-slate-200' : 'text-sky-900/40 hover:bg-sky-100 cursor-pointer'}`}
+                                                                ${i + 1 === 18 ? 'bg-[#0EA5E9] text-white shadow-xl shadow-sky-200 cursor-pointer scale-110 relative z-10' :
+                                                                    'text-slate-400'}`}
                                                         >
                                                             {i + 1}
                                                         </div>

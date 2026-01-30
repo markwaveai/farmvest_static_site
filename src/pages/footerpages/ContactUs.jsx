@@ -280,12 +280,10 @@ const ContactUs = () => {
                             <div className="p-8 bg-primary rounded-[40px] text-white shadow-xl shadow-primary/20 relative overflow-hidden group">
                                 <div className="relative z-10">
                                     <h3 className="text-2xl font-black mb-4 italic uppercase tracking-tighter">Ready to Visit?</h3>
-                                    <p className="text-green-50 text-sm leading-relaxed mb-6 italic font-medium">
+                                    <p className="text-white text-sm leading-relaxed mb-6 italic font-medium">
                                         Investors can schedule physical site visits to our buffalo sheds via the "Investor Login" portal. Experience the operations first-hand carefully managed by our supervisors.
                                     </p>
-                                    <button disabled className="px-8 py-3 bg-white text-primary font-bold rounded-xl text-xs uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-all shadow-lg opacity-50 cursor-not-allowed">
-                                        Schedule Now
-                                    </button>
+
                                 </div>
                                 <MessageSquare className="absolute -bottom-10 -right-10 w-48 h-48 text-white/10 group-hover:rotate-12 transition-transform duration-700" />
                             </div>

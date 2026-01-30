@@ -265,14 +265,14 @@ const FarmManager = () => {
                 </Section>
 
                 {/* 4. Entry & Exit Management */}
-                <Section title="Livestock Entry & Exit Workflow" icon={Tractor}>
+                <Section title="Livestock Entry & Exit Work flow" icon={Tractor}>
                     <div className="grid md:grid-cols-2 gap-8 items-center">
                         <div className="space-y-4">
                             <CheckList items={[
                                 "Only the Farm Manager is authorized to manage entry into sheds.",
                                 "Farm Manager exclusively controls exit from sheds.",
                                 "Entry and exit access restricted from all other roles.",
-                                "Coordinates medical workflows based on ticket priority.",
+                                "Coordinates medical work flows based on ticket priority.",
                                 "Reviews medical reports and treatment updates regularly.",
                                 "Ensures smooth and effective healthcare management."
                             ]} />

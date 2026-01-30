@@ -102,16 +102,16 @@ const AssistantDoctor = () => {
                                     <div className="w-6 h-6 rounded-full bg-teal-600 border-2 border-[#0a1a1a] flex items-center justify-center text-[8px] font-black leading-none">DR</div>
                                     <div className="w-6 h-6 rounded-full bg-slate-700 border-2 border-[#0a1a1a] flex items-center justify-center text-[8px] font-black leading-none">AS</div>
                                 </div>
-                                <span className="text-teal-400 text-[10px] font-black uppercase tracking-[0.3em]">Direct Doctor-to-Asst. Link</span>
+                                <span className="text-teal-400 text-[10px] font-black uppercase tracking-[0.3em]">Direct Doctor-to-Asst</span>
                             </motion.div>
 
                             <h1 className="text-6xl lg:text-8xl font-black text-white mb-8 leading-[0.85] tracking-tighter">
                                 ASST <span className="text-teal-500">DOCTOR</span>
                             </h1>
 
-                            <p className="text-xl text-slate-400 max-w-xl leading-relaxed mb-12 font-medium">
+                            <p className="text-xl text-slate-200 max-w-xl leading-relaxed mb-12 font-medium">
                                 Executing medical directives and precision treatments under the supervision of Chief Medical Officers.
-                                <span className="text-teal-500 block mt-2">Protocol: Systematic Recovery Verification.</span>
+                                <span className="text-teal-400 block mt-2">Protocol: Systematic Recovery Verification.</span>
                             </p>
 
                             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0">

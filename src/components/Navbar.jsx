@@ -55,7 +55,9 @@ const Navbar = () => {
                                     "flex items-center gap-2 text-sm font-medium transition-all hover:text-primary relative group font-bold",
                                     isActive
                                         ? "text-primary"
-                                        : (scrolled || ['/contact-us', '/investor', '/about-us', '/investment-plans', '/blog', '/cookie-policy', '/privacy-policy', '/terms-of-service', '/support', '/admin'].includes(location.pathname))
+                                        : (scrolled ||
+                                            location.pathname.startsWith('/blog') ||
+                                            ['/about-us', '/about', '/contact-us', '/contact', '/investment-plans', '/cookie-policy', '/privacy-policy', '/terms-of-service', '/support', '/admin'].some(path => location.pathname.startsWith(path)))
                                             ? "text-gray-600"
                                             : "text-gray-200"
                                 )}

@@ -33,10 +33,10 @@ const BlogCard = ({ title, excerpt, image, author, date, category, icon: Icon, s
                 <div className="flex items-center gap-2"><Calendar className="w-3 h-3 text-primary" /> {date}</div>
                 <div className="flex items-center gap-2"><User className="w-3 h-3 text-primary" /> {author}</div>
             </div>
-            <h3 className="text-xl font-bold font-sans text-slate-800 mb-4 group-hover:text-primary transition-colors line-clamp-2 leading-tight">{title}</h3>
-            <p className="text-slate-700 text-base leading-relaxed mb-8 line-clamp-3 font-medium">{excerpt}</p>
+            <h3 className="text-xl font-bold font-sans text-black mb-4 group-hover:text-primary transition-colors line-clamp-2 leading-tight">{title}</h3>
+            <p className="text-gray-900 text-base leading-relaxed mb-8 line-clamp-3 font-medium">{excerpt}</p>
             <div className="mt-auto">
-                <Link to={`/blog/${slug}`} className="flex items-center gap-2 font-black font-display text-slate-900 group-hover:gap-4 transition-all uppercase tracking-[0.2em] text-[10px]">
+                <Link to={`/blog/${slug}`} className="flex items-center gap-2 font-black font-display text-black group-hover:gap-4 transition-all uppercase tracking-[0.2em] text-xs">
                     Read Update <ArrowRight className="w-4 h-4 text-primary" />
                 </Link>
             </div>
@@ -47,7 +47,7 @@ const BlogCard = ({ title, excerpt, image, author, date, category, icon: Icon, s
 const Blog = () => {
     const blogPosts = [
         {
-            title: "Monitoring",
+
             excerpt: "Allowing investors to earn returns from buffalo farming while transparently monitoring farm operations and revenue through our integrated digital platform.",
             image: DigitalPlatformImg,
             author: "Tech Dept",
@@ -57,7 +57,7 @@ const Blog = () => {
             slug: "transparency"
         },
         {
-            title: "Medical Care",
+
             excerpt: "Our system professionally manages medical care using role-based access for veterinarians, ensuring constant monitoring of animal health and swift treatment.",
             image: HealthMonitoringImg,
             author: "Dr. Sathish",
@@ -67,7 +67,7 @@ const Blog = () => {
             slug: "health"
         },
         {
-            title: "Asset Governance & Ownership Integrity Framework",
+
             excerpt: "Farmvest operates under a governed asset framework where ownership, lifecycle events, replacements, and exits are digitally enforced through structured protocols, ensuring accountability and long-term ownership integrity.",
             image: MilkYieldImg,
             author: "Governance Team",
@@ -77,7 +77,7 @@ const Blog = () => {
             slug: "governance"
         },
         {
-            title: "Role-Based Access for Platform Oversight",
+
             excerpt: "Efficiently managing farm activities through specialized access for Supervisors and Managers, bringing professional rigor to traditional buffalo farming.",
             image: BuffaloCareImg,
             author: "System Admin",

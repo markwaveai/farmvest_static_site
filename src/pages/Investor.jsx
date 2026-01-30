@@ -97,7 +97,7 @@ const Investor = () => {
                             INVESTOR
                         </motion.h1>
 
-                        <p className="text-xl text-slate-300 max-w-2xl mx-auto font-medium leading-relaxed mb-12">
+                        <p className="text-xl text-slate-100 max-w-2xl mx-auto font-medium leading-relaxed mb-12">
                             Secure, transparent, and asset-backed. Manage your biological capital with real-time monitoring and institutional-grade governance.
                         </p>
 

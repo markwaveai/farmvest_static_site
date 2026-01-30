@@ -176,26 +176,26 @@ const BlogPostDetail = () => {
                             className="lg:col-span-4"
                         >
                             <div className="sticky top-40 space-y-8">
-                                <Link to="/blog" className="inline-flex items-center gap-2 text-current/60 hover:text-current font-bold uppercase tracking-widest text-xs transition-colors group">
+                                <Link to="/blog" className="inline-flex items-center gap-2 text-slate-800 hover:text-black font-bold uppercase tracking-widest text-xs transition-colors group">
                                     <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
                                     Back to blog
                                 </Link>
 
                                 <div>
-                                    <span className={cn("inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest bg-white border shadow-sm italic mb-4", post.accent.replace('bg-', 'text-'))}>
+                                    <span className={cn("inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest bg-white border shadow-sm mb-4", post.accent.replace('bg-', 'text-'))}>
                                         <Icon className="w-3 h-3" /> {post.category}
                                     </span>
-                                    <h1 className="text-3xl md:text-5xl font-black leading-tight italic tracking-tighter mb-6">
+                                    <h1 className="text-3xl md:text-5xl font-black leading-tight tracking-tighter mb-6 text-black">
                                         {post.title}
                                     </h1>
-                                    <div className="flex flex-col gap-4 text-xs font-bold uppercase tracking-[0.2em] text-current/60">
-                                        <div className="flex items-center gap-2"><Calendar className="w-4 h-4 opacity-50" /> {post.date}</div>
-                                        <div className="flex items-center gap-2"><User className="w-4 h-4 opacity-50" /> By {post.author}</div>
+                                    <div className="flex flex-col gap-4 text-xs font-bold uppercase tracking-[0.2em] text-slate-700">
+                                        <div className="flex items-center gap-2"><Calendar className="w-4 h-4 text-slate-500" /> {post.date}</div>
+                                        <div className="flex items-center gap-2"><User className="w-4 h-4 text-slate-500" /> By {post.author}</div>
                                     </div>
                                 </div>
 
                                 <div className="p-6 bg-white/50 backdrop-blur-sm rounded-3xl border border-white/50 shadow-sm">
-                                    <p className="text-sm italic font-medium leading-relaxed text-current/80">
+                                    <p className="text-sm font-bold leading-relaxed text-slate-900">
                                         "{post.overview}"
                                     </p>
                                 </div>
@@ -212,13 +212,13 @@ const BlogPostDetail = () => {
                                     viewport={{ once: true }}
                                     className="bg-white/40 p-10 rounded-[2.5rem] border border-white shadow-sm"
                                 >
-                                    <h2 className="text-2xl font-black mb-6 italic flex items-center gap-4">
-                                        <span className={cn("w-10 h-10 rounded-xl flex items-center justify-center text-white italic text-sm font-black", post.accent)}>
-                                            {idx + 2 < 10 ? `0${idx + 2}` : idx + 2}
+                                    <h2 className="text-2xl font-black mb-6 flex items-center gap-4 text-black">
+                                        <span className={cn("w-10 h-10 rounded-xl flex items-center justify-center text-white text-sm font-black", post.accent)}>
+                                            {idx + 1 < 10 ? `0${idx + 1}` : idx + 1}
                                         </span>
                                         {section.title}
                                     </h2>
-                                    <p className="text-lg leading-relaxed mb-8 italic text-current/70">
+                                    <p className="text-lg leading-relaxed mb-8 text-slate-900 font-medium">
                                         {section.content}
                                     </p>
 
@@ -245,12 +245,14 @@ const BlogPostDetail = () => {
                                 className={cn("p-12 rounded-[3rem] text-white shadow-2xl relative overflow-hidden", post.accent)}
                             >
                                 <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2" />
-                                <h3 className="text-2xl font-black mb-10 italic text-center uppercase tracking-widest">Strategic Outcomes</h3>
+                                <h3 className="text-2xl font-black mb-10 text-center uppercase tracking-widest">Strategic Outcomes</h3>
                                 <div className="grid sm:grid-cols-2 gap-4">
                                     {post.outcomes.map((outcome, i) => (
-                                        <div key={i} className="flex items-start gap-4 bg-black/10 backdrop-blur-md border border-white/20 p-5 rounded-2xl">
-                                            <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-1" />
-                                            <span className="font-black text-sm lg:text-base tracking-tight leading-tight">{outcome}</span>
+                                        <div key={i} className="flex items-start gap-4 bg-white p-6 rounded-2xl shadow-lg border border-white/50">
+                                            <div className={cn("flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center", post.accent)}>
+                                                <CheckCircle className="w-5 h-5 text-white" />
+                                            </div>
+                                            <span className="font-black text-sm lg:text-base tracking-tight leading-tight text-slate-900 mt-1">{outcome}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -261,7 +263,7 @@ const BlogPostDetail = () => {
                                     CONSULT WITH US
                                     <ArrowLeft className="w-5 h-5 rotate-180 group-hover:translate-x-1 transition-transform" />
                                 </Link>
-                                <p className="mt-6 text-xs font-bold uppercase tracking-[0.3em] opacity-40">Farmvest Governance Framework 2026</p>
+
                             </div>
                         </div>
                     </div>

@@ -16,9 +16,9 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 // Import assets
-import feedingImage from '../assets/buffalo_feeding.png';
+import feedingImage from '../assets/buffalo_.png';
 import appImage from '../assets/management_app.png';
-import supervisorImage from '../assets/supervisor_inspection.png';
+import supervisorImage from '../assets/supervisor_inspection1.png';
 import milkImage from '../assets/milk_production.png';
 
 const Section = ({ title, icon: Icon, children, className = "" }) => (
@@ -103,9 +103,9 @@ const Supervisor = () => {
                                 <span className="text-[#8b6b36]">VISOR</span>
                             </motion.h1>
 
-                            <p className="text-xl text-green-100/60 max-w-xl font-medium leading-relaxed mb-10">
+                            <p className="text-xl text-green-50 max-w-xl font-medium leading-relaxed mb-10">
                                 Management of livestock Buffaloes.
-                                <span className="text-[#8b6b36]"> Systematic tag tracking initiated.</span>
+                                <span className="text-[#e2c38d]"> Systematic tag tracking initiated.</span>
                             </p>
 
                             {/* Live Unit Counters */}

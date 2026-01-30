@@ -71,7 +71,15 @@ const ContactUs = () => {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }));
+
+        // For name field, only allow letters and spaces
+        if (name === 'name') {
+            const filteredValue = value.replace(/[^a-zA-Z\s]/g, '');
+            setFormData(prev => ({ ...prev, [name]: filteredValue }));
+        } else {
+            setFormData(prev => ({ ...prev, [name]: value }));
+        }
+
         // Clear error when user types
         if (errors[name]) {
             setErrors(prev => ({ ...prev, [name]: '' }));
@@ -222,7 +230,7 @@ const ContactUs = () => {
                                             onChange={handleChange}
                                             type="text"
                                             className={`w-full px-6 py-4 bg-slate-50 rounded-2xl border outline-none transition-all italic text-slate-800 font-medium ${errors.email ? 'border-red-400 focus:ring-4 focus:ring-red-100' : 'border-slate-100 focus:border-primary focus:ring-4 focus:ring-primary/10'}`}
-                                            placeholder="email@domain.com"
+                                            placeholder="example@gmail.com"
                                         />
                                         {errors.email && <p className="text-xs text-red-500 font-bold px-2 italic">{errors.email}</p>}
                                     </div>

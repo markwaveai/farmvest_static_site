@@ -484,7 +484,7 @@ const Investor = () => {
                                 </ul>
                             </div>
                             <div className="bg-white/5 backdrop-blur-md p-6 rounded-3xl border border-white/10 text-left">
-                                <h4 className="text-white font-black text-2xl mb-3">Option 2: Exit</h4>
+                                <h4 className="text-blue-400 font-black text-2xl mb-3">Option 2: Exit</h4>
                                 <ul className="space-y-3 text-slate-300">
                                     <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-blue-400" /> Physical handover of assets</li>
                                     <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-blue-400" /> Ownership of all growth</li>

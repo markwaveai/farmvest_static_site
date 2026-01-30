@@ -197,12 +197,12 @@ const Home = () => {
                         <motion.div
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            className=""
+                            className="flex justify-center"
                         >
                             <img
                                 src={ManagementApp}
                                 alt="Structured Platform"
-                                className="rounded-xl shadow-2xl mb-8 opacity-80"
+                                className="rounded-xl shadow-2xl mb-8 w-full max-w-md md:max-w-lg lg:max-w-xl"
                             />
                         </motion.div>
                     </div>

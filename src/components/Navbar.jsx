@@ -47,24 +47,25 @@ const Navbar = () => {
                 <div className="hidden lg:flex items-center gap-8 bg-white/10 backdrop-blur-md border border-white/20 px-8 py-2 rounded-full shadow-lg">
                     {navLinks.map((link) => {
                         const isActive = location.pathname === link.path;
+                        const isHomePage = location.pathname === '/';
                         return (
                             <Link
                                 key={link.name}
                                 to={link.path}
                                 className={cn(
-                                    "flex items-center gap-2 text-sm font-medium transition-all hover:text-primary relative group font-bold",
+                                    "flex items-center gap-2 text-sm font-medium transition-all relative group font-bold",
                                     isActive
-                                        ? "text-primary"
-                                        : (scrolled ||
-                                            location.pathname.startsWith('/blog') ||
+                                        ? isHomePage ? "text-black" : "text-primary"
+                                        : (scrolled || location.pathname.startsWith('/blog') ||
                                             ['/about-us', '/about', '/contact-us', '/contact', '/investment-plans', '/cookie-policy', '/privacy-policy', '/terms-of-service', '/support', '/admin'].some(path => location.pathname.startsWith(path)))
                                             ? "text-gray-600"
-                                            : "text-gray-200"
+                                            : "text-gray-200",
+                                    isHomePage ? "hover:text-black" : "hover:text-primary"
                                 )}
                             >
                                 <link.icon className={cn(
                                     "w-4 h-4 transition-transform group-hover:-translate-y-0.5",
-                                    isActive && "text-primary"
+                                    isActive && (isHomePage ? "text-black" : "text-primary")
                                 )} />
                                 <span>{link.name}</span>
                             </Link>

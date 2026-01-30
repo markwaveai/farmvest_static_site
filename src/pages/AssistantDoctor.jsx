@@ -137,7 +137,7 @@ const AssistantDoctor = () => {
 
                                     <div className="flex justify-between items-center mb-10">
                                         <div className="space-y-1">
-                                            <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest">Diagnostic Pulse</p>
+                                            <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest">Diagnose Pulse</p>
                                             <div className="flex items-center gap-2">
                                                 <div className="w-3 h-1 bg-teal-500 rounded-full animate-pulse" />
                                                 <div className="w-10 h-1 bg-teal-500/20 rounded-full overflow-hidden">

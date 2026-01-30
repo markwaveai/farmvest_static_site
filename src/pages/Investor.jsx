@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Lock, Camera, QrCode, TrendingUp, CheckCircle, Calendar, Shield, Smartphone, FileText, Activity, Stethoscope, Clock, ChevronRight, X, ChevronLeft, User, LockKeyhole } from 'lucide-react';
+import { Lock, Camera, QrCode, TrendingUp, CheckCircle, Calendar, Shield, Smartphone, FileText, Activity, Stethoscope, Clock, ChevronRight, X, ChevronLeft, User, LockKeyhole, Bell, RefreshCw } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ManagementApp from '../assets/management_app.png';
@@ -92,7 +92,7 @@ const Investor = () => {
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="text-5xl md:text-8xl font-black text-white mb-8 tracking-tight"
+                            className="text-5xl md:text-8xl font-display font-black text-white mb-8 tracking-normal"
                         >
                             INVESTOR
                         </motion.h1>
@@ -302,49 +302,116 @@ const Investor = () => {
                     </div>
                 </Section>
 
-                {/* 3. Notifications & Reports */}
-                <Section title="Notifications & Reports" id="qrcode" icon={QrCode}>
-                    <div className="grid md:grid-cols-2 gap-8 items-center">
-                        <div className="space-y-6">
-                            <FeatureList items={[
-                                "Stay updated with real-time push notifications.",
-                                "Receive alerts for farm operations and health milestones.",
-                                "Historical data access for investment tracking.",
-                                "Automated monthly dividend and yield reports.",
-                                "Secure document vault for investment certificates."
-                            ]} />
-                        </div>
-                        <div className="bg-green-50 p-8 rounded-[3rem] flex justify-center relative overflow-hidden group">
-                            <div className="absolute inset-0 bg-mesh opacity-20" />
-                            <div className="bg-white p-7 rounded-[3rem] shadow-2xl w-64 border-[8px] border-slate-900 relative z-10">
-                                <div className="w-12 h-1.5 bg-slate-100 rounded-full mx-auto mb-6" />
+                {/* 4. QR Code Generation */}
+                <Section title="QR Code Generation" id="qrcode" icon={QrCode}>
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <div className="space-y-8">
+                            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest">
+                                <QrCode className="w-4 h-4" />
+                                Digital Access Protocol
+                            </div>
 
-                                <div className="text-center mb-6">
-                                    <div className="text-[10px] text-slate-400 font-black uppercase tracking-[0.2em] mb-1">Notification</div>
-                                    <div className="font-black text-lg text-slate-900">Visit Scheduled</div>
-                                </div>
+                            <h3 className="text-3xl font-black text-slate-900 leading-tight">
+                                Automated <span className="text-primary italic">Visit Pass</span> Generation
+                            </h3>
 
-                                <div className="bg-emerald-50 rounded-2xl p-5 border border-emerald-100 flex flex-col items-center text-center shadow-inner">
-                                    <motion.div
-                                        initial={{ scale: 0 }}
-                                        animate={{ scale: 1 }}
-                                        className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary shadow-md mb-3"
+                            <ul className="space-y-6">
+                                {[
+                                    "After successful visit slot booking, the system generates a unique QR code for the investor.",
+                                    "The QR code acts as digital visit pass for farm entry.",
+                                    "At the farm gate, the QR code is scanned to verify visit validity and investor authenticity.",
+                                    "Visit details and the QR code are displayed in the application after booking.",
+                                    "Investors can view booking status, QR code, and visit history at any time."
+                                ].map((point, i) => (
+                                    <motion.li
+                                        key={i}
+                                        initial={{ opacity: 0, x: -20 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        transition={{ delay: i * 0.1 }}
+                                        className="flex gap-4 items-start group"
                                     >
-                                        <CheckCircle className="w-7 h-7" />
-                                    </motion.div>
-                                    <div className="text-xs font-black text-emerald-900 uppercase tracking-tighter mb-1">Slot Booking Successful</div>
-                                    <div className="text-[10px] text-emerald-600 font-bold italic">Shed #04 • 10:30 AM</div>
-                                </div>
+                                        <div className="mt-1 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary group-hover:scale-110 transition-transform flex-shrink-0">
+                                            <CheckCircle className="w-4 h-4" />
+                                        </div>
+                                        <p className="text-slate-600 font-bold leading-relaxed">{point}</p>
+                                    </motion.li>
+                                ))}
+                            </ul>
+                        </div>
 
-                                <div className="mt-6 space-y-2">
-                                    <div className="h-1 bg-slate-50 rounded-full w-full" />
-                                    <div className="h-1 bg-slate-50 rounded-full w-3/4" />
-                                </div>
+                        <div className="flex justify-center items-center">
+                            <div className="p-10 bg-white rounded-[3rem] shadow-2xl border border-slate-100/50 relative overflow-hidden group">
+                                <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                <QrCode className="w-48 h-48 text-primary opacity-80 group-hover:scale-110 transition-transform duration-500" />
+                            </div>
+                        </div>
+                    </div>
+                </Section>
 
-                                <div className="mt-10 py-3 bg-slate-900 rounded-xl text-white text-[9px] font-black uppercase tracking-widest text-center">
-                                    View Details
+                {/* 5. Investor Notifications */}
+                <Section title="Investor Notifications" id="notifications" icon={Bell}>
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <div className="order-2 md:order-1 relative">
+                            <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[500px] w-[280px] shadow-xl flex flex-col items-center justify-start overflow-hidden">
+                                <div className="h-[32px] w-[3px] bg-gray-800 absolute -start-[17px] top-[72px] rounded-s-lg"></div>
+                                <div className="h-[46px] w-[3px] bg-gray-800 absolute -start-[17px] top-[124px] rounded-s-lg"></div>
+                                <div className="h-[46px] w-[3px] bg-gray-800 absolute -end-[17px] top-[142px] rounded-e-lg"></div>
+                                <div className="rounded-[2rem] overflow-hidden w-full h-full bg-slate-50 relative">
+                                    <div className="bg-white p-4 pt-10 pb-4 shadow-sm z-10 relative">
+                                        <div className="flex justify-between items-center">
+                                            <h3 className="font-bold text-slate-800">Notifications</h3>
+                                            <Bell className="w-4 h-4 text-slate-400" />
+                                        </div>
+                                    </div>
+
+                                    <div className="p-4 space-y-3">
+                                        <div className="bg-white p-3 rounded-xl shadow-sm border border-slate-100 flex gap-3">
+                                            <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 text-green-600">
+                                                <CheckCircle className="w-4 h-4" />
+                                            </div>
+                                            <div>
+                                                <p className="text-[10px] font-bold text-slate-800">Visit Confirmed</p>
+                                                <p className="text-[9px] text-slate-500">Your visit to Shed 4 on Apr 25 is approved.</p>
+                                                <p className="text-[8px] text-slate-400 mt-1">2 mins ago</p>
+                                            </div>
+                                        </div>
+
+                                        <div className="bg-white p-3 rounded-xl shadow-sm border border-slate-100 flex gap-3">
+                                            <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 text-blue-600">
+                                                <Shield className="w-4 h-4" />
+                                            </div>
+                                            <div>
+                                                <p className="text-[10px] font-bold text-slate-800">Security Alert</p>
+                                                <p className="text-[9px] text-slate-500">Scheduled maintenance at North Gate.</p>
+                                                <p className="text-[8px] text-slate-400 mt-1">1 hour ago</p>
+                                            </div>
+                                        </div>
+
+                                        <div className="bg-white p-3 rounded-xl shadow-sm border border-slate-100 flex gap-3 opacity-60">
+                                            <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0 text-orange-600">
+                                                <Activity className="w-4 h-4" />
+                                            </div>
+                                            <div>
+                                                <p className="text-[10px] font-bold text-slate-800">Health Update</p>
+                                                <p className="text-[9px] text-slate-500">Weekly buffalo health report is ready.</p>
+                                                <p className="text-[8px] text-slate-400 mt-1">Yesterday</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+                        <div className="order-1 md:order-2 space-y-6">
+                            <h3 className="text-3xl font-black text-slate-900 leading-tight">
+                                Stay Informed with <span className="text-primary italic">Instant Alerts</span>
+                            </h3>
+                            <FeatureList items={[
+                                "Receive real-time push notifications for visit approvals.",
+                                "Get alerts when you pass through security gates.",
+                                "Instant updates on livestock health and milestones.",
+                                "Reminders for upcoming scheduled visits.",
+                                "Quarterly performance report availability alerts."
+                            ]} />
                         </div>
                     </div>
                 </Section>
@@ -409,24 +476,20 @@ const Investor = () => {
                         <p className="text-slate-300 text-xl mb-12">After 36 months, you have the absolute freedom to choose your path.</p>
 
                         <div className="grid md:grid-cols-2 gap-8 mb-16">
-                            <div className="bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 text-left">
-                                <h4 className="text-primary font-black text-2xl mb-4">Option 1: Continue</h4>
+                            <div className="bg-white/5 backdrop-blur-md p-6 rounded-3xl border border-white/10 text-left">
+                                <h4 className="text-primary font-black text-2xl mb-3">Option 1: Continue</h4>
                                 <ul className="space-y-3 text-slate-300">
                                     <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-primary" /> Keep earning fixed income</li>
                                     <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-primary" /> Full Farmvest management</li>
                                 </ul>
                             </div>
-                            <div className="bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 text-left">
-                                <h4 className="text-white font-black text-2xl mb-4">Option 2: Exit</h4>
+                            <div className="bg-white/5 backdrop-blur-md p-6 rounded-3xl border border-white/10 text-left">
+                                <h4 className="text-white font-black text-2xl mb-3">Option 2: Exit</h4>
                                 <ul className="space-y-3 text-slate-300">
                                     <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-blue-400" /> Physical handover of assets</li>
                                     <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-blue-400" /> Ownership of all growth</li>
                                 </ul>
                             </div>
-                        </div>
-
-                        <div className="inline-block bg-primary text-white px-12 py-5 rounded-full font-black text-xl shadow-xl shadow-primary/20 cursor-default">
-                            Get Investment Details
                         </div>
                     </div>
                 </div>

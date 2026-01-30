@@ -29,13 +29,13 @@ const Section = ({ title, icon: Icon, children, className = "" }) => (
         transition={{ duration: 0.6 }}
         className={`bg-white rounded-2xl shadow-xl overflow-hidden ${className}`}
     >
-        <div className="bg-primary/5 p-6 flex items-center gap-4">
+        <div className="bg-primary/5 px-6 py-4 flex items-center gap-4">
             <div className="p-3 bg-white rounded-xl shadow-sm text-primary">
                 <Icon className="w-8 h-8" />
             </div>
             <h2 className="text-2xl font-bold text-gray-800">{title}</h2>
         </div>
-        <div className="p-6 md:p-8">
+        <div className="p-4 md:p-6">
             {children}
         </div>
     </motion.div>
@@ -172,7 +172,7 @@ const Supervisor = () => {
             <div className="container mx-auto px-4 -mt-12 pb-24 relative z-20 space-y-12 xl:pl-24">
 
                 {/* 1. Supervisor Role & Shed Responsibility */}
-                <Section title="Role & Shed Responsibility" icon={Home}>
+                <Section title="Responsibilities" icon={Home}>
                     <div className="grid md:grid-cols-2 gap-8 items-center">
                         <div className="space-y-6">
                             <p className="text-gray-600 text-lg">
@@ -220,8 +220,8 @@ const Supervisor = () => {
 
                 {/* 3. Livestock Health Monitoring */}
                 <Section title="Livestock Health Monitoring" icon={Activity}>
-                    <div className="grid md:grid-cols-2 gap-8 items-center">
-                        <div className="space-y-6">
+                    <div className="flex flex-col md:flex-row gap-8 items-stretch">
+                        <div className="flex-1 py-2">
                             <FeatureList items={[
                                 "Conducts daily health checkups for all tagged Buffaloes.",
                                 "Performs detailed health checkups on a weekly basis.",
@@ -231,11 +231,11 @@ const Supervisor = () => {
                                 "Helps prevent serious and critical health problems."
                             ]} />
                         </div>
-                        <div className="bg-green-50 p-4 rounded-2xl shadow-inner relative overflow-hidden group">
+                        <div className="flex-1 bg-green-50 rounded-2xl shadow-inner relative overflow-hidden group h-72 md:h-80">
                             <img
                                 src={feedingImage}
                                 alt="Health Monitoring"
-                                className="w-full h-auto rounded-xl shadow-lg transform group-hover:scale-105 transition-transform duration-500"
+                                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                             />
                         </div>
                     </div>

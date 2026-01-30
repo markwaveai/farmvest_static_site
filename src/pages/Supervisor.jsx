@@ -104,15 +104,15 @@ const Supervisor = () => {
                             </motion.h1>
 
                             <p className="text-xl text-green-100/60 max-w-xl font-medium leading-relaxed mb-10">
-                                Management of 300 livestock units across 4 rows.
+                                Management of livestock Buffaloes.
                                 <span className="text-[#8b6b36]"> Systematic tag tracking initiated.</span>
                             </p>
 
                             {/* Live Unit Counters */}
                             <div className="flex flex-wrap justify-center lg:justify-start gap-6">
                                 {[
-                                    { label: 'Units', icon: Tag, val: '300/300' },
-                                    { label: 'Morning Yield', icon: Droplet, val: '1,240L' },
+                                    // { label: 'Buffaloes', icon: Tag, val: '300/300' },
+                                    // { label: 'Morning Yield', icon: Droplet, val: '1,240L' },
                                 ].map((stat, i) => (
                                     <div key={i} className="flex items-center gap-3">
                                         <div className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center text-[#8b6b36]">

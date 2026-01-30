@@ -425,9 +425,9 @@ const Investor = () => {
                             </div>
                         </div>
 
-                        <a href="/contact-us" className="inline-block bg-primary hover:bg-green-600 text-white px-12 py-5 rounded-full font-black text-xl transition-all shadow-xl shadow-primary/20">
+                        <div className="inline-block bg-primary text-white px-12 py-5 rounded-full font-black text-xl shadow-xl shadow-primary/20 cursor-default">
                             Get Investment Details
-                        </a>
+                        </div>
                     </div>
                 </div>
 

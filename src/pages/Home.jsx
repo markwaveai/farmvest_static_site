@@ -235,9 +235,6 @@ const Home = () => {
                         >
                             How the Farmvest Model Works
                         </motion.h2>
-                        <div className="mt-6 flex justify-center">
-                            <div className="h-1.5 w-40 bg-gradient-to-r from-transparent via-primary/20 to-transparent rounded-full" />
-                        </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
@@ -267,9 +264,6 @@ const Home = () => {
                                     </div>
                                     <p className="text-slate-200 text-sm leading-relaxed font-medium transition-colors">{item.desc}</p>
                                 </div>
-                                {i < 4 && (
-                                    <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-px bg-white/10 z-0" />
-                                )}
                             </motion.div>
                         ))}
                     </div>

@@ -109,7 +109,7 @@ const Blog = () => {
                         Project <span className="text-teal-600">Insights</span>
                     </motion.h1>
                     <p className="text-xl text-slate-800 max-w-3xl mx-auto font-medium leading-relaxed">
-                        Earn returns from buffalo farming while transparently monitoring operations, animal health, and revenue through our professional digital platform.
+                        Earn returns from buffalo farming while transparently monitoring operations, Buffalo health, and revenue through our professional digital platform.
                     </p>
                 </div>
             </section>

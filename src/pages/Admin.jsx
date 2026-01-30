@@ -44,7 +44,7 @@ const ResponsibilityCard = ({ icon: Icon, title, subtitle, items, colorClass }) 
             {items.map((item, i) => (
                 <li key={i} className="flex items-start gap-3 group/item">
                     <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/20 group-hover/item:bg-primary transition-colors flex-shrink-0" />
-                    <span className="text-slate-600 text-sm leading-relaxed group-hover/item:text-slate-900 transition-colors font-bold">{item}</span>
+                    <span className="text-slate-600 text-sm leading-relaxed group-hover/item:text-slate-900 transition-colors font-black">{item}</span>
                 </li>
             ))}
         </ul>
@@ -167,10 +167,10 @@ const Admin = () => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.3 }}
-                            className="text-slate-400 text-xl md:text-2xl leading-relaxed font-medium max-w-3xl border-l-4 border-primary/30 pl-8"
+                            className="text-slate-400 text-xl md:text-xl leading-relaxed font-black max-w-3xl border-l-4 border-primary/30 pl-8"
                         >
-                            Admins are responsible for platform governance, asset integrity, and risk framework supervision.
-                            This role ensures the platform operates within <span className="text-green-500">defined rules</span>, not discretion.
+                            Admins ensure the platform follows defined rules by overseeing governance, assets, and
+                            <span className="text-green-500"> risk management.</span>
                         </motion.p>
                     </div>
                 </div>
@@ -185,8 +185,8 @@ const Admin = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                         >
-                            <span className="text-primary font-black text-xs uppercase tracking-[0.5em] block mb-6">Core Functions</span>
-                            <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-10 leading-tight">Platform Execution <br />& <span className="text-primary">Governance</span></h2>
+                            {/* <span className="text-primary font-black text-xs uppercase tracking-[0.5em] block mb-6">Core Functions</span> */}
+                            <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-10 leading-tight">Governance <br />& <span className="text-primary">Core</span></h2>
 
                             <div className="grid sm:grid-cols-2 gap-8 mb-12">
                                 {[
@@ -209,7 +209,7 @@ const Admin = () => {
                                 whileHover={{ scale: 1.02 }}
                                 className="p-8 rounded-[2.5rem] bg-primary/5 border border-primary/10 backdrop-blur-md"
                             >
-                                <p className="text-slate-800 text-xl font-bold italic leading-relaxed">
+                                <p className="text-slate-800 text-xl font-black italic leading-relaxed">
                                     "Governing biological assets with <span className="text-primary">technical precision</span> and <span className="text-primary">legal clarity</span>."
                                 </p>
                             </motion.div>
@@ -288,19 +288,11 @@ const Admin = () => {
                                         <feature.icon className="w-8 h-8" />
                                     </div>
                                     <h4 className="text-2xl font-black text-slate-900 mb-4 tracking-tight leading-tight">{feature.title}</h4>
-                                    <p className="text-slate-500 text-base leading-relaxed font-bold">{feature.desc}</p>
+                                    <p className="text-slate-500 text-base leading-relaxed font-black">{feature.desc}</p>
                                 </motion.div>
                             ))}
                         </div>
 
-                        <div className="mt-16 pt-10 border-t border-slate-200 flex flex-wrap justify-center md:justify-between items-center gap-6">
-                            {["Non-Editable Logs", "Immutable Audit Trails", "System Rule Enforcement"].map((text, i) => (
-                                <div key={i} className="flex items-center gap-2">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                                    <span className="text-slate-400 text-[10px] font-black uppercase tracking-[0.3em]">{text}</span>
-                                </div>
-                            ))}
-                        </div>
                     </div>
                 </div>
             </section>

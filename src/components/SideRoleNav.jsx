@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 
 const SideRoleNav = () => {
     const roles = [
-        { name: 'Admin', path: '/admin', icon: ShieldAlert, color: 'text-teal-400' },
-        { name: 'Investor', path: '/investor', icon: User, color: 'text-blue-400' },
+        { name: 'Admin', path: '/admin', icon: User, color: 'text-teal-400' },
+        { name: 'Investor', path: '/investor', icon: ShieldAlert, color: 'text-blue-400' },
         { name: 'Supervisor', path: '/supervisor', icon: ClipboardCheck, color: 'text-yellow-400' },
         { name: 'Farm Manager', path: '/farm-manager', icon: Tractor, color: 'text-green-400' },
         { name: 'Doctor', path: '/doctor', icon: Stethoscope, color: 'text-red-400' },

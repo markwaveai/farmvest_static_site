@@ -89,20 +89,20 @@ const CookiePolicy = () => {
                                         <Lock className="w-5 h-5" />
                                     </div>
                                     <div>
-                                        <div className="h-2 w-24 bg-slate-200 rounded mb-2"></div>
-                                        <div className="h-2 w-16 bg-slate-200 rounded"></div>
+                                        <div className="text-[10px] font-bold text-slate-700 leading-tight">Secure Session</div>
+                                        <div className="text-[9px] text-slate-500">Encrypted Token</div>
                                     </div>
                                 </div>
                                 <div className="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">SECURE</div>
                             </div>
-                            <div className="flex items-center justify-between p-4 bg-slate-50 rounded-xl border border-slate-100 opacity-60">
+                            <div className="flex items-center justify-between p-4 bg-slate-50 rounded-xl border border-slate-100">
                                 <div className="flex items-center gap-3">
                                     <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
                                         <Zap className="w-5 h-5" />
                                     </div>
                                     <div>
-                                        <div className="h-2 w-24 bg-slate-200 rounded mb-2"></div>
-                                        <div className="h-2 w-16 bg-slate-200 rounded"></div>
+                                        <div className="text-[10px] font-bold text-slate-700 leading-tight">Optimized Delivery</div>
+                                        <div className="text-[9px] text-slate-500">Fast Cache</div>
                                     </div>
                                 </div>
                                 <div className="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full">FAST</div>

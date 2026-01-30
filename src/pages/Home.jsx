@@ -50,7 +50,7 @@ const Home = () => {
                             Structured Biological Asset Management
                         </p>
 
-                        <div className="pt-8 border-t border-white/20 inline-block px-12">
+                        <div className="pt-8 border-white/20 inline-block px-12">
                             <p className="text-white/50 text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase">
                                 Structured Returns • Total Transparency • Asset Protection
                             </p>
@@ -202,7 +202,7 @@ const Home = () => {
                             <img
                                 src={ManagementApp}
                                 alt="Structured Platform"
-                                className="rounded-xl shadow-2xl mb-8 opacity-80 w-full lg:scale-[1.15] origin-center transition-transform duration-500"
+                                className="rounded-xl shadow-2xl mb-8 opacity-80 w-full lg:scale-[1] origin-center transition-transform duration-500"
                             />
                         </motion.div>
                     </div>
@@ -335,8 +335,8 @@ const Home = () => {
                                 >
                                     <source src="/hero_video.mp4" type="video/mp4" />
                                 </video>
-                                <div className="absolute bottom-1.5 right-0 w-full bg-black/100 text-right">
-                                    <span className="text-white/100 font-black tracking-tighter italic mr-3">
+                                <div className="absolute bottom-0 right-0 w-full bg-black/100 text-right">
+                                    <span className="text-white/100 font-black tracking-tighter italic mr-5">
                                         FarmVest
                                     </span>
                                 </div>

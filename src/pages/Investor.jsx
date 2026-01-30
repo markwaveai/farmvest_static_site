@@ -184,9 +184,9 @@ const Investor = () => {
                                         </div>
                                     </div>
 
-                                    <p className="text-[9px] text-slate-400 text-center font-bold uppercase tracking-tighter opacity-60">
+                                    {/* <p className="text-[9px] text-slate-400 text-center font-bold uppercase tracking-tighter opacity-60">
                                         Encrypted Session • Farmvest Security
-                                    </p>
+                                    </p> */}
                                 </div>
                             </div>
                         </div>

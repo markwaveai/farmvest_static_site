@@ -14,7 +14,7 @@ const Home = () => {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="relative min-h-screen md:min-h-0 lg:min-h-screen flex items-center justify-center overflow-hidden bg-black">
+            <section className="relative h-[50vh] min-h-[50vh] md:h-auto md:min-h-0 lg:min-h-screen flex items-center justify-center overflow-hidden bg-black">
                 <div className="absolute inset-0 z-0 md:relative md:h-auto lg:absolute">
                     <motion.div
                         initial={{ scale: 1.05, opacity: 0 }}
@@ -42,7 +42,7 @@ const Home = () => {
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 1.2, ease: "easeOut" }}
-                            className="text-5xl sm:text-7xl md:text-[4rem] lg:text-[8rem] xl:text-[150px] font-black text-white leading-[0.9] tracking-tighter drop-shadow-[0_20px_20px_rgba(0,0,0,0.8)] select-none mb-6 whitespace-nowrap"
+                            className="text-5xl sm:text-7xl md:text-[4rem] lg:text-[8rem] xl:text-[150px] font-black text-white leading-[0.9] tracking-tighter drop-shadow-[0_20px_20px_rgba(0,0,0,0.8)] select-none mb-6 whitespace-nowrap letter-spacing-[-0.05em]"
                         >
                             FARM VEST
                         </motion.h1>
@@ -155,11 +155,11 @@ const Home = () => {
                                     { label: "Guaranteed", sub: "Antibiotic Free" },
                                     { label: "End-to-End", sub: "Traceability" }
                                 ].map((stat, i) => (
-                                    <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-2xl flex items-center gap-6 md:gap-12 hover:bg-white/10 transition-colors group">
-                                        <div className="text-2xl md:text-2xl font-black text-white min-w-[140px] md:min-w-[220px] leading-none group-hover:text-primary transition-colors">
+                                    <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 p-4 md:p-6 rounded-2xl flex items-center gap-4 md:gap-12 hover:bg-white/10 transition-colors group">
+                                        <div className="text-2xl md:text-2xl font-black text-white min-w-[100px] md:min-w-[220px] leading-none group-hover:text-primary transition-colors">
                                             {stat.label}
                                         </div>
-                                        <div className="text-[10px] md:text-xs font-black text-slate-400 uppercase tracking-[0.3em] leading-tight flex-1">
+                                        <div className="text-[10px] md:text-xs font-black text-slate-400 uppercase tracking-[0.2em] md:tracking-[0.3em] leading-tight flex-1 break-words">
                                             {stat.sub}
                                         </div>
                                     </div>
@@ -197,12 +197,12 @@ const Home = () => {
                         <motion.div
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            className="flex justify-center"
+                            className="hidden md:block"
                         >
                             <img
                                 src={ManagementApp}
                                 alt="Structured Platform"
-                                className="rounded-xl shadow-2xl mb-8 w-full max-w-md md:max-w-lg lg:max-w-xl"
+                                className="rounded-xl shadow-2xl mb-8 opacity-80 w-full lg:scale-[1.15] origin-center transition-transform duration-500"
                             />
                         </motion.div>
                     </div>

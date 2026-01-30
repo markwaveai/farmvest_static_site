@@ -147,7 +147,7 @@ const AssistantDoctor = () => {
                                         </div>
                                         <div className="text-right">
                                             <div className="text-[10px] font-black text-teal-500 uppercase">Authenticated</div>
-                                            <div className="text-[8px] text-slate-500 font-medium">Field-MD v4.2</div>
+                                            {/* <div className="text-[8px] text-slate-500 font-medium">Field-MD v4.2</div> */}
                                         </div>
                                     </div>
 
@@ -156,7 +156,7 @@ const AssistantDoctor = () => {
                                         <div className="space-y-4">
                                             {[
                                                 { t: '12:40 PM', a: 'Medicine Administered' },
-                                                { t: '12:15 PM', a: 'Doc Approval Recvd' },
+                                                { t: '12:15 PM', a: 'Doc Approval Recorded' },
                                                 { t: '11:50 AM', a: 'Vital Checkup : Pass' }
                                             ].map((log, i) => (
                                                 <div key={i} className="flex gap-3 items-start border-l-2 border-teal-500/20 pl-4 py-1">

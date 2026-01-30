@@ -317,10 +317,7 @@ const PrivacyPolicy = () => {
                                 <span className="text-xl">📧</span>
                                 <span className="font-medium">{import.meta.env.VITE_COMPANY_EMAIL}</span>
                             </a>
-                            <a href={import.meta.env.VITE_WEBSITE_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 bg-white rounded-xl shadow-sm border border-slate-100 text-slate-700 hover:text-primary hover:border-primary transition-all group">
-                                <span className="text-xl">🌐</span>
-                                <span className="font-medium">farmvest.in</span>
-                            </a>
+                            
                         </div>
                     </div>
                 </motion.div>

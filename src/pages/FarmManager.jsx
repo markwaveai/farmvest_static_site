@@ -77,8 +77,8 @@ const FarmManager = () => {
                                 <div className="p-3 bg-blue-600 rounded-xl shadow-[0_0_20px_rgba(37,99,235,0.4)]">
                                     <Tractor className="w-6 h-6 text-white" />
                                 </div>
-                                <span className="h-px w-12 bg-blue-600/50" />
-                                <span className="text-blue-400 font-black text-xs uppercase tracking-[0.3em]">Executive Console</span>
+                                {/* <span className="h-px w-12 bg-blue-600/50" /> */}
+                                {/* <span className="text-blue-400 font-black text-xs uppercase tracking-[0.3em]">Executive Console</span> */}
                             </div>
 
                             <h1 className="text-6xl md:text-7xl font-black mb-8 leading-[0.9] tracking-tighter">
@@ -119,13 +119,7 @@ const FarmManager = () => {
                                         </div>
                                     ))}
                                 </div>
-                                <div className="mt-8 pt-6 border-t border-white/5 flex items-center justify-between">
-                                    <div className="flex items-center gap-2">
-                                        <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                                        <span className="text-[10px] text-slate-300 font-bold uppercase tracking-wider">Cloud Data Sync</span>
-                                    </div>
-                                    <div className="text-[10px] text-blue-400 font-black">STABLE</div>
-                                </div>
+                                
                             </div>
                         </motion.div>
                     </div>

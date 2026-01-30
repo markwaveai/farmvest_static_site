@@ -36,8 +36,8 @@ const ResponsibilityCard = ({ icon: Icon, title, subtitle, items, colorClass }) 
         </div>
 
         <div className="mb-6">
-            <span className="text-primary font-black text-[10px] uppercase tracking-[0.3em]">{subtitle}</span>
-            <h3 className="text-2xl font-black text-slate-900 mt-1 leading-tight group-hover:text-primary transition-colors">{title}</h3>
+            <span className="text-primary font-bold text-[10px] uppercase tracking-[0.3em] break-words">{subtitle}</span>
+            <h3 className="text-2xl font-bold text-slate-900 mt-1 leading-tight group-hover:text-primary transition-colors">{title}</h3>
         </div>
 
         <ul className="space-y-4 mt-auto">
@@ -150,7 +150,7 @@ const Admin = () => {
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
-                            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 border border-white/10 text-primary text-[10px] font-black uppercase tracking-[0.4em] mb-8 shadow-2xl"
+                            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 border border-white/10 text-primary text-[10px] font-bold uppercase tracking-[0.4em] mb-8 shadow-2xl"
                         >
                             <ShieldAlert className="w-4 h-4" />
                             System Administration Center
@@ -167,7 +167,7 @@ const Admin = () => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.3 }}
-                            className="text-slate-400 text-xl md:text-xl leading-relaxed font-black max-w-3xl border-l-4 border-primary/30 pl-8"
+                            className="text-slate-600 text-xl md:text-2xl leading-relaxed font-medium max-w-3xl border-l-4 border-primary/30 pl-8"
                         >
                             Admins ensure the platform follows defined rules by overseeing governance, assets, and
                             <span className="text-green-500"> risk management.</span>
@@ -198,8 +198,8 @@ const Admin = () => {
                                     <div key={i} className="flex flex-col gap-3 p-6 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-primary/5 hover:border-primary/20 transition-all duration-300">
                                         <item.icon className="w-8 h-8 text-primary" />
                                         <div>
-                                            <h4 className="text-slate-900 font-black text-sm">{item.title}</h4>
-                                            <p className="text-slate-400 text-[10px] font-black uppercase tracking-widest">{item.desc}</p>
+                                            <h4 className="text-slate-900 font-bold text-sm">{item.title}</h4>
+                                            <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest">{item.desc}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -219,23 +219,23 @@ const Admin = () => {
                             <div className="absolute -inset-4 bg-primary/10 blur-3xl rounded-full" />
                             <div className="relative grid grid-cols-2 gap-6">
                                 <div className="space-y-6">
-                                    <div className="p-10 rounded-[3rem] bg-white border border-slate-100 shadow-xl">
-                                        <div className="text-4xl font-black text-slate-900 mb-3">100%</div>
-                                        <p className="text-slate-400 text-xs font-black uppercase tracking-widest">Digital Registration</p>
+                                    <div className="p-6 rounded-3xl bg-white border border-slate-100 shadow-xl overflow-hidden">
+                                        <div className="text-4xl font-extrabold text-slate-900 mb-2">100%</div>
+                                        <p className="text-slate-400 text-xs font-bold uppercase tracking-widest break-words">Digital Registration</p>
                                     </div>
-                                    <div className="p-10 rounded-[3rem] bg-white border border-slate-100 shadow-xl">
-                                        <div className="text-4xl font-black text-slate-900 mb-3">Traceable</div>
-                                        <p className="text-slate-400 text-xs font-black uppercase tracking-widest">Audit Trails</p>
+                                    <div className="p-6 rounded-3xl bg-white border border-slate-100 shadow-xl overflow-hidden">
+                                        <div className="text-4xl font-extrabold text-slate-900 mb-2">Traceable</div>
+                                        <p className="text-slate-400 text-xs font-bold uppercase tracking-widest break-words">Audit Trails</p>
                                     </div>
                                 </div>
                                 <div className="space-y-6 pt-16">
-                                    <div className="p-10 rounded-[3rem] bg-primary border border-primary shadow-2xl shadow-primary/20">
-                                        <div className="text-4xl font-black text-white mb-3">Locked</div>
-                                        <p className="text-white/70 text-xs font-black uppercase tracking-widest">Asset Integrity</p>
+                                    <div className="p-6 rounded-3xl bg-primary border border-primary shadow-2xl shadow-primary/20 overflow-hidden">
+                                        <div className="text-4xl font-extrabold text-white mb-2">Locked</div>
+                                        <p className="text-white/70 text-xs font-bold uppercase tracking-widest break-words">Asset Integrity</p>
                                     </div>
-                                    <div className="p-10 rounded-[3rem] bg-white border border-slate-100 shadow-xl">
-                                        <div className="text-4xl font-black text-slate-900 mb-3">Logged</div>
-                                        <p className="text-slate-400 text-xs font-black uppercase tracking-widest">System Actions</p>
+                                    <div className="p-6 rounded-3xl bg-white border border-slate-100 shadow-xl overflow-hidden">
+                                        <div className="text-4xl font-extrabold text-slate-900 mb-2">Logged</div>
+                                        <p className="text-slate-400 text-xs font-bold uppercase tracking-widest break-words">System Actions</p>
                                     </div>
                                 </div>
                             </div>
@@ -249,13 +249,13 @@ const Admin = () => {
                 <div className="container mx-auto px-4 xl:pl-24 relative z-10">
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
                         <div>
-                            <span className="text-primary font-black text-xs uppercase tracking-[0.4em] block mb-4">Control Systems</span>
+                            <span className="text-primary font-bold text-xs uppercase tracking-[0.4em] block mb-4">Control Systems</span>
                             <h2 className="text-4xl md:text-6xl font-black text-slate-900 uppercase tracking-tight">Administrative <span className="text-primary italic">Protocols</span></h2>
                         </div>
                         <div className="h-px flex-1 bg-slate-200 hidden md:block mx-12 translate-y-[-10px]" />
-                        <div className="text-slate-400 font-black uppercase tracking-widest text-sm">
+                        {/* <div className="text-slate-400 font-black uppercase tracking-widest text-sm">
                             v4.0.0 Stable Build
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -287,8 +287,8 @@ const Admin = () => {
                                     <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-primary mb-8 mx-auto md:mx-0 border border-slate-100 shadow-xl shadow-slate-900/5 transition-transform duration-300 group-hover:scale-110">
                                         <feature.icon className="w-8 h-8" />
                                     </div>
-                                    <h4 className="text-2xl font-black text-slate-900 mb-4 tracking-tight leading-tight">{feature.title}</h4>
-                                    <p className="text-slate-500 text-base leading-relaxed font-black">{feature.desc}</p>
+                                    <h4 className="text-2xl font-bold text-slate-900 mb-4 tracking-tight leading-tight">{feature.title}</h4>
+                                    <p className="text-slate-500 text-base leading-relaxed font-bold">{feature.desc}</p>
                                 </motion.div>
                             ))}
                         </div>

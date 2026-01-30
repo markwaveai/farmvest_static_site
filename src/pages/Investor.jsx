@@ -4,6 +4,7 @@ import { Lock, Camera, QrCode, TrendingUp, CheckCircle, Calendar, Shield, Smartp
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ManagementApp from '../assets/management_app.png';
+import CalendarMockup from '../assets/calendar.png';
 
 const Section = ({ title, id, icon: Icon, children, className = "" }) => (
     <motion.div
@@ -132,7 +133,7 @@ const Investor = () => {
                 </div>
             </div>
 
-            <div className="container mx-auto px-4 -mt-12 pb-24 relative z-20 space-y-12 xl:pl-24">
+            <div className="container mx-auto px-4 pb-24 relative z-20 space-y-12 xl:pl-24 pt-12">
 
                 {/* 1. Investor Login Section */}
                 <Section title="Secure Investor Login" id="login" icon={Lock}>
@@ -249,56 +250,20 @@ const Investor = () => {
                             ]} />
                         </div>
 
-                        <div className="bg-white p-6 md:p-8 rounded-[2.5rem] shadow-xl relative overflow-hidden group border border-slate-100">
-                            {/* Decorative background elements matching the light theme */}
-                            <div className="absolute top-0 right-0 w-48 h-48 bg-primary/5 rounded-full blur-[60px] -z-0" />
-
-                            <div className="relative z-10">
-                                <div className="flex justify-between items-center mb-8">
-
-                                </div>
-
-                                {/* 3D Tent Calendar Simulation */}
-                                <div className="perspective-container relative mb-12 h-48 flex justify-center items-center">
-                                    <div className="relative w-full max-w-[320px] h-full transition-transform duration-700 hover:rotate-y-12">
-                                        {/* Tent Structure - Back Side */}
-                                        <div className="absolute inset-0 bg-slate-200 rounded-2xl origin-bottom transform -rotate-x-45 translate-z-neg-20 shadow-inner" />
-
-                                        {/* Tent Structure - Front Face (The Calendar) */}
-                                        <div className="absolute inset-0 bg-white rounded-2xl shadow-2xl origin-bottom transform rotate-x-12 border border-slate-100 flex flex-col overflow-hidden">
-                                            {/* Light Blue Calendar Face */}
-                                            <div className="bg-sky-50/80 p-6 flex-1">
-                                                <div className="grid grid-cols-7 gap-1 mb-4">
-                                                    {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map(d => (
-                                                        <div key={d} className="text-[9px] text-sky-500 font-black text-center opacity-70">{d}</div>
-                                                    ))}
-                                                </div>
-                                                <div className="grid grid-cols-7 gap-1 text-slate-400">
-                                                    {Array.from({ length: 31 }).map((_, i) => (
-                                                        <div
-                                                            key={i}
-                                                            className={`h-7 rounded-lg flex items-center justify-center text-[10px] font-bold transition-all
-                                                                ${i + 1 === 18 ? 'bg-[#0EA5E9] text-white shadow-xl shadow-sky-200 cursor-pointer scale-110 relative z-10' :
-                                                                    'text-slate-400'}`}
-                                                        >
-                                                            {i + 1}
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                            {/* Bottom Edge Reflection/Shadow */}
-                                            <div className="h-2 bg-gradient-to-b from-slate-50 to-white" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* Time Slots - Matching Light Theme */}
-                                <div className="space-y-3">
-                                </div>
-
-
-                            </div>
-                        </div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            whileHover={{ y: -6 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5 }}
+                            className="bg-white p-2 rounded-[2rem] shadow-[0_20px_40px_rgba(0,0,0,0.08)] border border-slate-100 overflow-hidden max-w-[260px] mx-auto group cursor-pointer"
+                        >
+                            <img
+                                src={CalendarMockup}
+                                alt="Visit Booking System"
+                                className="w-full h-auto rounded-[1.5rem] transition-transform duration-500 group-hover:scale-[1.03]"
+                            />
+                        </motion.div>
                     </div>
                 </Section>
 

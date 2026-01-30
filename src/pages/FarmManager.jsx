@@ -20,7 +20,7 @@ const Section = ({ title, icon: Icon, children, className = "" }) => (
             </div>
             <h2 className="text-2xl font-bold text-gray-800">{title}</h2>
         </div>
-        <div className="p-6 md:p-8">
+        <div className="p-8 md:p-10">
             {children}
         </div>
     </motion.div>
@@ -119,14 +119,14 @@ const FarmManager = () => {
                                         </div>
                                     ))}
                                 </div>
-                                
+
                             </div>
                         </motion.div>
                     </div>
                 </div>
             </div>
 
-            <div className="container mx-auto px-4 -mt-12 pb-24 relative z-20 space-y-12 xl:pl-24">
+            <div className="container mx-auto px-4 pb-24 relative z-20 space-y-16 xl:pl-24 pt-20">
 
                 {/* 1. Access & Responsibilities */}
                 <Section title="Access & Responsibilities" icon={Key}>
@@ -141,7 +141,7 @@ const FarmManager = () => {
                                 "Ensures centralized and efficient farm management."
                             ]} />
                         </div>
-                        <div className="bg-blue-50/50 p-8 rounded-[3rem] flex justify-center items-center h-full min-h-[350px] relative overflow-hidden group">
+                        <div className="bg-blue-50/50 p-8 rounded-[3rem] flex justify-center items-center h-full min-h-[400px] relative overflow-hidden group">
                             <Key className="w-48 h-48 text-blue-600/5 absolute -right-10 -bottom-10 rotate-12 group-hover:scale-110 transition-transform duration-700" />
                             <div className="relative z-10 bg-white p-8 rounded-3xl shadow-2xl w-full max-w-[300px] border border-white/50 backdrop-blur-sm">
                                 <div className="space-y-6">
@@ -188,7 +188,7 @@ const FarmManager = () => {
                 {/* 2. Login & Ticket Management */}
                 <Section title="Login & Ticket Management" icon={ClipboardCheck}>
                     <div className="grid md:grid-cols-2 gap-8 items-center">
-                        <div className="order-2 md:order-1 relative h-64 md:h-full min-h-[300px] bg-blue-50 rounded-2xl p-6 flex flex-col items-center justify-center">
+                        <div className="order-2 md:order-1 relative h-64 md:h-full min-h-[380px] bg-blue-50 rounded-2xl p-6 flex flex-col items-center justify-center">
                             <div className="w-full max-w-md bg-white rounded-xl shadow-lg p-4 space-y-4">
                                 <div className="flex justify-between items-center border-b pb-2">
                                     <span className="font-bold text-gray-700">Ticket #1042</span>
@@ -271,7 +271,7 @@ const FarmManager = () => {
                                 "Ensures smooth and effective healthcare management."
                             ]} />
                         </div>
-                        <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
+                        <div className="relative h-80 md:h-[420px] rounded-2xl overflow-hidden shadow-lg border-4 border-white">
                             <img src={Feeding} alt="Feeding" className="w-full h-full object-cover" />
                             <div className="absolute inset-0 bg-blue-900/10 mix-blend-multiply" />
                             {/* Overlay Badge */}

@@ -136,17 +136,17 @@ const Supervisor = () => {
                                     <p className="text-[10px] font-black uppercase text-gray-400 tracking-widest">Shed Occupancy Matrix</p>
                                     <div className="px-2 py-1 bg-emerald-500/10 rounded text-[8px] font-bold text-emerald-500 uppercase tracking-tighter">Live Scan</div>
                                 </div>
-                                <div className="grid grid-cols-10 gap-2 mb-6">
-                                    {Array.from({ length: 40 }).map((_, i) => (
+                                <div className="grid grid-cols-4 gap-4 mb-8 px-6">
+                                    {Array.from({ length: 16 }).map((_, i) => (
                                         <motion.div
                                             key={i}
                                             animate={{ opacity: [0.3, 1, 0.3] }}
                                             transition={{
                                                 duration: 3,
                                                 repeat: Infinity,
-                                                delay: i * 0.05
+                                                delay: i * 0.1
                                             }}
-                                            className={`h-1.5 rounded-full ${i % 7 === 0 ? 'bg-red-500/50' : i % 3 === 0 ? 'bg-emerald-500/50' : 'bg-[#8b6b36]/30'}`}
+                                            className={`h-2 rounded-full ${i % 5 === 0 ? 'bg-red-500/50' : i % 3 === 0 ? 'bg-emerald-500/50' : 'bg-[#8b6b36]/30'}`}
                                         />
                                     ))}
                                 </div>
@@ -169,7 +169,7 @@ const Supervisor = () => {
                 </div>
             </div>
 
-            <div className="container mx-auto px-4 -mt-12 pb-24 relative z-20 space-y-12 xl:pl-24">
+            <div className="container mx-auto px-4 pb-24 relative z-20 space-y-12 xl:pl-24 pt-12">
 
                 {/* 1. Supervisor Role & Shed Responsibility */}
                 <Section title="Responsibilities" icon={Home}>

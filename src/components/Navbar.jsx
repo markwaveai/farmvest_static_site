@@ -23,6 +23,27 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= 1024) {
+                setIsOpen(false);
+            }
+        };
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isOpen]);
+
     const navLinks = [
         { name: 'Home', path: '/', icon: Home },
         { name: 'About', path: '/about-us', icon: Info },
@@ -55,17 +76,17 @@ const Navbar = () => {
                                 className={cn(
                                     "flex items-center gap-2 text-sm font-medium transition-all relative group font-bold",
                                     isActive
-                                        ? isHomePage ? "text-black" : "text-primary"
+                                        ? "text-primary"
                                         : (scrolled || location.pathname.startsWith('/blog') ||
                                             ['/about-us', '/about', '/contact-us', '/contact', '/investment-plans', '/cookie-policy', '/privacy-policy', '/terms-of-service', '/support', '/admin'].some(path => location.pathname.startsWith(path)))
                                             ? "text-gray-600"
                                             : "text-gray-200",
-                                    isHomePage ? "hover:text-black" : "hover:text-primary"
+                                    "hover:text-primary"
                                 )}
                             >
                                 <link.icon className={cn(
                                     "w-4 h-4 transition-transform group-hover:-translate-y-0.5",
-                                    isActive && (isHomePage ? "text-black" : "text-primary")
+                                    isActive && "text-primary"
                                 )} />
                                 <span>{link.name}</span>
                             </Link>

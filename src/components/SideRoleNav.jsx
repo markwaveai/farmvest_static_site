@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { User, Stethoscope, ClipboardCheck, Users, Tractor, ShieldAlert } from 'lucide-react';
+import { User, Stethoscope, ClipboardCheck, Users, ShieldCheck, HeartPulse, UserCog, LayoutDashboard } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const SideRoleNav = () => {
     const roles = [
-        { name: 'Admin', path: '/admin', icon: User, color: 'text-teal-400' },
-        { name: 'Investor', path: '/investor', icon: ShieldAlert, color: 'text-blue-400' },
+        { name: 'Admin', path: '/admin', icon: LayoutDashboard, color: 'text-teal-400' },
+        { name: 'Investor', path: '/investor', icon: User, color: 'text-blue-400' },
         { name: 'Supervisor', path: '/supervisor', icon: ClipboardCheck, color: 'text-yellow-400' },
-        { name: 'Farm Manager', path: '/farm-manager', icon: Tractor, color: 'text-green-400' },
+        { name: 'Farm Manager', path: '/farm-manager', icon: UserCog, color: 'text-green-400' },
         { name: 'Doctor', path: '/doctor', icon: Stethoscope, color: 'text-red-400' },
-        { name: 'Asst. Doctor', path: '/assistant-doctor', icon: Users, color: 'text-purple-400' },
+        { name: 'Asst. Doctor', path: '/assistant-doctor', icon: HeartPulse, color: 'text-purple-400' },
     ];
 
     const [hoveredIndex, setHoveredIndex] = useState(null);

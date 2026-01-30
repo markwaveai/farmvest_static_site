@@ -127,7 +127,7 @@ const Doctor = () => {
                 </div>
             </div>
 
-            <div className="container mx-auto px-4 -mt-20 relative z-20 pb-24 space-y-24 xl:pl-24">
+            <div className="container mx-auto px-4 relative z-20 pb-24 space-y-24 xl:pl-24 pt-12">
 
                 {/* 1. Login & Access Control - Glassmorphism Card */}
                 <motion.div
@@ -167,24 +167,24 @@ const Doctor = () => {
                         <div className="flex-1 w-full max-w-md">
                             <div className="relative">
                                 <div className="absolute -inset-4 bg-teal-500/20 blur-2xl rounded-full" />
-                                <div className="relative bg-slate-900 rounded-2xl p-1 shadow-2xl overflow-hidden aspect-[4/3] flex flex-col">
+                                <div className="relative bg-slate-900 rounded-2xl p-1 shadow-2xl overflow-hidden aspect-[4/3] md:aspect-square lg:aspect-[4/3] flex flex-col">
                                     <div className="bg-slate-800 px-4 py-2 flex items-center gap-2">
                                         <div className="w-3 h-3 rounded-full bg-red-500" />
                                         <div className="w-3 h-3 rounded-full bg-yellow-500" />
                                         <div className="w-3 h-3 rounded-full bg-green-500" />
                                     </div>
-                                    <div className="flex-1 bg-slate-900 p-6 flex items-center justify-center">
-                                        <div className="text-center space-y-4">
+                                    <div className="flex-1 bg-slate-900 p-6 flex flex-col items-center justify-center">
+                                        <div className="flex-1 flex flex-col items-center justify-center text-center space-y-4">
                                             <div className="w-16 h-16 bg-teal-500 rounded-xl mx-auto flex items-center justify-center mb-4">
                                                 <Stethoscope className="w-8 h-8 text-white" />
                                             </div>
                                             <div className="text-white font-bold text-lg">Dr. Login Portal</div>
                                             <div className="text-slate-400 text-sm">Verify Credentials</div>
-                                            <div className="flex gap-2 justify-center mt-4">
-                                                <div className="h-2 w-2 rounded-full bg-teal-500 animate-pulse" />
-                                                <div className="h-2 w-2 rounded-full bg-teal-500 animate-pulse delay-75" />
-                                                <div className="h-2 w-2 rounded-full bg-teal-500 animate-pulse delay-150" />
-                                            </div>
+                                        </div>
+                                        <div className="flex gap-2 justify-center mt-4 md:mt-auto md:pb-2">
+                                            <div className="h-2 w-2 rounded-full bg-teal-500 animate-pulse" />
+                                            <div className="h-2 w-2 rounded-full bg-teal-500 animate-pulse delay-75" />
+                                            <div className="h-2 w-2 rounded-full bg-teal-500 animate-pulse delay-150" />
                                         </div>
                                     </div>
                                 </div>

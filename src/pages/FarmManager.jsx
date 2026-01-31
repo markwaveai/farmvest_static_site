@@ -81,7 +81,7 @@ const FarmManager = () => {
                                 {/* <span className="text-blue-400 font-black text-xs uppercase tracking-[0.3em]">Executive Console</span> */}
                             </div>
 
-                            <h1 className="text-6xl md:text-7xl font-black mb-8 leading-[0.9] tracking-tighter">
+                            <h1 className="text-6xl md:text-7xl font-black mb-8 leading-[0.9] tracking-[0.05em]">
                                 FARM <br />
                                 <span className="text-blue-600">MANAGER</span>
                             </h1>
@@ -272,7 +272,7 @@ const FarmManager = () => {
                             ]} />
                         </div>
                         <div className="relative h-80 md:h-[420px] rounded-2xl overflow-hidden shadow-lg border-4 border-white">
-                            <img src={Feeding} alt="Feeding" className="w-full h-full object-cover" />
+                            <img src={Feeding} alt="Feeding" className="w-full h-full object-cover scale-110 origin-center transition-transform duration-500" />
                             <div className="absolute inset-0 bg-blue-900/10 mix-blend-multiply" />
                             {/* Overlay Badge */}
 

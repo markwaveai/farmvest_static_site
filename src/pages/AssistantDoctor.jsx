@@ -105,7 +105,7 @@ const AssistantDoctor = () => {
                                 <span className="text-teal-400 text-[10px] font-black uppercase tracking-[0.3em]">Direct Doctor-to-Asst</span>
                             </motion.div>
 
-                            <h1 className="text-6xl lg:text-8xl font-black text-white mb-8 leading-[0.85] tracking-tighter">
+                            <h1 className="text-6xl lg:text-8xl font-black text-white mb-8 leading-[0.85] tracking-[0.05em]">
                                 ASST <span className="text-teal-500">DOCTOR</span>
                             </h1>
 
@@ -137,16 +137,16 @@ const AssistantDoctor = () => {
 
                                     <div className="flex justify-between items-center mb-10">
                                         <div className="space-y-1">
-                                            <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest">Diagnose Pulse</p>
+                                            <p className="text-[11px] text-white font-black uppercase tracking-[0.2em]">Diagnose Pulse</p>
                                             <div className="flex items-center gap-2">
-                                                <div className="w-3 h-1 bg-teal-500 rounded-full animate-pulse" />
-                                                <div className="w-10 h-1 bg-teal-500/20 rounded-full overflow-hidden">
-                                                    <motion.div animate={{ x: [-40, 40] }} transition={{ duration: 1.5, repeat: Infinity }} className="w-full h-full bg-teal-500" />
+                                                <div className="w-3 h-1 bg-teal-400 rounded-full animate-pulse" />
+                                                <div className="w-10 h-1 bg-teal-500/30 rounded-full overflow-hidden">
+                                                    <motion.div animate={{ x: [-40, 40] }} transition={{ duration: 1.5, repeat: Infinity }} className="w-full h-full bg-teal-400" />
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="text-right">
-                                            <div className="text-[10px] font-black text-teal-500 uppercase">Authenticated</div>
+                                            <div className="text-[10px] font-black text-teal-400 uppercase tracking-widest">Authenticated</div>
                                             {/* <div className="text-[8px] text-slate-500 font-medium">Field-MD v4.2</div> */}
                                         </div>
                                     </div>
@@ -159,9 +159,9 @@ const AssistantDoctor = () => {
                                                 { t: '12:15 PM', a: 'Doc Approval Recorded' },
                                                 { t: '11:50 AM', a: 'Vital Checkup : Pass' }
                                             ].map((log, i) => (
-                                                <div key={i} className="flex gap-3 items-start border-l-2 border-teal-500/20 pl-4 py-1">
-                                                    <div className="text-[9px] font-mono text-teal-600">{log.t}</div>
-                                                    <div className="text-[10px] font-bold text-slate-300">{log.a}</div>
+                                                <div key={i} className="flex gap-3 items-center border-l-2 border-teal-500/40 pl-4 py-2">
+                                                    <div className="text-[11px] font-mono font-bold text-teal-300 shrink-0 whitespace-nowrap">{log.t}</div>
+                                                    <div className="text-sm font-bold text-white whitespace-nowrap">{log.a}</div>
                                                 </div>
                                             ))}
                                         </div>
@@ -271,7 +271,7 @@ const AssistantDoctor = () => {
                             viewport={{ once: true }}
                             className="order-2 lg:order-1"
                         >
-                            <img src={treatmentImg} alt="Treatment" className="rounded-[40px] shadow-2xl border border-white/10" />
+                            <img src={treatmentImg} alt="Treatment" className="rounded-[40px] shadow-2xl border border-white/10 scale-110 origin-center transition-transform duration-500" />
                         </motion.div>
                         <div className="order-1 lg:order-2">
                             <h2 className="text-4xl lg:text-5xl font-bold mb-8 italic text-teal-400">Core Responsibilities</h2>

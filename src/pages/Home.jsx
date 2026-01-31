@@ -42,9 +42,9 @@ const Home = () => {
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 1.2, ease: "easeOut" }}
-                            className="text-5xl sm:text-7xl md:text-[4rem] lg:text-[8rem] xl:text-[150px] font-black text-white leading-[0.9] tracking-tighter drop-shadow-[0_20px_20px_rgba(0,0,0,0.8)] select-none mb-6 whitespace-nowrap letter-spacing-[-0.05em]"
+                            className="text-5xl sm:text-7xl md:text-[4rem] lg:text-[8rem] xl:text-[150px] font-black text-white leading-[0.9] tracking-[0.05em] drop-shadow-[0_20px_20px_rgba(0,0,0,0.8)] select-none mb-6 whitespace-nowrap"
                         >
-                            FARM VEST
+                            FARMVEST
                         </motion.h1>
                         <p className="text-white/80 text-sm md:text-base font-bold tracking-[0.4em] uppercase mb-8">
                             Structured Biological Asset Management
@@ -202,7 +202,7 @@ const Home = () => {
                             <img
                                 src={ManagementApp}
                                 alt="Structured Platform"
-                                className="rounded-xl shadow-2xl mb-8 opacity-80 w-full lg:scale-[1] origin-center transition-transform duration-500"
+                                className="rounded-xl shadow-2xl mb-8 opacity-100 w-full lg:scale-[1.15] origin-center transition-transform duration-500"
                             />
                         </motion.div>
                     </div>
@@ -336,7 +336,7 @@ const Home = () => {
                                     <source src="/hero_video.mp4" type="video/mp4" />
                                 </video>
                                 <div className="absolute bottom-0 right-0 w-full bg-black/100 text-right">
-                                    <span className="text-white/100 font-black tracking-tighter italic mr-5">
+                                    <span className="text-white/100 font-black tracking-[0.05em] italic mr-5">
                                         FarmVest
                                     </span>
                                 </div>

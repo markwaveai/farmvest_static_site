@@ -50,7 +50,7 @@ const Doctor = () => {
                                 <span className="text-teal-400 font-black text-xs uppercase tracking-[0.4em]">Chief Medical Console</span>
                             </div>
 
-                            <h1 className="text-6xl md:text-8xl font-black text-white mb-8 tracking-tighter leading-none">
+                            <h1 className="text-6xl md:text-8xl font-black text-white mb-8 tracking-[0.05em] leading-none">
                                 DOCTOR
                             </h1>
 
@@ -205,7 +205,7 @@ const Doctor = () => {
                         <img
                             src={supervisorImage}
                             alt="Supervisor reporting issues"
-                            className="relative z-10 w-full rounded-2xl shadow-xl transition-all duration-500"
+                            className="relative z-10 w-full rounded-2xl shadow-xl scale-110 origin-center transition-transform duration-500"
                         />
 
                     </motion.div>

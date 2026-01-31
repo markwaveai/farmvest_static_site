@@ -159,7 +159,7 @@ const Admin = () => {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 }}
-                            className="text-5xl md:text-6xl lg:text-8xl font-black text-slate-900 leading-[0.85] tracking-tighter mb-10"
+                            className="text-5xl md:text-6xl lg:text-8xl font-black text-slate-900 leading-[0.85] tracking-[0.05em] mb-10"
                         >
                             ADMIN
                         </motion.h1>

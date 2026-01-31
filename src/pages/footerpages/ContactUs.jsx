@@ -287,9 +287,9 @@ const ContactUs = () => {
 
                             <div className="p-8 bg-primary rounded-[40px] text-white shadow-xl shadow-primary/20 relative overflow-hidden group">
                                 <div className="relative z-10">
-                                    <h3 className="text-2xl font-black mb-4 italic uppercase tracking-tighter">Ready to Visit?</h3>
+                                    <h3 className="text-2xl font-black mb-4 italic uppercase tracking-normal">Ready to Visit?</h3>
                                     <p className="text-white text-sm leading-relaxed mb-6 italic font-medium">
-                                        Investors can schedule physical site visits to our buffalo sheds via the "Investor Login" portal. Experience the operations first-hand carefully managed by our supervisors.
+                                        Investors can schedule physical site visits to our <span className="tracking-widest">buffalo</span> sheds via the "Investor Login" portal. Experience the operations first-hand carefully managed by our supervisors.
                                     </p>
 
                                 </div>

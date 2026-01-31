@@ -104,7 +104,7 @@ const Blog = () => {
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-4xl md:text-6xl font-black font-sans text-slate-900 mb-6 uppercase tracking-tighter"
+                        className="text-4xl md:text-6xl font-black font-sans text-slate-900 mb-6 uppercase tracking-normal"
                     >
                         Project <span className="text-teal-600">Insights</span>
                     </motion.h1>

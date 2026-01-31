@@ -10,45 +10,50 @@ const Footer = () => {
             <div className="container mx-auto px-4 md:px-8 xl:pl-24">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
                     {/* Company Info */}
-                    <div>
-                        <Link to="/" className="inline-block mb-6">
-                            <img src={Logo} alt="FarmVest" className="h-20 rounded-md hover:opacity-80 transition-opacity" />
-                        </Link>
+                    <div className="flex flex-col">
+                        <div className="h-12 flex items-center mb-6">
+                            <Link to="/" className="inline-block h-8">
+                                <img src={Logo} alt="Farm Vest" className="h-full object-contain rounded-md" />
+                            </Link>
+                        </div>
 
-                        <p className="text-gray-400 mb-6 leading-relaxed">
-                            Revolutionizing livestock farming through sustainable investment and modern technology. Join us in building the future of agriculture.
-                        </p>
-                        <div className="flex gap-4">
-                            {[
-                                { Icon: Facebook },
-                                { Icon: Twitter },
-                                { Icon: Instagram },
-                                { Icon: Linkedin }
-                            ].map(({ Icon }, i) => (
-                                <div
-                                    key={i}
-                                    className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center transition-colors text-white"
-                                >
-                                    <Icon className="w-5 h-5" />
-                                </div>
-                            ))}
+                        <div className="flex-1">
+                            <p className="text-gray-400 mb-8 leading-relaxed text-base">
+                                Revolutionizing livestock farming through sustainable investment and modern technology. Join us in building the future of agriculture.
+                            </p>
+                            <div className="flex gap-4">
+                                {[
+                                    { Icon: Facebook },
+                                    { Icon: Twitter },
+                                    { Icon: Instagram },
+                                    { Icon: Linkedin }
+                                ].map(({ Icon }, i) => (
+                                    <div
+                                        key={i}
+                                        className="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center text-gray-400"
+                                    >
+                                        <Icon className="w-5 h-5" />
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
 
                     {/* Quick Links */}
                     <div>
-                        <h3 className="text-lg font-bold mb-6">Quick Links</h3>
+                        <div className="h-12 flex items-center mb-6">
+                            <h3 className="text-lg font-bold">Quick Links</h3>
+                        </div>
                         <ul className="space-y-4">
                             {[
                                 { name: 'Home', path: '/' },
                                 { name: 'About Us', path: '/about-us' },
-
                                 { name: 'Blog', path: '/blog' },
                                 { name: 'Contact Us', path: '/contact-us' }
                             ].map((item) => (
-                                <li key={item.name}>
-                                    <Link to={item.path} className="text-gray-400 hover:text-primary transition-colors flex items-center gap-2 group">
-                                        <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                <li key={item.name} className="h-6 flex items-center">
+                                    <Link to={item.path} className="text-gray-400 hover:text-primary transition-colors flex items-center gap-2 group text-base leading-relaxed">
+                                        <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all -ml-6 group-hover:ml-0" />
                                         {item.name}
                                     </Link>
                                 </li>
@@ -60,36 +65,27 @@ const Footer = () => {
 
                     {/* Contact Info */}
                     <div>
-                        <h3 className="text-lg font-bold mb-6">Contact Us</h3>
+                        <div className="h-12 flex items-center mb-6">
+                            <h3 className="text-lg font-bold">Contact Us</h3>
+                        </div>
                         <ul className="space-y-4">
-                            <li className="flex items-start gap-3 text-gray-400 group">
-                                <a
-                                    href="https://www.google.com/maps/search/?api=1&query=PSR+Prime+Tower+Beside+DLF+Gachibowli"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-primary mt-1 hover:scale-110 transition-transform"
-                                >
-                                    <MapPin className="w-5 h-5" />
-                                </a>
+                            <li className="flex items-start gap-3 text-gray-400 group text-base leading-relaxed min-h-[64px]">
+                                <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                                 <a
                                     href="https://www.google.com/maps/search/?api=1&query=PSR+Prime+Tower+Beside+DLF+Gachibowli"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="hover:text-primary transition-colors"
                                 >
-                                    206,2nd floor,Block-A, PSR Prime Tower,Beside DLF,Gachibowli
+                                    206, 2nd floor, Block-A, PSR Prime Tower, Beside DLF, Gachibowli
                                 </a>
                             </li>
-                            <li className="flex items-center gap-3 text-gray-400 group">
-                                <a href="tel:+917702710290" className="text-primary hover:scale-110 transition-transform">
-                                    <Phone className="w-5 h-5" />
-                                </a>
+                            <li className="flex items-center gap-3 text-gray-400 group text-base leading-relaxed h-6">
+                                <Phone className="w-5 h-5 text-primary flex-shrink-0" />
                                 <a href="tel:+917702710290" className="hover:text-primary transition-colors">+91 77027 10290</a>
                             </li>
-                            <li className="flex items-center gap-3 text-gray-400 group">
-                                <a href={`mailto:${import.meta.env.VITE_COMPANY_EMAIL}`} className="text-primary hover:scale-110 transition-transform">
-                                    <Mail className="w-5 h-5" />
-                                </a>
+                            <li className="flex items-center gap-3 text-gray-400 group text-base leading-relaxed h-6">
+                                <Mail className="w-5 h-5 text-primary flex-shrink-0" />
                                 <a href={`mailto:${import.meta.env.VITE_COMPANY_EMAIL}`} className="hover:text-primary transition-colors">{import.meta.env.VITE_COMPANY_EMAIL}</a>
                             </li>
                         </ul>

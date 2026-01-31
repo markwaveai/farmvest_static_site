@@ -97,7 +97,7 @@ const Supervisor = () => {
                             <motion.h1
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 animate={{ opacity: 1, scale: 1 }}
-                                className="text-6xl md:text-8xl font-black mb-4 tracking-tighter leading-[0.85]"
+                                className="text-6xl md:text-8xl font-black mb-4 tracking-[0.05em] leading-[0.85]"
                             >
                                 SUPER
                                 <span className="text-[#8b6b36]">VISOR</span>
@@ -134,7 +134,7 @@ const Supervisor = () => {
                                 <div className="absolute -inset-0.5 bg-gradient-to-br from-[#8b6b36]/20 to-transparent rounded-[3.1rem] -z-10" />
                                 <div className="flex items-center justify-between mb-6">
                                     <p className="text-[10px] font-black uppercase text-gray-400 tracking-widest">Shed Occupancy Matrix</p>
-                                    <div className="px-2 py-1 bg-emerald-500/10 rounded text-[8px] font-bold text-emerald-500 uppercase tracking-tighter">Live Scan</div>
+                                    <div className="px-2.5 py-1 bg-emerald-500 rounded text-[10px] font-black text-white uppercase tracking-widest shadow-[0_0_15px_rgba(16,185,129,0.4)]">Live Scan</div>
                                 </div>
                                 <div className="grid grid-cols-4 gap-4 mb-8 px-6">
                                     {Array.from({ length: 16 }).map((_, i) => (
@@ -191,7 +191,7 @@ const Supervisor = () => {
                             <img
                                 src={supervisorImage}
                                 alt="Supervisor Inspection"
-                                className="w-full h-auto rounded-xl shadow-lg transform group-hover:scale-105 transition-transform duration-500"
+                                className="w-full h-auto rounded-xl shadow-lg transform scale-110 group-hover:scale-[1.15] transition-transform duration-500"
                             />
                         </div>
                     </div>
@@ -235,7 +235,7 @@ const Supervisor = () => {
                             <img
                                 src={feedingImage}
                                 alt="Health Monitoring"
-                                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                className="w-full h-full object-cover transform scale-110 group-hover:scale-[1.15] transition-transform duration-500"
                             />
                         </div>
                     </div>

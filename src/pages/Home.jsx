@@ -202,7 +202,7 @@ const Home = () => {
                             <img
                                 src={ManagementApp}
                                 alt="Structured Platform"
-                                className="rounded-xl shadow-2xl mb-8 opacity-100 w-full lg:scale-[1] xl:scale-80 origin-center transition-transform duration-500"
+                                className="rounded-xl shadow-2xl mb-8 opacity-100 w-full lg:scale-[1] max-h-[90vh] xl:scale-80 origin-center transition-transform duration-500"
                             />
                         </motion.div>
                     </div>

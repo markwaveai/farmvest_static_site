@@ -104,7 +104,7 @@ const Supervisor = () => {
                             </motion.h1>
 
                             <p className="text-xl text-green-50 max-w-xl font-medium leading-relaxed mb-10">
-                                Management of livestock Buffaloes.
+                                Management of livestock <span className="tracking-wider">Buffaloes</span>.
                                 <span className="text-[#e2c38d]"> Systematic tag tracking initiated.</span>
                             </p>
 
@@ -176,14 +176,14 @@ const Supervisor = () => {
                     <div className="grid md:grid-cols-2 gap-8 items-center">
                         <div className="space-y-6">
                             <p className="text-gray-600 text-lg">
-                                Supervisors are the backbone of shed management, ensuring clear accountability and organized monitoring of every Buffalo.
+                                Supervisors are the backbone of shed management, ensuring clear accountability and organized monitoring of every <span className="tracking-wider">Buffalo</span>.
                             </p>
                             <FeatureList items={[
                                 "One Supervisor assigned to each shed.",
-                                "Each shed manages 300 Buffaloes.",
-                                "Buffaloes arranged in 4 rows of 75 for organized monitoring.",
-                                "Each Buffalo uniquely identified with a tag number.",
-                                "Complete management of all tagged Buffaloes.",
+                                <>Each shed manages 300 <span className="tracking-wider">Buffaloes</span>.</>,
+                                <><span className="tracking-wider">Buffaloes</span> arranged in 4 rows of 75 for organized monitoring.</>,
+                                <>Each <span className="tracking-wider">Buffalo</span> uniquely identified with a tag number.</>,
+                                <>Complete management of all tagged <span className="tracking-wider">Buffaloes</span>.</>,
                                 "Ensures clear accountability at the shed level."
                             ]} />
                         </div>
@@ -223,10 +223,10 @@ const Supervisor = () => {
                     <div className="flex flex-col md:flex-row gap-8 items-stretch">
                         <div className="flex-1 py-2">
                             <FeatureList items={[
-                                "Conducts daily health checkups for all tagged Buffaloes.",
+                                <>Conducts daily health checkups for all tagged <span className="tracking-wider">Buffaloes</span>.</>,
                                 "Performs detailed health checkups on a weekly basis.",
                                 "Systematic row-wise checking process.",
-                                "Ensures health monitoring for every Buffalo without exception.",
+                                <>Ensures health monitoring for every <span className="tracking-wider">Buffalo</span> without exception.</>,
                                 "Early detection of potential health issues.",
                                 "Helps prevent serious and critical health problems."
                             ]} />

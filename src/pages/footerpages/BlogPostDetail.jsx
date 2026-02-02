@@ -19,7 +19,7 @@ const blogData = {
         sections: [
             {
                 title: "What Transparency Means at Farmvest",
-                content: "Farmvest does not rely on verbal assurance or periodic summaries. Transparency is enforced through system design, where every asset lifecycle event is digitally captured and traceable.",
+                content: "Farmvest does not rely on verbal assurance or periodic summaries. Transparency is enforced through system design, where every asset lifecycle event is digitally captured and trace-able.",
                 list: [
                     "Asset registration",
                     "Ownership mapping",

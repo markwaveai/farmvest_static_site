@@ -153,7 +153,7 @@ const Home = () => {
                                     { label: "100%", sub: "Source Verified" },
                                     { label: "Daily", sub: "Purity Checks" },
                                     { label: "Guaranteed", sub: "Antibiotic Free" },
-                                    { label: "End-to-End", sub: "Traceability" }
+                                    { label: "End-to-End", sub: "Trace-ability" }
                                 ].map((stat, i) => (
                                     <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 p-4 md:p-6 rounded-2xl flex items-center gap-4 md:gap-12 hover:bg-white/10 transition-colors group">
                                         <div className="text-2xl md:text-2xl font-black text-white min-w-[100px] md:min-w-[220px] leading-none group-hover:text-primary transition-colors">

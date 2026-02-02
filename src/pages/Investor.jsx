@@ -93,7 +93,7 @@ const Investor = () => {
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="text-5xl md:text-8xl font-display font-black text-white mb-8 tracking-normal"
+                            className="text-5xl md:text-8xl font-display font-black text-white mb-8 tracking-[0.05em]"
                         >
                             INVESTOR
                         </motion.h1>
@@ -358,7 +358,7 @@ const Investor = () => {
                                             </div>
                                             <div>
                                                 <p className="text-[10px] font-bold text-slate-800">Health Update</p>
-                                                <p className="text-[9px] text-slate-500">Weekly buffalo health report is ready.</p>
+                                                <p className="text-[9px] text-slate-500">Weekly <span className="tracking-wider">buffalo</span> health report is ready.</p>
                                                 <p className="text-[8px] text-slate-400 mt-1">Yesterday</p>
                                             </div>
                                         </div>

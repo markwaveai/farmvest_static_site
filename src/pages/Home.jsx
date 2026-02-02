@@ -42,7 +42,7 @@ const Home = () => {
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 1.2, ease: "easeOut" }}
-                            className="text-5xl sm:text-7xl md:text-[4rem] lg:text-[8rem] xl:text-[150px] font-black text-white leading-[0.9] tracking-[0.05em] drop-shadow-[0_20px_20px_rgba(0,0,0,0.8)] select-none mb-6 whitespace-nowrap"
+                            className="text-5xl sm:text-7xl md:text-[4rem] lg:text-[8rem] xl:text-[150px] font-black text-white drop-shadow-[0_20px_20px_rgba(0,0,0,0.8)] select-none mb-6 whitespace-nowrap font-[sans-serif]"
                         >
                             FARMVEST
                         </motion.h1>
@@ -202,7 +202,7 @@ const Home = () => {
                             <img
                                 src={ManagementApp}
                                 alt="Structured Platform"
-                                className="rounded-xl shadow-2xl mb-8 opacity-100 w-full lg:scale-[1.45] origin-center transition-transform duration-500"
+                                className="rounded-xl shadow-2xl mb-8 opacity-100 w-full lg:scale-[1] xl:scale-80 origin-center transition-transform duration-500"
                             />
                         </motion.div>
                     </div>

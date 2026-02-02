@@ -78,7 +78,7 @@ const Navbar = () => {
                                     isActive
                                         ? "text-primary"
                                         : (scrolled || location.pathname.startsWith('/blog') ||
-                                            ['/about-us', '/about', '/contact-us', '/contact', '/investment-plans', '/cookie-policy', '/privacy-policy', '/terms-of-service', '/support', '/admin'].some(path => location.pathname.startsWith(path)))
+                                            ['/about-us', '/about', '/contact-us', '/contact', '/investment-plans', '/cookie-policy', '/terms-of-service', '/admin'].some(path => location.pathname.startsWith(path)))
                                             ? "text-gray-600"
                                             : "text-gray-200",
                                     "hover:text-primary"

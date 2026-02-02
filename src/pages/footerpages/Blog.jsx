@@ -99,7 +99,7 @@ const Blog = () => {
                         animate={{ opacity: 1, scale: 1 }}
                         className="inline-block px-4 py-1 bg-white border border-teal-200 rounded-full text-teal-700 text-xs font-bold mb-6 tracking-widest uppercase shadow-sm"
                     >
-                        Buffalo FarmVest Updates
+                        Buffaloe FarmVest Updates
                     </motion.div>
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
@@ -109,7 +109,7 @@ const Blog = () => {
                         Project <span className="text-teal-600">Insights</span>
                     </motion.h1>
                     <p className="text-xl text-slate-800 max-w-3xl mx-auto font-medium leading-relaxed">
-                        Earn returns from buffalo farming while transparently monitoring operations, Buffalo health, and revenue through our professional digital platform.
+                        Earn returns from buffaloe farming while transparently monitoring operations, Buffalo health, and revenue through our professional digital platform.
                     </p>
                 </div>
             </section>

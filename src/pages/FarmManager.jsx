@@ -4,7 +4,7 @@ import { ClipboardCheck, ShieldAlert, BadgeInfo, Tractor, CheckCircle, AlertTria
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import BuffaloShed from '../assets/buffalo_shed.png';
-import Feeding from '../assets/buffalo_feeding.png';
+import EntryExit from '../assets/entry_exit.png';
 
 const Section = ({ title, icon: Icon, children, className = "" }) => (
     <motion.div
@@ -272,7 +272,7 @@ const FarmManager = () => {
                             ]} />
                         </div>
                         <div className="relative h-80 md:h-[420px] rounded-2xl overflow-hidden shadow-lg border-4 border-white">
-                            <img src={Feeding} alt="Feeding" className="w-full h-full object-cover scale-110 origin-center transition-transform duration-500" />
+                            <img src={EntryExit} alt="Entry Exit" className="w-full h-full object-cover object-top transition-transform duration-500" />
                             <div className="absolute inset-0 bg-blue-900/10 mix-blend-multiply" />
                             {/* Overlay Badge */}
 

@@ -55,7 +55,7 @@ const FeatureList = ({ items }) => (
                 <div className="mt-1 flex-shrink-0 text-primary">
                     <CheckCircle className="w-5 h-5 fill-green-50" />
                 </div>
-                <span className="text-gray-700 text-lg leading-relaxed">{item}</span>
+                <span className="text-gray-700 text-lg leading-relaxed tracking-wide">{item}</span>
             </motion.li>
         ))}
     </ul>
@@ -63,7 +63,7 @@ const FeatureList = ({ items }) => (
 
 const Supervisor = () => {
     return (
-        <div className="min-h-screen flex flex-col font-sans bg-[#fdfcf8] relative overflow-hidden">
+        <div className="min-h-screen flex flex-col font-sans bg-[#fdfcf8] relative overflow-hidden" style={{ fontVariantLigatures: 'none', letterSpacing: '0.01em' }}>
             {/* Background Grid Pattern */}
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/pinstripe-light.png')] opacity-30 -z-10" />
 

@@ -87,7 +87,7 @@ const AboutUs = () => {
                             <div className="absolute -inset-4 bg-primary/10 rounded-[60px] blur-3xl -z-10" />
                             <img
                                 src={ModernShed}
-                                alt="Modern Buffalo Shed"
+                                alt="Modern Buffaloe Shed"
                                 className="rounded-[40px] shadow-2xl border-8 border-white w-full h-[400px] object-cover"
                             />
                         </motion.div>

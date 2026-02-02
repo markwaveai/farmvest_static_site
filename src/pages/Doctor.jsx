@@ -339,7 +339,7 @@ const Doctor = () => {
                                         "Keep medical instructions available for reference",
                                         "Coordinate with Assistant Doctors for minor cases",
                                         "Ensure continuity of care across treatments",
-                                        "Improve overall Buffalo health management"
+                                        "Improve overall Buffaloe health management"
                                     ].map((text, idx) => (
                                         <motion.div
                                             key={idx}

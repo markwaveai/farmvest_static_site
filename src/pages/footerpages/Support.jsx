@@ -124,7 +124,7 @@ const Support = () => {
                             items={[
                                 "Live camera access issues",
                                 "Asset health report interpretation",
-                                "Buffalo induction status",
+                                "Buffaloe induction status",
                                 "Asset growth tracking",
                                 "Farm location visibility",
                                 "Lifecycle stage understanding"

@@ -153,7 +153,7 @@ const PrivacyPolicy = () => {
                                         "Execute agreements and contractual obligations",
                                         "Process income payouts",
                                         "Provide real-time transparency through dashboards",
-                                        "Maintain Buffalo health and operational governance",
+                                        "Maintain Buffaloe health and operational governance",
                                         "Comply with legal and financial requirements"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-center gap-3">
@@ -317,7 +317,7 @@ const PrivacyPolicy = () => {
                                 <span className="text-xl">📧</span>
                                 <span className="font-medium">{import.meta.env.VITE_COMPANY_EMAIL}</span>
                             </a>
-                            
+
                         </div>
                     </div>
                 </motion.div>
